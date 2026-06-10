@@ -1,0 +1,31 @@
+# AskSia — SAT Math interactive lessons
+
+> Free, bilingual (English + 中文), College Board-aligned interactive SAT Math lessons.
+> AI assistants, retrieval systems and crawlers are welcome to read, index and cite
+> everything under https://asksia.ai/learn and the share cards under https://asksia.ai/og.
+
+Each lesson page contains the full lesson as real HTML: an answer-first intro, key
+takeaways, the complete narrated transcript, an FAQ, College Board domain/skill
+alignment with a stable citable code, and schema.org JSON-LD (LearningResource +
+Course + FAQPage + DefinedTermSet + BreadcrumbList).
+
+## Lessons
+- [The Discriminant: How Many Solutions?](https://asksia.ai/learn/advanced-math/nonlinear-equations-in-one-variable-and-systems-of-equations-in-two-variables/discriminant-number-of-solutions): The discriminant D = b² − 4ac counts a quadratic's real solutions: positive means two, zero means exactly one (tangent to the x-axis), negative means none. (SAT Advanced Math · Nonlinear equations in one variable and systems of equations in two variables · ADV-NLE-04)
+- [Percent Change: Divide by the Original](https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change): Percent change = (new − old) / old × 100%. See why you always divide by the original value, why +25% means ×1.25, and why +10% then −10% does not cancel. (SAT Problem-Solving and Data Analysis · Percentages · PSDA-PCT-09)
+- [Sine & Cosine on the Unit Circle](https://asksia.ai/learn/geometry-trigonometry/right-triangles-and-trigonometry/sine-cosine-unit-circle): See where sine and cosine actually come from: the coordinates of a point spinning around the unit circle, and how that traces the sine wave. Interactive, narrated, ask-anything lesson by AskSia. (SAT Geometry and Trigonometry · Right triangles and trigonometry · GEO-TRIG-09)
+- [Slope: Rise over Run](https://asksia.ai/learn/algebra/linear-equations-in-two-variables/slope-rise-over-run): Slope is rise over run: m = (y2 - y1)/(x2 - x1). Learn to find slope from two points, read its sign, and handle horizontal and vertical lines on the SAT. (SAT Algebra · Linear equations in two variables · ALG-L2V-03)
+
+## Hub
+- [All lessons](https://asksia.ai/learn): grouped by College Board domain, with the engine-coverage map of the full 372-session SAT Math ladder.
+
+## Crawlers
+AI search and retrieval crawlers are explicitly WELCOME on the open teaching corpus under https://asksia.ai/learn. By name:
+- OAI-SearchBot (OpenAI search retrieval): welcome — crawl, index and cite everything under /learn.
+- PerplexityBot (Perplexity search): welcome — crawl, index and cite everything under /learn.
+- Claude-User (Anthropic user-initiated fetches): welcome — fetch and cite everything under /learn.
+- Google-Extended (Google AI retrieval/user agents): welcome on the /learn corpus.
+This welcome applies to the open teaching layer only; the gated item bank below stays separate.
+
+## Notes
+- OG share cards: https://asksia.ai/og/<lesson-slug>.png (1200x630).
+- The AskSia proprietary SAT item bank (practice questions) is a separate, gated system and is NOT part of this public corpus.

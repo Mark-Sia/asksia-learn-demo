@@ -1,0 +1,21 @@
+# AskSia /learn — open teaching layer. Crawlers welcome.
+# Training-crawler gating (GPTBot/CCBot policy) is decided at the real-domain level
+# on the proprietary, gated item bank — NOT on this open teaching layer.
+
+User-agent: *
+Allow: /
+
+# Explicitly welcome — AI search and retrieval user-agents:
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://asksia.ai/sitemap.xml

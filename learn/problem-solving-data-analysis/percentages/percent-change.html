@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percent Change: Divide by the Original | SAT Problem-Solving and Data Analysis | AskSia</title>
+<meta name="description" content="Percent change = (new − old) / old × 100%. See why you always divide by the original value, why +25% means ×1.25, and why +10% then −10% does not cancel.">
+<meta name="keywords" content="percent change formula, percent increase decrease, percent change calculator concept">
+<link rel="canonical" href="https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Percent Change: Divide by the Original">
+<meta property="og:description" content="Percent change = (new − old) / old × 100%. See why you always divide by the original value, why +25% means ×1.25, and why +10% then −10% does not cancel.">
+<meta property="og:image" content="https://asksia.ai/og/percent-change.png">
+<meta property="og:url" content="https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change">
+<meta property="og:site_name" content="AskSia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4E4DF4">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://asksia.ai/#org",
+   "name": "AskSia",
+   "url": "https://asksia.ai"
+  },
+  {
+   "@type": [
+    "LearningResource",
+    "Course"
+   ],
+   "@id": "https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change#lesson",
+   "name": "Percent Change: Divide by the Original",
+   "description": "Percent change = (new − old) / old × 100%. See why you always divide by the original value, why +25% means ×1.25, and why +10% then −10% does not cancel.",
+   "url": "https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change",
+   "identifier": "PSDA-PCT-09",
+   "inLanguage": [
+    "en",
+    "zh"
+   ],
+   "datePublished": "2026-06-10",
+   "dateModified": "2026-06-10",
+   "isAccessibleForFree": true,
+   "learningResourceType": "Interactive lesson",
+   "educationalLevel": "High school / SAT",
+   "timeRequired": "PT5M",
+   "teaches": [
+    "Percent change",
+    "Base",
+    "Multiplier",
+    "Successive change"
+   ],
+   "educationalAlignment": [
+    {
+     "@type": "AlignmentObject",
+     "alignmentType": "educationalSubject",
+     "educationalFramework": "College Board SAT Math",
+     "targetName": "Problem-Solving and Data Analysis"
+    },
+    {
+     "@type": "AlignmentObject",
+     "alignmentType": "teaches",
+     "educationalFramework": "College Board SAT Math",
+     "targetName": "Percentages"
+    }
+   ],
+   "provider": {
+    "@id": "https://asksia.ai/#org"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Why divide by the original and not the new value?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Percent change measures the jump relative to where it STARTED. From 40 to 50 the jump is 10, and 10/40 = 25%. Dividing by the new value (10/50 = 20%) answers a different question — and on multiple-choice questions it is the most common wrong answer the SAT plants in the choices."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the percent change formula?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Percent change = (new − old) / old × 100%. Keep the sign: a positive result is an increase, a negative result is a decrease. The denominator is always the original value."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does a multiplier like ×1.25 mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A +25% change makes the new value 1.25 times the old one: new = old × (1 + 25/100). It is the same fact as the formula, compressed into one multiplication — 40 × 1.25 = 50."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is +10% then −10% back to the start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The factors multiply: ×1.1 then ×0.9 is ×0.99 overall — a net 1% loss. The −10% acts on the larger base of 110, so it removes 11, not 10. Successive percent changes never just cancel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is 40 → 50 a +25% increase but 50 → 40 only a −20% decrease?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Because the base changed. Going up, the change of 10 is measured against 40: +25%. Coming down, the same 10 is measured against 50: −20%. Up and down by the same amount are NOT the same percent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are percent change answers entered on the SAT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This skill appears as SPR (grid-in) questions: for a 'what percent' answer, enter 25, not 0.25 and not 25%. The built-in Desmos calculator can do the arithmetic, but choosing the right base is on you."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "DefinedTermSet",
+   "name": "Percent Change: Divide by the Original — key terms",
+   "hasDefinedTerm": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Percent change",
+     "description": "The change relative to the starting value, as a percent: (new − old) / old × 100%. Positive means an increase, negative a decrease."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Base",
+     "description": "The value you divide by — always the ORIGINAL (starting) value, never the new one."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Multiplier",
+     "description": "The factor 1 + p/100 that turns the old value into the new one in one step: +25% means ×1.25, −20% means ×0.80."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Successive change",
+     "description": "Two or more percent changes applied in a row. Their multipliers multiply: +10% then −10% is ×1.1 × 0.9 = ×0.99, a net 1% loss."
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Problem-Solving and Data Analysis",
+     "item": "https://asksia.ai/learn/problem-solving-data-analysis"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Percentages",
+     "item": "https://asksia.ai/learn/problem-solving-data-analysis/percentages"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Percent change",
+     "item": "https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#4E4DF4; --primary-hover:#6C52FF; --primary-50:#F0F0FE; --primary-100:#E6E6FD;
+  --primary-200:#C6C6FB; --primary-700:#3736B0;
+  --orange:#F5874E; --teal:#11B5C9; --grape:#854EF5; --pink:#FF5A8A; --yellow:#FFD81A;
+  --cyan:#3DFCE8; --good:#1F9E6F;
+  --ink:#1A1A2E; --ink2:#4A4A6A; --ink3:#8888A8; --ink4:#B7B7CC;
+  --surface:#FFFFFF; --cool:#F4F5FF; --subtle:#F8FAFF; --cream:#FEFCF7;
+  --bd:rgba(78,77,244,.12); --bd2:rgba(78,77,244,.20); --bd-strong:#E5E4F2;
+  --sh-sm:0 2px 10px rgba(78,77,244,.06);
+  --sh-md:0 6px 24px rgba(78,77,244,.09);
+  --sh-lg:0 14px 44px rgba(78,77,244,.14);
+  --sh-cta:0 6px 22px rgba(78,77,244,.32);
+  --font-display:'Plus Jakarta Sans',system-ui,sans-serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-hand:'Caveat',cursive;
+  --font-mono:'Space Mono',monospace;
+  --graph:
+    linear-gradient(rgba(78,77,244,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(78,77,244,.07) 1px,transparent 1px),
+    linear-gradient(rgba(78,77,244,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(78,77,244,.035) 1px,transparent 1px);
+  --graph-sz:40px 40px,40px 40px,8px 8px,8px 8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:var(--font-body); color:var(--ink); background:var(--cream); -webkit-font-smoothing:antialiased;}
+#root{height:100vh;width:100vw;overflow:hidden}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.mono{font-family:var(--font-mono)}
+.hand{font-family:var(--font-hand)}
+.mono-eq{font-family:var(--font-mono);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:6px;padding:1px 7px;color:var(--primary);font-weight:700}
+
+/* ===== WEB ENTRY ===== */
+.web-entry{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--cream);background-image:var(--graph);background-size:var(--graph-sz);overflow:hidden}
+.web-nav{position:relative;height:64px;display:flex;align-items:center;gap:26px;padding:0 32px;border-bottom:1px solid var(--bd);background:#fff}
+.web-brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-.4px}
+.web-brand .ba{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#E159FC,#854EF5 45%,#4E4DF4 70%,#3DFCE8);color:#fff;display:grid;place-items:center;font-size:17px;box-shadow:var(--sh-sm)}
+.web-links{display:flex;gap:22px;font-size:14px;font-weight:600;color:var(--ink3)}
+.web-links a{cursor:pointer}.web-links a:hover{color:var(--ink)}.web-links a.on{color:var(--primary)}
+.web-ava{margin-left:auto;width:34px;height:34px;border-radius:50%;background:var(--grape);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.web-main{position:relative;flex:1;display:grid;place-items:center;padding:32px}
+.cover{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;max-width:1040px;width:100%;background:#fff;border:1.5px solid var(--bd);border-radius:26px;padding:48px 52px;box-shadow:var(--sh-lg)}
+.cover-eyebrow{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--primary);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:5px 12px;margin-bottom:16px}
+.cover-crumb{font-family:var(--font-mono);font-size:11px;color:var(--ink3);letter-spacing:.04em;margin-bottom:8px}
+.cover-h1{font-family:var(--font-display);font-weight:800;font-size:46px;line-height:1.05;letter-spacing:-1.6px;color:var(--ink)}
+.cover-h1 .grad{background:linear-gradient(90deg,#854EF5,#4E4DF4 55%,#11B5C9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cover-sub{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink2);margin-top:6px}
+.cover-blurb{font-size:15.5px;line-height:1.65;color:var(--ink2);margin-top:16px;max-width:440px}
+.cover-actions{display:flex;align-items:center;gap:16px;margin-top:24px}
+.cover-start{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:#fff;background:var(--primary);border-radius:100px;padding:14px 26px;box-shadow:var(--sh-cta);transition:transform .15s,box-shadow .15s}
+.cover-start:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(78,77,244,.4)}
+.cover-meta{font-family:var(--font-mono);font-size:12px;color:var(--ink3)}
+.cover-feats{display:flex;gap:18px;margin-top:26px;flex-wrap:wrap}
+.feat{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--ink2)}
+.feat .fi{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px}
+.cover-r{display:flex;justify-content:center}
+.sia-stage{display:flex;flex-direction:column;align-items:center;gap:16px}
+.sia-tile-lg{width:200px;height:200px;border-radius:28px;background:linear-gradient(160deg,#F2F0FF,#FFF6F0);border:1.5px solid var(--bd);display:grid;place-items:center;box-shadow:var(--sh-md);animation:floaty 4.5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.sia-tile-lg canvas{filter:drop-shadow(0 8px 16px rgba(78,77,244,.28))}
+.sia-say{font-family:var(--font-hand);font-weight:700;font-size:20px;color:var(--grape)}
+.web-launch{position:relative;flex:1;display:grid;place-items:center;padding:32px}
+.wl-card{background:#fff;border:1.5px solid var(--bd);border-radius:22px;padding:40px 48px;display:flex;flex-direction:column;align-items:center;gap:18px;box-shadow:var(--sh-lg)}
+.wl-card canvas{filter:drop-shadow(0 8px 16px rgba(78,77,244,.28))}
+.wl-card .tt{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.3px}
+.wl-card .steps{width:100%;max-width:320px;display:flex;flex-direction:column;gap:11px;margin-top:4px}
+.lstep{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--ink3);transition:color .3s}
+.lstep.on{color:var(--ink)}
+.lstep .dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--bd2);flex:none;display:grid;place-items:center;transition:all .3s}
+.lstep.on .dot{background:var(--good);border-color:var(--good);color:#fff}
+.lstep.cur .dot{border-color:var(--primary);border-top-color:transparent;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== PLAYER SHELL ===== */
+.player{position:fixed;inset:0;display:flex;flex-direction:column;background:var(--subtle);background-image:var(--graph);background-size:var(--graph-sz)}
+.topbar{height:62px;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:14px;padding:0 20px;z-index:30;flex:none}
+.tb-back{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:var(--ink2)}
+.tb-back:hover{background:var(--primary-50);color:var(--primary)}
+.tb-title{display:flex;flex-direction:column;line-height:1.15}
+.tb-title .t{font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:-.3px}
+.tb-crumb{font-family:var(--font-mono);font-size:10px;color:var(--ink3);letter-spacing:.04em;margin-top:2px}
+.tb-crumb b{color:var(--primary)}
+.tb-spacer{flex:1}
+.tb-step{font-family:var(--font-mono);font-size:11px;color:var(--ink3);font-weight:700}
+.langtoggle{display:flex;align-items:center;border:1.5px solid var(--bd);border-radius:100px;overflow:hidden;font-family:var(--font-mono);font-size:10px;font-weight:700;margin-right:2px}
+.langtoggle button{padding:6px 10px;color:var(--ink3)}
+.langtoggle button.on{background:var(--primary);color:#fff}
+.tb-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:var(--ink3)}
+.tb-ic:hover{background:var(--primary-50);color:var(--primary)}
+
+.main{flex:1;display:flex;gap:16px;padding:16px;min-height:0}
+.stage{flex:1;position:relative;display:flex;flex-direction:column;min-width:0}
+.stage-card{flex:1;background:#fff;border:1.5px solid var(--bd);border-radius:18px;position:relative;overflow:hidden;box-shadow:var(--sh-md);display:flex;flex-direction:column;min-height:0}
+.stage-toprow{position:absolute;top:14px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;z-index:8;pointer-events:none}
+.chapter-pill{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:5px 13px}
+.tools{display:flex;gap:8px;pointer-events:auto}
+.tool{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink2);background:#fff;border:1.5px solid var(--bd);border-radius:100px;padding:6px 13px;box-shadow:var(--sh-sm);transition:all .15s}
+.tool:hover{border-color:var(--primary);color:var(--primary)}
+.tool.on{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:var(--sh-cta)}
+.tool svg{width:15px;height:15px}
+.canvas-host{flex:1;position:relative;min-height:0}
+.canvas-host canvas.diagram{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.lasso{position:absolute;inset:0;width:100%;height:100%;z-index:9}
+.lasso.armed{cursor:crosshair}
+
+.companion{position:absolute;left:18px;bottom:18px;z-index:12;display:flex;align-items:flex-end;gap:10px;pointer-events:none;transform:scale(var(--sia-scale,1));transform-origin:bottom left}
+.companion .sia-tile{position:relative;animation:float 4.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.companion canvas{display:block;filter:drop-shadow(0 8px 14px rgba(78,77,244,.28))}
+.companion .pedestal{position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);width:64px;height:11px;background:radial-gradient(ellipse,rgba(78,77,244,.20),transparent 70%);border-radius:50%}
+.soundbars{display:flex;align-items:flex-end;gap:3px;height:20px;margin-bottom:14px}
+.soundbars span{width:3px;background:var(--primary);border-radius:2px;height:5px}
+.soundbars.on span{animation:sb .6s ease-in-out infinite}
+.soundbars span:nth-child(2){animation-delay:.15s}.soundbars span:nth-child(3){animation-delay:.3s}.soundbars span:nth-child(4){animation-delay:.45s}
+@keyframes sb{0%,100%{height:5px}50%{height:18px}}
+
+.hintbar{position:absolute;left:16px;right:16px;bottom:16px;z-index:11;background:rgba(255,255,255,.96);border:1.5px solid var(--primary-200);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh-md);animation:popUp .3s ease both}
+@keyframes popUp{from{transform:translateY(8px);opacity:.4}to{transform:translateY(0);opacity:1}}
+.hintbar .htxt{flex:1}
+.hintbar .htag{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary)}
+.hintbar .hmain{font-size:14px;font-weight:600;color:var(--ink);margin-top:2px}
+.hintbar .hmain .hand{color:var(--grape);font-size:17px}
+.hint-prog{width:130px;height:7px;border-radius:5px;background:var(--primary-50);overflow:hidden;flex:none}
+.hint-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--grape),var(--primary));border-radius:5px;transition:width .2s}
+.btn-cont{display:flex;align-items:center;gap:7px;font-weight:700;font-size:14px;color:#fff;background:var(--primary);border-radius:100px;padding:9px 18px;box-shadow:var(--sh-cta);transition:transform .15s;flex:none}
+.btn-cont:hover{transform:translateY(-2px)}
+.btn-cont:disabled{opacity:.4;box-shadow:none;cursor:default;transform:none}
+.buildlist{display:flex;gap:8px;align-items:center;flex:1;flex-wrap:wrap}
+.bstep{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink3);padding:5px 11px;border-radius:100px;border:1.5px solid var(--bd);background:#fff;transition:all .25s}
+.bstep .n{width:18px;height:18px;border-radius:50%;background:var(--primary-50);color:var(--primary);font-size:10px;font-weight:700;display:grid;place-items:center;font-family:var(--font-mono)}
+.bstep.cur{border-color:var(--primary);color:var(--ink);box-shadow:var(--sh-sm)}
+.bstep.cur .n{background:var(--primary);color:#fff}
+.bstep.done{border-color:var(--good);color:var(--good);background:#F1FBF6}
+.bstep.done .n{background:var(--good);color:#fff}
+
+.focusctl{position:absolute;right:18px;bottom:78px;z-index:11;background:rgba(255,255,255,.96);border:1.5px solid var(--bd);border-radius:13px;padding:12px 14px;box-shadow:var(--sh-md);width:188px}
+.focusctl .lbl{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.focusctl .val{font-family:var(--font-mono);font-weight:700;font-size:14px;color:var(--primary);margin:2px 0 8px}
+.focusctl input[type=range]{width:100%;accent-color:var(--primary);cursor:pointer}
+
+/* right rail */
+.rail{width:360px;flex:none;background:#fff;border:1.5px solid var(--bd);border-radius:18px;display:flex;flex-direction:column;box-shadow:var(--sh-md);overflow:hidden}
+.rail-tabs{display:flex;padding:8px 8px 0;gap:3px;border-bottom:1px solid var(--bd);flex:none}
+.rtab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px;border-radius:11px 11px 0 0;font-size:11px;font-weight:700;color:var(--ink3);transition:all .15s;position:relative}
+.rtab svg{width:17px;height:17px}
+.rtab:hover{color:var(--primary);background:var(--primary-50)}
+.rtab.on{color:var(--primary)}
+.rtab.on::after{content:'';position:absolute;left:14%;right:14%;bottom:-1px;height:2.5px;background:var(--primary);border-radius:2px}
+.rtab .badge{position:absolute;top:5px;right:18px;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.rail-body{flex:1;overflow-y:auto;padding:18px}
+.rail-body::-webkit-scrollbar{width:8px}.rail-body::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:4px}
+.tr-line{display:flex;gap:10px;padding:9px 11px;border-radius:10px;cursor:pointer;transition:background .15s;margin-bottom:2px}
+.tr-line:hover{background:var(--primary-50)}
+.tr-line.cur{background:var(--primary-50);box-shadow:inset 0 0 0 1.5px var(--primary-200)}
+.tr-line.past{opacity:.55}
+.tr-num{font-family:var(--font-mono);font-size:10px;font-weight:700;color:var(--primary);flex:none;width:30px;padding-top:2px}
+.tr-txt{font-size:13.5px;line-height:1.6;color:var(--ink2)}
+.tr-line.cur .tr-txt{color:var(--ink);font-weight:500}
+.tr-chap{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);margin:14px 0 6px;padding-left:11px}
+.tr-chap:first-child{margin-top:0}
+.tk-empty{text-align:center;color:var(--ink3);font-size:13px;padding:30px 10px}
+.tk-empty .hand{display:block;font-size:20px;color:var(--grape);margin-bottom:6px}
+.tk{border:1.5px solid var(--bd);border-radius:13px;padding:13px 15px;margin-bottom:11px;background:var(--subtle);animation:popUp .35s ease both;position:relative;overflow:hidden}
+.tk::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--grape),var(--primary))}
+.tk .tk-n{font-family:var(--font-mono);font-size:9px;font-weight:700;color:var(--primary);letter-spacing:.1em}
+.tk .tk-t{font-family:var(--font-display);font-weight:800;font-size:15px;margin:3px 0 5px;letter-spacing:-.2px}
+.tk .tk-b{font-size:13px;line-height:1.6;color:var(--ink2)}
+.tk .tk-b b{color:var(--ink)}
+.tk-exam{margin-top:9px;background:#FFF8EE;border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:7px 11px;font-size:12px;color:#9A5A24;line-height:1.5}
+.tk-exam b{display:block;font-family:var(--font-mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+.fc-intro{font-size:12.5px;color:var(--ink3);margin-bottom:14px;line-height:1.5}
+.fc-intro .hand{font-size:16px;color:var(--grape);margin-right:4px}
+.fc{margin-bottom:11px;cursor:pointer}
+.fc-face{border-radius:13px;padding:15px 17px;min-height:118px;display:flex;flex-direction:column;justify-content:center;border:1.5px solid var(--bd);animation:cardFlip .32s ease}
+.fc-front{background:#fff}.fc-back{background:var(--primary-50);border-color:var(--primary-200)}
+@keyframes cardFlip{from{transform:scaleX(.9);opacity:.45}to{transform:scaleX(1);opacity:1}}
+.fc-tag{font-family:var(--font-mono);font-size:8.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);margin-bottom:6px}
+.fc-front .fc-tag{color:var(--grape)}
+.fc-q{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.4}
+.fc-a{font-size:13.5px;color:var(--primary-700);line-height:1.5;font-weight:500}
+.map-crumb{font-family:var(--font-mono);font-size:10px;color:var(--ink3);margin-bottom:16px}
+.map-crumb b{color:var(--primary)}
+.map-sec{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);margin:4px 0 9px}
+.mnode{display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:12px;border:1.5px solid var(--bd);margin-bottom:8px;background:#fff;transition:all .15s}
+.mnode.done{opacity:.7}
+.mnode.cur{border-color:var(--primary);background:var(--primary-50);box-shadow:var(--sh-sm)}
+.mnode.next:hover{border-color:var(--primary);transform:translateX(3px);cursor:pointer;box-shadow:var(--sh-sm)}
+.mnode .mi{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;font-size:14px}
+.mnode.done .mi{background:#EAF8F1;color:var(--good)}
+.mnode.cur .mi{background:var(--primary);color:#fff}
+.mnode.next .mi{background:var(--primary-50);color:var(--primary)}
+.mnode .mt{font-size:13.5px;font-weight:700;color:var(--ink)}
+.mnode .ms{font-family:var(--font-mono);font-size:10px;color:var(--ink3);margin-top:1px}
+.mnode .marr{margin-left:auto;color:var(--ink4)}
+.map-rail{height:16px;width:2px;background:var(--bd2);margin:0 0 8px 27px}
+.rel-grid{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.rel{display:flex;flex-direction:column;gap:2px;padding:9px 12px;border:1.5px solid var(--bd);border-radius:11px;background:var(--subtle);transition:all .15s;cursor:pointer;flex:1 1 45%}
+.rel:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--sh-sm)}
+.rel .rn{font-size:12.5px;font-weight:700;color:var(--ink)}
+.rel .rt{font-family:var(--font-mono);font-size:9px;color:var(--ink3)}
+
+/* timeline */
+.timeline{flex:none;height:32px;display:flex;align-items:center;gap:12px;padding:0 18px;background:rgba(255,255,255,.9);backdrop-filter:blur(24px) saturate(180%);border-top:1px solid var(--bd);z-index:18}
+.tl-track{flex:1;display:flex;gap:3px;height:9px;align-items:center}
+.tl-seg{flex:1;height:9px;border-radius:5px;background:var(--primary-50);overflow:hidden;cursor:pointer;position:relative;transition:height .12s}
+.tl-seg:hover{height:13px}
+.tl-seg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--grape),var(--primary));border-radius:5px;transition:width .12s linear}
+.tl-seg.done i{width:100%}
+.tl-time{font-family:var(--font-mono);font-size:10px;color:var(--ink3);flex:none;min-width:84px;text-align:right;letter-spacing:.02em}
+
+/* bottom bar */
+.bottombar{flex:none;background:rgba(255,255,255,.9);backdrop-filter:blur(24px) saturate(180%);border-top:1px solid var(--bd);display:flex;align-items:center;gap:14px;padding:12px 18px;z-index:20;min-height:74px}
+.bb-controls{display:flex;align-items:center;gap:8px;flex:none}
+.bb-play{width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:var(--sh-cta);transition:transform .15s}
+.bb-play:hover{transform:scale(1.05)}
+.bb-ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--ink2);transition:all .15s}
+.bb-ic:hover{background:var(--primary-50);color:var(--primary)}
+.bb-ic.on{color:var(--primary);background:var(--primary-50)}
+.bb-speed{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--ink2);border:1.5px solid var(--bd);border-radius:100px;padding:6px 11px;min-width:46px;text-align:center}
+.bb-speed:hover{border-color:var(--primary);color:var(--primary)}
+.caption{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0;padding:0 6px;max-height:128px}
+.cap-q{align-self:flex-start;background:var(--grape);color:#fff;font-size:12.5px;font-weight:600;border-radius:13px 13px 13px 4px;padding:6px 12px;max-width:80%;animation:popUp .25s ease both}
+.cap-q-img{display:inline-flex;align-items:center;gap:6px}
+.cap-answer{max-height:74px;overflow-y:auto;padding-right:6px}
+.cap-answer::-webkit-scrollbar{width:6px}.cap-answer::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px}
+.cap-row{display:flex;align-items:flex-start;gap:9px}
+.cap-tag{font-family:var(--font-hand);font-weight:700;font-size:16px;color:var(--primary);flex:none;padding-top:1px;display:flex;align-items:center;gap:5px}
+.cap-tag::before{content:'✦';font-size:11px}
+.cap-text{font-size:14.5px;line-height:1.5;color:var(--ink);flex:1}
+.cap-text .cursor{display:inline-block;width:2px;height:1em;background:var(--primary);margin-left:1px;vertical-align:text-bottom;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.cap-resume{align-self:flex-start;margin-top:4px;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:5px 12px}
+.cap-resume:hover{background:var(--primary-100)}
+.askbar{flex:none;display:flex;align-items:center;gap:8px}
+.attach{width:42px;height:42px;border-radius:50%;background:#fff;border:1.5px solid var(--bd);color:var(--ink2);display:grid;place-items:center;transition:all .15s}
+.attach:hover{border-color:var(--primary);color:var(--primary)}
+.mic{width:46px;height:46px;border-radius:50%;background:#fff;border:1.5px solid var(--bd);color:var(--grape);display:grid;place-items:center;transition:all .15s;position:relative}
+.mic:hover{border-color:var(--grape)}
+.mic.listening{background:var(--grape);color:#fff;border-color:var(--grape);animation:micPulse 1.1s ease-in-out infinite}
+@keyframes micPulse{0%,100%{box-shadow:0 0 0 0 rgba(133,78,245,.4)}50%{box-shadow:0 0 0 9px rgba(133,78,245,0)}}
+.ask-input{display:flex;align-items:center;background:#fff;border:1.5px solid var(--bd);border-radius:100px;padding:0 6px 0 16px;width:240px;transition:all .15s;box-shadow:var(--sh-sm)}
+.ask-input:focus-within{border-color:var(--primary);width:300px;box-shadow:var(--sh-cta)}
+.ask-input input{flex:1;border:none;outline:none;background:none;font-family:inherit;font-size:13.5px;padding:11px 0;color:var(--ink)}
+.ask-input input::placeholder{color:var(--ink3)}
+.ask-go{width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;flex:none}
+.ask-bubble{position:absolute;z-index:40;max-width:330px;background:#fff;border:1.5px solid var(--primary-200);border-radius:16px;padding:14px 16px;box-shadow:var(--sh-lg);animation:popUp .28s ease both}
+.ask-bubble .ab-tag{font-family:var(--font-hand);font-weight:700;font-size:16px;color:var(--primary);display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.ask-bubble .ab-tag::before{content:'✦';font-size:11px}
+.ask-bubble .ab-body{font-size:13.5px;line-height:1.6;color:var(--ink2)}
+.ask-bubble .ab-body b{color:var(--ink)}
+.ask-bubble .ab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ask-bubble .ab-chip{font-size:11.5px;font-weight:600;color:var(--primary);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:5px 11px;transition:all .15s}
+.ask-bubble .ab-chip:hover{background:var(--primary-100)}
+.ask-bubble .ab-close{position:absolute;top:10px;right:10px;color:var(--ink4);width:22px;height:22px;display:grid;place-items:center;border-radius:50%}
+.ask-bubble .ab-close:hover{background:var(--cool);color:var(--ink2)}
+.listen-toast{position:absolute;bottom:120px;left:50%;transform:translateX(-50%);background:var(--grape);color:#fff;border-radius:14px;padding:11px 18px;display:flex;align-items:center;gap:11px;box-shadow:var(--sh-lg);z-index:45;animation:toastIn .25s ease both;font-size:13.5px;font-weight:600}
+@keyframes toastIn{from{transform:translateX(-50%) translateY(8px)}to{transform:translateX(-50%) translateY(0)}}
+.listen-toast .dots span{display:inline-block;width:6px;height:6px;border-radius:50%;background:#fff;margin:0 1.5px;animation:sb2 .8s ease-in-out infinite}
+.listen-toast .dots span:nth-child(2){animation-delay:.2s}.listen-toast .dots span:nth-child(3){animation-delay:.4s}
+@keyframes sb2{0%,100%{opacity:.4;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(540deg);opacity:.9}}
+.save-toast{position:fixed;bottom:120px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:100px;padding:11px 20px;display:flex;align-items:center;gap:10px;box-shadow:var(--sh-lg);z-index:55;font-size:13.5px;font-weight:600;animation:toastIn .3s ease both}
+.save-toast .ck{width:22px;height:22px;border-radius:50%;background:var(--good);display:grid;place-items:center;color:#fff}
+@media (max-width:1080px){.rail{width:300px}.ask-input{width:150px}.ask-input:focus-within{width:190px}}
+/* ===== v2: watch vs interact separation, timeline markers, a11y, motion ===== */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.stage-card.interacting{box-shadow:0 0 0 2px var(--grape),0 10px 30px rgba(133,78,245,.20)}
+.chapter-pill.yourturn{color:#fff;background:var(--grape);border-color:var(--grape)}
+.yt-toast{position:absolute;top:54px;left:50%;transform:translateX(-50%);background:var(--grape);color:#fff;border-radius:100px;padding:8px 16px;font-size:12.5px;font-weight:700;box-shadow:var(--sh-lg);z-index:14;display:flex;align-items:center;gap:7px;animation:toastIn .25s ease both;pointer-events:none}
+.hb-actions{display:flex;align-items:center;gap:8px;flex:none}
+.skip-link{font-size:12px;font-weight:700;color:var(--ink3);background:none;border:none;padding:6px 4px}
+.skip-link:hover{color:var(--primary)}
+.bb-mode{display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--grape);background:rgba(133,78,245,.10);border:1.5px solid rgba(133,78,245,.30);border-radius:100px;padding:9px 15px}
+.tl-mark{flex:none;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--grape);display:grid;place-items:center;cursor:pointer;color:var(--grape);padding:0;transition:transform .12s}
+.tl-mark:hover{transform:scale(1.2)}
+.tl-mark.done{background:var(--grape);color:#fff}
+.tl-mark.cur{box-shadow:0 0 0 4px rgba(133,78,245,.18)}
+.tl-mark svg{width:9px;height:9px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}}
+
+/* =====================================================================
+   FACTORY ADDITIONS (renderer v1) — everything below is NEW.
+   The page itself is now a real, scrollable document (hero + article
+   generated by build/article.js); the player lives in #player-overlay.
+   ===================================================================== */
+:root{--bg:var(--cream)}
+
+/* (a) scrollable page; lock scroll only while the player overlay is open */
+body{background:var(--cream);background-image:var(--graph);background-size:var(--graph-sz);overflow:visible}
+body.player-open{overflow:hidden}
+#root{height:auto;width:auto;overflow:visible}
+
+/* (b) visible cover hero — WebEntry visual language, in normal page flow */
+.hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;max-width:1040px;margin:44px auto 26px;padding:48px 52px;background:#fff;border:1.5px solid var(--bd);border-radius:26px;box-shadow:var(--sh-lg)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--primary);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:5px 12px;margin-bottom:16px}
+.hero-crumb{font-family:var(--font-mono);font-size:11px;color:var(--ink3);letter-spacing:.04em;margin-bottom:8px}
+.hero h1{font-family:var(--font-display);font-weight:800;font-size:46px;line-height:1.05;letter-spacing:-1.6px;color:var(--ink)}
+.hero h1 .grad{background:linear-gradient(90deg,#854EF5,#4E4DF4 55%,#11B5C9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink2);margin-top:6px}
+.hero-blurb{font-size:15.5px;line-height:1.65;color:var(--ink2);margin-top:16px;max-width:480px}
+.sat-align{margin-top:20px;background:var(--subtle);border:1.5px solid var(--bd);border-radius:14px;padding:13px 16px 9px}
+.sat-align .sa-h{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:9px}
+.sat-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--primary-700);background:var(--primary-50);border:1px solid var(--primary-200);border-radius:100px;padding:4px 11px;margin:0 6px 7px 0;white-space:nowrap}
+.sat-badge.code{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sat-badge.tier{background:#FFF3EA;color:#B05A1F;border-color:rgba(245,135,78,.4)}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-top:24px;flex-wrap:wrap}
+.cta-btn{display:inline-flex;align-items:center;gap:9px;font-family:inherit;font-weight:700;font-size:16px;color:#fff;background:var(--primary);border:none;border-radius:100px;padding:14px 26px;box-shadow:var(--sh-cta);cursor:pointer;transition:transform .15s,box-shadow .15s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(78,77,244,.4)}
+.hero-meta{font-family:var(--font-mono);font-size:12px;color:var(--ink3)}
+.hero-sia{display:flex;justify-content:center}
+@media (max-width:880px){.hero{display:block;margin:16px;padding:32px 26px}.hero h1{font-size:36px}.hero-sia{margin-top:26px}}
+
+/* (c) visible lesson article */
+.article{max-width:760px;margin:0 auto;padding:26px 24px 56px;font-size:16px;line-height:1.75;color:var(--ink2)}
+.article h2{font-family:var(--font-display);font-weight:800;font-size:25px;letter-spacing:-.6px;color:var(--ink);margin:46px 0 14px;display:flex;align-items:center;gap:12px}
+.article h2::before{content:'';width:5px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--grape),var(--primary));flex:none}
+.article h3{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--ink);margin:20px 0 6px}
+.article p{margin:0 0 14px}
+.article p.lead{font-size:18px;line-height:1.7}
+.article strong,.article b{color:var(--ink)}
+.article ul,.article ol{padding-left:24px;margin:0 0 16px}
+.article li{margin-bottom:10px}
+.article li::marker{color:var(--primary);font-weight:700}
+.article .takeaway-list li{margin-bottom:12px}
+.faq-item{background:#fff;border:1.5px solid var(--bd);border-radius:14px;padding:15px 18px;margin-bottom:12px;box-shadow:var(--sh-sm)}
+.faq-item h3{margin:0 0 6px;font-size:15.5px}
+.faq-item p{margin:0;font-size:14.5px;line-height:1.65}
+.nav-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px;padding:0;list-style:none}
+.nav-links a,.nav-links .nl{display:flex;flex-direction:column;gap:3px;padding:13px 16px;background:#fff;border:1.5px solid var(--bd);border-radius:13px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14px;box-shadow:var(--sh-sm);transition:all .15s}
+.nav-links a:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--sh-md)}
+.nav-links .nl-k{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.nav-links .nl-m{font-family:var(--font-mono);font-size:10px;font-weight:400;color:var(--ink3)}
+@media (max-width:640px){.nav-links{grid-template-columns:1fr}}
+.related-chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.related-chips>*{display:inline-flex;align-items:baseline;gap:7px;font-size:13px;font-weight:600;color:var(--ink2);background:#fff;border:1.5px solid var(--bd);border-radius:100px;padding:7px 14px;text-decoration:none;transition:all .15s}
+.related-chips>a:hover{border-color:var(--primary);color:var(--primary)}
+.related-chips .tag{font-family:var(--font-mono);font-size:9.5px;color:var(--ink3)}
+.page-footer{max-width:760px;margin:0 auto;padding:24px 24px 70px;border-top:1.5px solid var(--bd);font-family:var(--font-mono);font-size:11.5px;color:var(--ink3);line-height:1.9}
+.page-footer a{color:var(--primary);text-decoration:none}
+.page-footer a:hover{text-decoration:underline}
+
+/* (d) fullscreen player overlay — hosts the existing .player layout unchanged */
+#player-overlay{position:fixed;inset:0;z-index:50;background:var(--bg)}
+
+/* launch overlay (the 5-step "Generating your interactive lesson" card) */
+.launch-overlay{position:fixed;inset:0;z-index:55;display:grid;place-items:center;padding:24px;background:rgba(254,252,247,.93);backdrop-filter:blur(14px) saturate(160%)}
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<header class="hero">
+  <div class="hero-eyebrow">SAT Math · Interactive lesson</div>
+  <div class="hero-crumb">Problem-Solving and Data Analysis · Percentages</div>
+  <h1>Percent Change: <span class="grad">Divide by the Original</span></h1>
+  <p class="hero-sub">Watch a 40 → 50 price jump become +25%, dodge the divide-by-the-new-value trap, and see why +10% then −10% never cancels.</p>
+  <p class="hero-blurb">Two bars, one rule: divide the change by the ORIGINAL. Drag the new bar yourself, hit percent targets, and walk away with the multiplier shortcut the SAT rewards.</p>
+  <div class="sat-align">
+    <div class="sat-align-label">College Board alignment</div>
+    <span class="sat-badge">Problem-Solving and Data Analysis</span> <span class="sat-badge">Percentages</span> <span class="sat-badge">Tier 2 → SAT M</span> <span class="sat-badge">PSDA-PCT-09</span> <span class="sat-badge">SPR / Desmos</span>
+  </div>
+  <div class="hero-actions">
+    <button class="cta-btn" id="launch-btn">▶ Start the interactive lesson</button>
+    <span class="hero-duration">≈ 4 min · narrated</span>
+  </div>
+  <div class="hero-sia" id="hero-sia" aria-hidden="true"></div>
+</header>
+
+<main id="lesson-article" class="article">
+  <p class="article-intro">Percent change measures a jump relative to where it started: subtract the old value from the new one, then divide by the ORIGINAL and multiply by 100. A price going from 40 to 50 is a +25% increase (10/40 = 0.25), which is the same as multiplying by 1.25. The most common SAT mistake is dividing by the new value instead of the original.</p>
+  <h2>Key takeaways</h2>
+  <ul>
+    <li><strong>The change is new − old:</strong> The raw change is new − old: 50 − 40 = 10. The sign carries direction — positive is an increase, negative is a decrease.</li>
+    <li><strong>Divide by the ORIGINAL:</strong> Percent change = (new − old) / old × 100%. The denominator is always the old value — the base: 10/40 = +25%. <strong>Exam tip:</strong> SAT wording: 'increased by p%' means multiply by (1 + p/100); 'decreased by p%' means ×(1 − p/100).</li>
+    <li><strong>The wrong-base trap:</strong> Dividing by the NEW value gives 10/50 = 20% — plausible and wrong. The base is where you STARTED, and on multiple-choice questions the SAT plants this exact wrong answer in the choices.</li>
+    <li><strong>Direction and chains:</strong> 40 → 50 is +25% but 50 → 40 is only −20% — the base changed. And chains multiply: +10% then −10% = ×1.1 × 0.9 = ×0.99, never a wash. <strong>Exam tip:</strong> To undo a +p% change, divide by (1 + p/100) — do not subtract p% of the new total.</li>
+  </ul>
+  <h2>Lesson transcript</h2>
+  <ol>
+    <li>A price goes from 40 to 50. Everyone can see it went up by 10 — but how big is that jump, really? Is it a big deal or barely noticeable? The raw number 10 cannot tell you on its own. Percent change is the tool that answers this, and the SAT tests it constantly. Watch the two bars.</li>
+    <li>First, the raw change: new minus old. 50 minus 40 is 10 — that is this green segment sticking out past the old bar. The sign carries direction: positive means an increase, negative means a decrease. But 10 by itself is not the answer. We need to compare it to something.</li>
+    <li>Here is the whole rule. To turn that 10 into a percent, divide it by the ORIGINAL value — the old bar, the base. 10 divided by 40 is 0.25, so the price rose 25 percent. Percent change is always change over original, times 100. The denominator is where you STARTED, every single time.</li>
+    <li>There is a second way to say the same thing: a plus 25 percent change means the new value is 1.25 times the old one. Check it — 40 times 1.25 is exactly 50. That multiplier, 1 plus p over 100, is the fastest tool on the SAT: one multiplication instead of compute, then add.</li>
+    <li>Now the classic trap. Divide by the NEW number instead, and you get 10 over 50 — 20 percent. It looks plausible, and it is wrong: 50 was never the starting point. On multiple-choice percent questions, the SAT writes a choice for exactly this mistake. The base is always the original — watch the highlight snap back where it belongs.</li>
+    <li>Your turn. Both bars start at 60 — old and new are equal, so the change is zero. Grab the right edge of the new bar, or use the slider, and stretch it until the readout shows exactly plus 25 percent. Think first: 25 percent of 60 is how much?</li>
+    <li>Now run it backwards: a price goes from 50 down to 40. The change is minus 10 — but the base is now 50, because 50 is where THIS move started. Minus 10 over 50 is minus 20 percent. Not minus 25. Going up from 40 to 50 was plus 25 percent; coming back down is only minus 20 — because the base changed.</li>
+    <li>Last trap: chains. Start at 100, go up 10 percent — times 1.1 — and you land at 110. Now drop 10 percent. But 10 percent of 110 is 11, not 10, so you fall to 99. Plus 10 then minus 10 is times 1.1 times 0.9 — times 0.99 overall, a net 1 percent loss. Successive changes multiply; they never just cancel.</li>
+    <li>Time to lock it in. The old bar is fixed at 40. I will call out a percent change — you drag the new bar until the readout matches. Three rounds: up 50 percent, down 25 percent, then double it. Use the rule: take that percent of 40, then add or subtract.</li>
+    <li>You now own the one formula this whole skill runs on: percent change equals new minus old, over the ORIGINAL, times 100. 40 to 50 is plus 25 percent — times 1.25 — and you never divide by the new number. I have saved this picture, turned it into 6 flashcards, and lined up what comes next.</li>
+  </ol>
+  <h2>Frequently asked questions</h2>
+  <h3>Why divide by the original and not the new value?</h3><p>Percent change measures the jump relative to where it STARTED. From 40 to 50 the jump is 10, and 10/40 = 25%. Dividing by the new value (10/50 = 20%) answers a different question — and on multiple-choice questions it is the most common wrong answer the SAT plants in the choices.</p>
+  <h3>What is the percent change formula?</h3><p>Percent change = (new − old) / old × 100%. Keep the sign: a positive result is an increase, a negative result is a decrease. The denominator is always the original value.</p>
+  <h3>What does a multiplier like ×1.25 mean?</h3><p>A +25% change makes the new value 1.25 times the old one: new = old × (1 + 25/100). It is the same fact as the formula, compressed into one multiplication — 40 × 1.25 = 50.</p>
+  <h3>Is +10% then −10% back to the start?</h3><p>No. The factors multiply: ×1.1 then ×0.9 is ×0.99 overall — a net 1% loss. The −10% acts on the larger base of 110, so it removes 11, not 10. Successive percent changes never just cancel.</p>
+  <h3>Why is 40 → 50 a +25% increase but 50 → 40 only a −20% decrease?</h3><p>Because the base changed. Going up, the change of 10 is measured against 40: +25%. Coming down, the same 10 is measured against 50: −20%. Up and down by the same amount are NOT the same percent.</p>
+  <h3>How are percent change answers entered on the SAT?</h3><p>This skill appears as SPR (grid-in) questions: for a 'what percent' answer, enter 25, not 0.25 and not 25%. The built-in Desmos calculator can do the arithmetic, but choosing the right base is on you.</p>
+  <h2>Prerequisites and what's next</h2>
+  <h3>Before this lesson</h3>
+  <ul class="map-prereq">
+    <li><span>Percent of a number (forward)</span> <span class="done-mark" title="done">✓</span></li>
+  </ul>
+  <h3>Up next</h3>
+  <ul class="map-next">
+    <li><span>'Increased by' vs 'increased to' vs 'is __% of'</span> · lesson · ≈ 5 min</li>
+    <li><span>Percentage points vs percent change</span> · lesson · ≈ 6 min</li>
+    <li><span>Successive percent changes — multiply the factors</span> · lesson · ≈ 6 min</li>
+  </ul>
+  <h2>Related</h2>
+  <div class="related-chips">
+    <a class="related-chip" href="../../algebra/linear-equations-in-two-variables/slope-rise-over-run.html">Slope: Rise over Run <em class="related-tag">Algebra</em></a>
+    <a class="related-chip" href="../../advanced-math/nonlinear-equations-in-one-variable-and-systems-of-equations-in-two-variables/discriminant-number-of-solutions.html">Discriminant: Number of Solutions <em class="related-tag">Advanced Math</em></a>
+    <a class="related-chip" href="../../geometry-trigonometry/right-triangles-and-trigonometry/sine-cosine-unit-circle.html">Sine &amp; Cosine on the Unit Circle <em class="related-tag">Geometry &amp; Trigonometry</em></a>
+    <span class="related-chip">Reverse percent: undoing tax and markup <em class="related-tag">Percentages</em></span>
+  </div>
+  <footer class="page-footer">
+    <span class="mono">PSDA-PCT-09</span> · 
+    <a href="https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change">https://asksia.ai/learn/problem-solving-data-analysis/percentages/percent-change</a> · 
+    Part of the AskSia SAT Math ladder — 372 sessions.
+  </footer>
+</main>
+<noscript><p style="max-width:680px;margin:40px auto;font-family:sans-serif;line-height:1.6">This is an interactive lesson on <strong>Percent Change: Divide by the Original</strong>. The player requires JavaScript; the full lesson text, transcript and FAQ are on this page above.</p></noscript>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script>window.LESSON_DATA = {"meta":{"slug":"percent-change","urlPath":"/learn/problem-solving-data-analysis/percentages/percent-change","title":"Percent Change: Divide by the Original","description":"Percent change = (new − old) / old × 100%. See why you always divide by the original value, why +25% means ×1.25, and why +10% then −10% does not cancel.","keywords":["percent change formula","percent increase decrease","percent change calculator concept"],"durationLabel":"≈ 4 min · narrated","intro":"Percent change measures a jump relative to where it started: subtract the old value from the new one, then divide by the ORIGINAL and multiply by 100. A price going from 40 to 50 is a +25% increase (10/40 = 0.25), which is the same as multiplying by 1.25. The most common SAT mistake is dividing by the new value instead of the original.","sat":{"domain":"Problem-Solving and Data Analysis","skillCode":"percentages","skillName":"Percentages","sessionId":"percentages.percent-change-increase-decrease--compute","code":"PSDA-PCT-09","tier":"2","difficultyIndex":5,"preparesFor":"M","formats":["SPR","Desmos"]},"cover":{"eyebrow":"SAT Math · Interactive lesson","crumb":"Problem-Solving and Data Analysis · Percentages","h1Parts":["Percent Change:","Divide by the Original"],"sub":{"en":"Watch a 40 → 50 price jump become +25%, dodge the divide-by-the-new-value trap, and see why +10% then −10% never cancels.","zh":"看一次 40 → 50 的涨价如何变成 +25%，避开「除以新值」的陷阱，并看清为什么先 +10% 再 −10% 永远不会抵消。"},"blurb":{"en":"Two bars, one rule: divide the change by the ORIGINAL. Drag the new bar yourself, hit percent targets, and walk away with the multiplier shortcut the SAT rewards.","zh":"两根条，一条规则：变化量除以「原始值」。亲手拖动新条、命中百分比目标，把 SAT 最看重的乘数捷径带回家。"},"launchSteps":["Reading the topic — percent change","Drawing the old and new bars","Wiring the change segment and base highlight","Loading the trap and the chain demo","Preparing your drag targets and flashcards"]},"terms":[{"name":"Percent change","def":"The change relative to the starting value, as a percent: (new − old) / old × 100%. Positive means an increase, negative a decrease."},{"name":"Base","def":"The value you divide by — always the ORIGINAL (starting) value, never the new one."},{"name":"Multiplier","def":"The factor 1 + p/100 that turns the old value into the new one in one step: +25% means ×1.25, −20% means ×0.80."},{"name":"Successive change","def":"Two or more percent changes applied in a row. Their multipliers multiply: +10% then −10% is ×1.1 × 0.9 = ×0.99, a net 1% loss."}],"faq":[{"q":{"en":"Why divide by the original and not the new value?","zh":"为什么除以原始值，而不是新值？"},"a":{"en":"Percent change measures the jump relative to where it STARTED. From 40 to 50 the jump is 10, and 10/40 = 25%. Dividing by the new value (10/50 = 20%) answers a different question — and on multiple-choice questions it is the most common wrong answer the SAT plants in the choices.","zh":"百分比变化衡量的是相对「起点」的变化幅度。从 40 到 50 跳了 10，10 ÷ 40 = 25%。除以新值（10 ÷ 50 = 20%）回答的是另一个问题——这也是 SAT 的选择题最爱埋进选项里的错误答案。"}},{"q":{"en":"What is the percent change formula?","zh":"百分比变化的公式是什么？"},"a":{"en":"Percent change = (new − old) / old × 100%. Keep the sign: a positive result is an increase, a negative result is a decrease. The denominator is always the original value.","zh":"百分比变化 = (新 − 旧) ÷ 旧 × 100%。保留符号：结果为正是增加，为负是减少。分母永远是原始值。"}},{"q":{"en":"What does a multiplier like ×1.25 mean?","zh":"像 ×1.25 这样的乘数是什么意思？"},"a":{"en":"A +25% change makes the new value 1.25 times the old one: new = old × (1 + 25/100). It is the same fact as the formula, compressed into one multiplication — 40 × 1.25 = 50.","zh":"+25% 的变化意味着新值是旧值的 1.25 倍：新 = 旧 × (1 + 25/100)。它和公式说的是同一件事，只是压缩成了一次乘法——40 × 1.25 = 50。"}},{"q":{"en":"Is +10% then −10% back to the start?","zh":"先 +10% 再 −10%，会回到起点吗？"},"a":{"en":"No. The factors multiply: ×1.1 then ×0.9 is ×0.99 overall — a net 1% loss. The −10% acts on the larger base of 110, so it removes 11, not 10. Successive percent changes never just cancel.","zh":"不会。因子要相乘：先 ×1.1 再 ×0.9，总共是 ×0.99——净亏 1%。那个 −10% 作用在更大的基数 110 上，所以减掉的是 11 而不是 10。连续百分比变化永远不会刚好抵消。"}},{"q":{"en":"Why is 40 → 50 a +25% increase but 50 → 40 only a −20% decrease?","zh":"为什么 40 → 50 是 +25%，而 50 → 40 只是 −20%？"},"a":{"en":"Because the base changed. Going up, the change of 10 is measured against 40: +25%. Coming down, the same 10 is measured against 50: −20%. Up and down by the same amount are NOT the same percent.","zh":"因为基数变了。上涨时，10 的变化量以 40 为基数：+25%。下跌时，同样的 10 以 50 为基数：−20%。涨跌同样的数量，百分比并不相同。"}},{"q":{"en":"How are percent change answers entered on the SAT?","zh":"SAT 上百分比变化的答案怎么填？"},"a":{"en":"This skill appears as SPR (grid-in) questions: for a 'what percent' answer, enter 25, not 0.25 and not 25%. The built-in Desmos calculator can do the arithmetic, but choosing the right base is on you.","zh":"这个技能以 SPR（填空题）形式出现：问「百分之几」时填 25，不是 0.25，也不是 25%。内置的 Desmos 计算器能帮你算，但选对基数得靠你自己。"}}]},"engine":{"id":"bar-model","config":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price"}},"STEPS":[{"id":"the-jump","chapter":"The idea","pose":"WAVE","dur":19000,"say":{"en":"A price goes from 40 to 50. Everyone can see it went up by 10 — but how big is that jump, really? Is it a big deal or barely noticeable? The raw number 10 cannot tell you on its own. Percent change is the tool that answers this, and the SAT tests it constantly. Watch the two bars.","zh":"一个价格从 40 涨到 50。谁都看得出涨了 10——可这一跳到底有多大？是大事，还是几乎可以忽略？光看 10 这个数字是判断不了的。百分比变化就是用来回答这个问题的工具，SAT 也反复考它。看好这两根条。"},"ops":[{"op":"reset"},{"op":"animate","state":{"showOld":1},"ms":700,"delay":200},{"op":"animate","state":{"showNew":1},"ms":700,"delay":900}]},{"id":"the-change","chapter":"The idea","pose":"HAPPY","dur":18000,"takeaway":1,"say":{"en":"First, the raw change: new minus old. 50 minus 40 is 10 — that is this green segment sticking out past the old bar. The sign carries direction: positive means an increase, negative means a decrease. But 10 by itself is not the answer. We need to compare it to something.","zh":"第一步，先算变化量：新值减旧值。50 减 40 等于 10——就是新条上多出来的这一段绿色。符号代表方向：正号是增加，负号是减少。但 10 本身还不是答案，我们得拿它和某个东西比一比。"},"ops":[{"op":"set","state":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":0,"showBaseHighlight":0,"showReadout":0,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"animate","state":{"showChange":1},"ms":700,"delay":300}]},{"id":"divide-by-original","chapter":"The rule","pose":"THINK","dur":22000,"pulse":true,"takeaway":2,"say":{"en":"Here is the whole rule. To turn that 10 into a percent, divide it by the ORIGINAL value — the old bar, the base. 10 divided by 40 is 0.25, so the price rose 25 percent. Percent change is always change over original, times 100. The denominator is where you STARTED, every single time.","zh":"整条规则就在这里。要把这个 10 变成百分比，就用它除以「原始值」——旧的那根条，也就是基数。10 除以 40 等于 0.25，所以价格上涨了 25%。百分比变化永远是：变化量除以原始值，再乘 100。分母永远是你出发的地方，一次都不例外。"},"ops":[{"op":"set","state":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":0,"showReadout":0,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"animate","state":{"showBaseHighlight":1},"ms":700},{"op":"animate","state":{"showReadout":1},"ms":700,"delay":900}]},{"id":"the-multiplier","chapter":"The rule","pose":"CONTENT","dur":19000,"say":{"en":"There is a second way to say the same thing: a plus 25 percent change means the new value is 1.25 times the old one. Check it — 40 times 1.25 is exactly 50. That multiplier, 1 plus p over 100, is the fastest tool on the SAT: one multiplication instead of compute, then add.","zh":"同一件事还有第二种说法：+25% 的变化，意味着新值是旧值的 1.25 倍。验证一下——40 乘 1.25 正好是 50。这个乘数——1 加上「p 除以 100」——是 SAT 上最快的工具：一次乘法，省掉先算再加的两步。"},"ops":[{"op":"set","state":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":1,"showReadout":1,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"animate","state":{"showMultiplier":1},"ms":700,"delay":400}]},{"id":"the-trap","chapter":"The trap","pose":"OOPS","dur":22000,"takeaway":3,"say":{"en":"Now the classic trap. Divide by the NEW number instead, and you get 10 over 50 — 20 percent. It looks plausible, and it is wrong: 50 was never the starting point. On multiple-choice percent questions, the SAT writes a choice for exactly this mistake. The base is always the original — watch the highlight snap back where it belongs.","zh":"现在是经典陷阱。如果改成除以「新」的那个数，你会得到 10 除以 50——20%。看起来挺像回事，但它是错的：50 从来就不是起点。SAT 的选择题会专门为这个错误设一个选项。基数永远是原始值——看，高亮跳回它该在的地方了。"},"ops":[{"op":"set","state":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":1,"showReadout":1,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"animate","state":{"baseIsNew":1},"ms":600,"delay":600},{"op":"animate","state":{"baseIsNew":0},"ms":600,"delay":15000}]},{"id":"drag-to-25","chapter":"Your turn","pose":"HAPPY","dur":0,"pulse":true,"say":{"en":"Your turn. Both bars start at 60 — old and new are equal, so the change is zero. Grab the right edge of the new bar, or use the slider, and stretch it until the readout shows exactly plus 25 percent. Think first: 25 percent of 60 is how much?","zh":"轮到你了。两根条都从 60 出发——新旧相等，变化是零。抓住新条的右端，或者用滑块，把它拉到读数正好显示 +25% 为止。先想一想：60 的 25% 是多少？"},"ops":[{"op":"reset"},{"op":"set","state":{"oldVal":60,"newVal":60,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":1,"showReadout":1,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"mode","v":"dragNew"}],"interactive":{"type":"drag","mode":"dragNew","hint":{"en":"Drag the new bar until the change is exactly +25%","zh":"拖动新条，让变化正好等于 +25%"},"control":{"bind":"newVal","min":0,"max":100,"step":1,"label":{"en":"new value","zh":"新值"},"display":"num","toState":null},"done":{"kind":"reach","measure":"pct","target":25,"tol":1.5},"doneSay":{"en":"75 — because 15 more on a base of 60 is 25%","zh":"75——因为在 60 的基数上多出 15，正好是 25%"}}},{"id":"going-down","chapter":"Direction matters","pose":"THINK","dur":23000,"takeaway":4,"say":{"en":"Now run it backwards: a price goes from 50 down to 40. The change is minus 10 — but the base is now 50, because 50 is where THIS move started. Minus 10 over 50 is minus 20 percent. Not minus 25. Going up from 40 to 50 was plus 25 percent; coming back down is only minus 20 — because the base changed.","zh":"现在反着来：价格从 50 跌到 40。变化量是 −10——但这一次基数是 50，因为「这一步」是从 50 出发的。−10 除以 50 是 −20%。不是 −25%。从 40 涨到 50 是 +25%，跌回去却只算 −20%——因为基数变了。"},"ops":[{"op":"reset"},{"op":"set","state":{"oldVal":50,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":0,"showBaseHighlight":0,"showReadout":0,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"animate","state":{"newVal":40},"ms":900,"delay":700},{"op":"animate","state":{"showChange":1,"showBaseHighlight":1,"showReadout":1},"ms":700,"delay":1900}]},{"id":"chains-dont-cancel","chapter":"Chains","pose":"HAPPY","dur":25000,"say":{"en":"Last trap: chains. Start at 100, go up 10 percent — times 1.1 — and you land at 110. Now drop 10 percent. But 10 percent of 110 is 11, not 10, so you fall to 99. Plus 10 then minus 10 is times 1.1 times 0.9 — times 0.99 overall, a net 1 percent loss. Successive changes multiply; they never just cancel.","zh":"最后一个陷阱：连续变化。从 100 出发，先涨 10%——乘 1.1——到 110。再跌 10%。可 110 的 10% 是 11，不是 10，所以落到 99。先 +10% 再 −10%，等于乘 1.1 再乘 0.9——总共乘 0.99，净亏 1%。连续变化要相乘，永远不会刚好抵消。"},"ops":[{"op":"reset"},{"op":"set","state":{"oldVal":100,"newVal":100,"chainVal":110,"unitsMax":120,"showOld":1,"showNew":1,"showChange":0,"showBaseHighlight":0,"showReadout":0,"showMultiplier":0,"baseIsNew":0,"showChain":0,"labelsOld":"start","labelsNew":"after +10%","labelsChain":"after −10%"}},{"op":"animate","state":{"newVal":110},"ms":800,"delay":700},{"op":"animate","state":{"showChain":1},"ms":600,"delay":1900},{"op":"animate","state":{"chainVal":99},"ms":900,"delay":2700}]},{"id":"build-targets","chapter":"Lock it in","pose":"HAPPY","dur":0,"say":{"en":"Time to lock it in. The old bar is fixed at 40. I will call out a percent change — you drag the new bar until the readout matches. Three rounds: up 50 percent, down 25 percent, then double it. Use the rule: take that percent of 40, then add or subtract.","zh":"来巩固一下。旧条固定在 40。我说一个百分比变化——你把新条拖到读数对上为止。三轮：涨 50%、跌 25%、再翻倍。用规则想：先算 40 的对应百分比，再加上或减去。"},"ops":[{"op":"reset"},{"op":"set","state":{"oldVal":40,"newVal":40,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":1,"showReadout":1,"showMultiplier":0,"baseIsNew":0,"showChain":0,"chainVal":0}},{"op":"mode","v":"dragNew"}],"interactive":{"type":"build","mode":"dragNew","doneHint":{"en":"Drag the new bar to hit each target change","zh":"拖动新条，命中每一个目标变化"},"stages":[{"measure":"pct","target":50,"tol":2,"label":"+50%","hint":{"en":"Stretch the new bar until the change reads +50%","zh":"把新条拉长，让变化正好是 +50%"},"ok":{"en":"60 — half of 40 is 20 more, so 40 + 20 = 60.","zh":"60——40 的一半是多出 20，40 + 20 = 60。"},"miss":{"en":"You are at {value}% — the target is {target}%. 50% of 40 is 20, so aim for 60.","zh":"你现在在 {value}%——目标是 {target}%。40 的 50% 是 20，所以瞄准 60。"},"pose":"CELEBRATE"},{"measure":"pct","target":-25,"tol":2,"label":"−25%","hint":{"en":"Now shrink it: drag the new bar to −25%","zh":"现在缩短它：把新条拖到 −25%"},"ok":{"en":"30 — a quarter of 40 is 10 less, so 40 − 10 = 30.","zh":"30——40 的四分之一是少掉 10，40 − 10 = 30。"},"miss":{"en":"You are at {value}% — the target is {target}%. 25% of 40 is 10 below, so aim for 30.","zh":"你现在在 {value}%——目标是 {target}%。40 的 25% 是 10，往下减 10，所以瞄准 30。"},"pose":"HAPPY"},{"measure":"pct","target":100,"tol":2,"label":"double = +100%","hint":{"en":"Last one: double the old value — that is +100%","zh":"最后一个：让它翻倍——也就是 +100%"},"ok":{"en":"80 — doubling is +100%, multiplier ×2. You own this now.","zh":"80——翻倍就是 +100%，乘数是 ×2。这下你彻底掌握了。"},"miss":{"en":"You are at {value}% — the target is {target}%. Double 40 means 80.","zh":"你现在在 {value}%——目标是 {target}%。40 的两倍就是 80。"},"pose":"CELEBRATE"}]}},{"id":"recap","chapter":"Recap","pose":"HEART","dur":21000,"flags":["recap"],"say":{"en":"You now own the one formula this whole skill runs on: percent change equals new minus old, over the ORIGINAL, times 100. 40 to 50 is plus 25 percent — times 1.25 — and you never divide by the new number. I have saved this picture, turned it into 6 flashcards, and lined up what comes next.","zh":"这整套技能只靠一个公式，现在它是你的了：百分比变化 = (新 − 旧) ÷ 原始值 × 100。40 到 50 是 +25%——也就是乘 1.25——而且永远不要除以新的那个数。我已经把这幅图存好、做成了 6 张闪卡，并排好了接下来要学的内容。"},"ops":[{"op":"reset"},{"op":"set","state":{"oldVal":40,"newVal":50,"unitsMax":100,"labelsOld":"old price","labelsNew":"new price","showOld":1,"showNew":1,"showChange":1,"showBaseHighlight":1,"showReadout":1,"showMultiplier":1,"baseIsNew":0,"showChain":0,"chainVal":0}}]}],"TAKEAWAYS":[{"t":{"en":"The change is new − old","zh":"变化量 = 新 − 旧"},"body":{"en":"The raw change is <b>new − old</b>: 50 − 40 = 10. The sign carries direction — positive is an increase, negative is a decrease.","zh":"变化量是<b>新值 − 旧值</b>：50 − 40 = 10。符号代表方向——正是增加，负是减少。"}},{"t":{"en":"Divide by the ORIGINAL","zh":"除以「原始值」"},"body":{"en":"Percent change = <b>(new − old) / old × 100%</b>. The denominator is always the old value — the base: 10/40 = <b>+25%</b>.","zh":"百分比变化 = <b>(新 − 旧) ÷ 旧 × 100%</b>。分母永远是旧值——基数：10 ÷ 40 = <b>+25%</b>。"},"exam":{"en":"SAT wording: 'increased by p%' means multiply by <b>(1 + p/100)</b>; 'decreased by p%' means ×(1 − p/100).","zh":"SAT 题面：「increased by p%」就是乘以 <b>(1 + p/100)</b>；「decreased by p%」就是乘以 (1 − p/100)。"}},{"t":{"en":"The wrong-base trap","zh":"基数用错的陷阱"},"body":{"en":"Dividing by the NEW value gives 10/50 = <b>20%</b> — plausible and wrong. The base is where you STARTED, and on multiple-choice questions the SAT plants this exact wrong answer in the choices.","zh":"除以「新值」得到 10 ÷ 50 = <b>20%</b>——看着像、其实错。基数是你出发的地方，SAT 的选择题会把这个错误答案原样埋进选项里。"}},{"t":{"en":"Direction and chains","zh":"方向与连续变化"},"body":{"en":"40 → 50 is +25% but 50 → 40 is only <b>−20%</b> — the base changed. And chains multiply: +10% then −10% = ×1.1 × 0.9 = <b>×0.99</b>, never a wash.","zh":"40 → 50 是 +25%，但 50 → 40 只是 <b>−20%</b>——因为基数变了。连续变化要相乘：先 +10% 再 −10% = ×1.1 × 0.9 = <b>×0.99</b>，永远不会刚好抵消。"},"exam":{"en":"To undo a +p% change, divide by (1 + p/100) — do not subtract p% of the new total.","zh":"要撤销一次 +p% 的变化，用除以 (1 + p/100)——不要再从新总数里减 p%。"}}],"FLASHCARDS":[{"q":{"en":"What is the percent change formula?","zh":"百分比变化的公式是什么？"},"a":{"en":"(new − old) / old × 100% — divide by the ORIGINAL.","zh":"(新 − 旧) ÷ 旧 × 100%——除以「原始值」。"}},{"q":{"en":"A price goes 40 → 50. Percent change?","zh":"价格从 40 到 50，百分比变化是多少？"},"a":{"en":"+25% — it is 10/40, not 10/50.","zh":"+25%——是 10 ÷ 40，不是 10 ÷ 50。"}},{"q":{"en":"What multiplier matches a +25% increase?","zh":"+25% 的增长对应什么乘数？"},"a":{"en":"×1.25, from 1 + 25/100.","zh":"×1.25，来自 1 + 25/100。"}},{"q":{"en":"A price goes 50 → 40. Percent change?","zh":"价格从 50 到 40，百分比变化是多少？"},"a":{"en":"−20% — the base for this move is 50.","zh":"−20%——这一步的基数是 50。"}},{"q":{"en":"+10% then −10% — what is the net effect?","zh":"先 +10% 再 −10%，净效果是什么？"},"a":{"en":"×1.1 × 0.9 = ×0.99, a net 1% loss. Changes multiply.","zh":"×1.1 × 0.9 = ×0.99，净亏 1%。变化要相乘。"}},{"q":{"en":"SAT says 'increased by p%' — what do you do?","zh":"SAT 写「increased by p%」——你该怎么做？"},"a":{"en":"Multiply by (1 + p/100).","zh":"乘以 (1 + p/100)。"}}],"MAP":{"breadcrumb":["Problem-Solving and Data Analysis","Percentages","Percent change"],"prereq":[{"name":"Percent of a number (forward)","done":true}],"current":"Percent change: divide by the original","next":[{"name":"'Increased by' vs 'increased to' vs 'is __% of'","kind":"lesson","min":5},{"name":"Percentage points vs percent change","kind":"lesson","min":6},{"name":"Successive percent changes — multiply the factors","kind":"lesson","min":6}]},"RELATED":[{"name":"Slope: Rise over Run","tag":"Algebra","slug":"slope-rise-over-run"},{"name":"Discriminant: Number of Solutions","tag":"Advanced Math","slug":"discriminant-number-of-solutions"},{"name":"Sine & Cosine on the Unit Circle","tag":"Geometry & Trigonometry","slug":"sine-cosine-unit-circle"},{"name":"Reverse percent: undoing tax and markup","tag":"Percentages"}],"REGION_ANSWERS":{"old-bar":{"pose":"CONTENT","a":"This slate bar is the <b>old value — the base</b>. Every percent in this lesson is measured against it: divide the change by THIS bar, never by the new one.","chips":["Why divide by the original?","What is the base?"]},"new-bar":{"pose":"HAPPY","a":"The purple bar is the <b>new value</b>. Its right edge is the part you drag. new = old × (1 + p/100) — at +25% on a base of 40 it lands exactly on 50.","chips":["What does ×1.25 mean?","How do I find the new value?"]},"change-segment":{"pose":"THINK","a":"This bracket marks <b>new − old</b> — the raw change. Green means an increase, red a decrease. It is the NUMERATOR of percent change, not the answer by itself.","chips":["Why is 10 not the answer?","What does a negative change mean?"]},"readout":{"pose":"CONTENT","a":"The card runs the whole computation: <b>(new − old) / old × 100%</b>. Watch the denominator — if it ever shows the new value, you are looking at the trap.","chips":["Walk me through the formula","What is the wrong-base trap?"]},"axis":{"pose":"THINK","a":"The ruler runs 0 to the scale max with ticks every 10, so you can read both bar lengths directly. Percent change ignores the units — only the <b>ratio</b> of change to original matters.","chips":["Does percent change depend on units?","What is the formula?"]},"plane":{"pose":"WAVE","a":"Circle a bar, the green change segment, or the readout card — and I will explain that piece. Or just ask me out loud.","chips":["Why divide by the original?","What does ×1.25 mean?"]}},"QA":[{"k":["why","divide","original","base","old"],"pose":"CONTENT","a":"Because percent change answers <b>relative to where you started</b>. A jump of 10 means a lot on a base of 40 and almost nothing on a base of 4000 — dividing by the ORIGINAL anchors the comparison to the starting point."},{"k":["multiplier","times","factor","1.25"],"pose":"HAPPY","a":"A change of +p% equals multiplying by <b>1 + p/100</b>: +25% is ×1.25, −20% is ×0.80. One multiplication replaces the whole compute-then-add dance — the fastest route on the SAT."},{"k":["decrease","down","negative","minus","drop"],"pose":"THINK","a":"A decrease just makes the numerator negative: 50 → 40 gives (40 − 50)/50 = <b>−20%</b>. Same formula, same base rule — divide by the original, which for that move is 50."},{"k":["reverse","cancel","undo","back"],"pose":"THINK","a":"No — +10% then −10% is ×1.1 × 0.9 = <b>×0.99</b>, a net 1% LOSS. The −10% acts on the bigger base of 110, so it removes 11, not 10. To truly undo a +p% change, DIVIDE by (1 + p/100)."},{"k":["increase","increased","by","wording"],"pose":"CONTENT","a":"SAT wording decoder: <b>'increased by p%'</b> means ×(1 + p/100); 'decreased by p%' means ×(1 − p/100). But 'increased TO' names the final value itself — the preposition changes everything."},{"k":["percentage","points","point"],"pose":"THINK","a":"If a rate moves 40% → 50%, that is <b>+10 percentage points</b> but a <b>+25% change</b> (10/40). The SAT names exactly which one it wants — match the phrase, not the vibe."},{"k":["formula","compute","calculate","percent","change"],"pose":"CONTENT","a":"<b>Percent change = (new − old) / old × 100%</b>. Keep the sign: positive is an increase, negative a decrease. The only part people get wrong is the denominator — it is ALWAYS the original."},{"k":["spr","enter","answer","desmos","grid"],"pose":"HAPPY","a":"This skill shows up as <b>SPR</b> (grid-in): for 'what percent' answers enter <b>25</b>, not 0.25 and not 25%. Desmos will do the arithmetic for you, but picking the right base is still your job."}],"QA_FALLBACK":{"pose":"CONTENT","a":"Good question. Hold onto the core picture: <b>percent change = (new − old) / old × 100%</b> — the change measured against the ORIGINAL bar. Want me to replay the two bars?"},"VOICE_SAMPLES":["Why do we divide by the original value?","What does times 1.25 actually mean?","Is plus 10 percent then minus 10 percent back to where we started?"],"MOCK_IMAGE_ASK":{"q":"Screenshot — 'A jacket priced at $80 is marked down to $60. The new price is what percent less than the original price?'","html":"Got your screenshot. Change = 60 − 80 = <b>−20</b>, and the base is the ORIGINAL 80, so percent change = −20/80 = <b>−25%</b> — the new price is 25% less. (Trap check: −20/60 ≈ −33% uses the wrong base.) Want me to set the bars to 80 → 60?"},"pronounce":{"×":" times ","−":" minus ","%":" percent","Δ":" delta "},"checks":[{"desc":"40 to 50 is +25 percent","expr":"(50-40)/40","expect":0.25,"tol":1e-9},{"desc":"trap: dividing by the new value gives 20 percent, not 25","expr":"10/50","expect":0.2,"tol":1e-9},{"desc":"50 to 40 is -20 percent","expr":"(40-50)/50","expect":-0.2,"tol":1e-9},{"desc":"multiplier view: 40 x 1.25 = 50","expr":"40*1.25","expect":50,"tol":1e-9},{"desc":"+10 percent then -10 percent nets x0.99","expr":"1.1*0.9","expect":0.99,"tol":1e-9},{"desc":"chain bar: 110 dropping 10 percent lands on 99","expr":"110*0.9","expect":99,"tol":1e-9},{"desc":"drag target: 15 more on a base of 60 is 25 percent","expr":"15/60","expect":0.25,"tol":1e-9},{"desc":"build stage 1: +50 percent of 40 lands on 60 (integer snap)","expr":"40*1.5","expect":60,"tol":1e-9},{"desc":"build stage 2: -25 percent of 40 lands on 30 (integer snap)","expr":"40*0.75","expect":30,"tol":1e-9},{"desc":"build stage 3: +100 percent of 40 lands on 80 (integer snap)","expr":"40*2","expect":80,"tol":1e-9},{"desc":"mock image ask: 80 to 60 is -25 percent","expr":"(60-80)/80","expect":-0.25,"tol":1e-9}]};</script>
+<script>
+/* ============================ PIXEL SIA ENGINE ============================ */
+(function () {
+  const COL = { B:'#4E4DF4', K:'#1A1A1A', P:'#C1D7FF', Y:'#FFD81A', D:'#7A90FE', G:'#3DFCE8', O:'#FF7A4A', H:'#FF5A8A', W:'#FFFFFF', Z:'#9CA3AF' };
+  const POSES_1X = {
+    HAT:[".....Y.....","....YYY....","...YYYYY...","....YYY....",".....Y.....","...........","...........","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+    WAVE:[".....Y.....","....YYY....","...YYYYY...","....YYY....",".....Y.....","...........","...........","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB","BBPPPPPBB..","B.......BB."],
+    CARRY:[".....Y.....","....YYY....","...YYYYY...","....YYY....",".....Y.....","..BB...BB..","...BBBBB...","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+    CELEBRATE:[".....H.....","....HHH....","...HHHHH...","....HHH....",".....H.....","...........",".BB.....BB.","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+    SLEEP_BASE:["...ZZZZ....","......Z....",".....Z.....","....Z......","...ZZZZ....","...........","...........","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+    THINK_BASE:["...YYYYY...","..Y.....Y..","...YYYYY...","....Y......","...Y.......","...........","...........","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+    HEART_BASE:["....H.H....","...HHHHH...","...HHHHH...","....HHH....",".....H.....","...........","...........","..BBBBBBB..",".BBBBBBBBB.","BBBKBBBKBBB","BBBBPPPBBBB",".BBPPPPPBB.",".BB.....BB."],
+  };
+  function upscale4(rows){const r=[];for(const row of rows){const nr=row.split('').map(c=>c.repeat(4)).join('');for(let i=0;i<4;i++)r.push(nr);}return r;}
+  function toGrid(rows){return rows.map(r=>r.split(''));}
+  function fromGrid(g){return g.map(r=>r.join(''));}
+  const L_EYE={col:12,row:36}, R_EYE={col:28,row:36};
+  function applyEye(grid,pos,pat){for(let dy=0;dy<4;dy++)for(let dx=0;dx<4;dx++)if(grid[pos.row+dy])grid[pos.row+dy][pos.col+dx]=pat[dy][dx]?'K':'B';}
+  function applyEyes(grid,l,r){applyEye(grid,L_EYE,l);applyEye(grid,R_EYE,r||l);}
+  const EYE={NORMAL:[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],HAPPY:[[1,0,0,1],[0,1,1,0],[0,0,0,0],[0,0,0,0]],CLOSED:[[0,0,0,0],[0,0,0,0],[0,0,0,0],[1,1,1,1]]};
+  function sp(g,r,c,col){while(g.length<=r)g.push([]);while(g[r].length<=c)g[r].push('.');g[r][c]=col;}
+  function base(k){return toGrid(upscale4(POSES_1X[k]));}
+  const BUILD={
+    IDLE(){const g=base('HAT');applyEyes(g,EYE.NORMAL);return fromGrid(g);},
+    WAVE(){const g=base('WAVE');applyEyes(g,EYE.NORMAL);return fromGrid(g);},
+    THINK(){const g=base('THINK_BASE');applyEyes(g,EYE.NORMAL);return fromGrid(g);},
+    HAPPY(){const g=base('HAT');applyEyes(g,EYE.HAPPY);return fromGrid(g);},
+    HEART(){const g=base('HEART_BASE');applyEyes(g,EYE.HAPPY);return fromGrid(g);},
+    CONTENT(){const g=base('HAT');applyEyes(g,EYE.HAPPY);return fromGrid(g);},
+    SLEEP(){const g=base('SLEEP_BASE');applyEyes(g,EYE.CLOSED);return fromGrid(g);},
+    OOPS(){const g=base('THINK_BASE');applyEyes(g,EYE.NORMAL);return fromGrid(g);},
+    CELEBRATE(){const g=base('CELEBRATE');applyEyes(g,EYE.HAPPY);[14,15,29,30].forEach(c=>sp(g,52,c,'G'));[18,19,24,25].forEach(c=>sp(g,53,c,'G'));return fromGrid(g);},
+  };
+  function getPose(n){return (BUILD[n]||BUILD.IDLE)();}
+  function renderGrid(canvas,rows,cell){const mw=Math.max(...rows.map(r=>r.length));const dpr=window.devicePixelRatio||1;canvas.width=mw*cell*dpr;canvas.height=rows.length*cell*dpr;canvas.style.width=(mw*cell)+'px';canvas.style.height=(rows.length*cell)+'px';canvas.style.imageRendering='pixelated';const x=canvas.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);x.imageSmoothingEnabled=false;x.clearRect(0,0,canvas.width,canvas.height);for(let y=0;y<rows.length;y++)for(let i=0;i<rows[y].length;i++){const c=rows[y][i];if(c==='.'||c===undefined)continue;x.fillStyle=COL[c]||COL.B;x.fillRect(i*cell,y*cell,cell,cell);}}
+  function render(canvas,name,cell){renderGrid(canvas,getPose(name),cell||3);}
+  function mountCompanion(canvas,opts){opts=opts||{};const cell=opts.cell||3;let current=opts.pose||'IDLE';let alive=true;
+    function draw(){renderGrid(canvas,getPose(current),cell);}
+    draw();
+    return {
+      setPose(n){if(current===n)return;current=n;draw();},
+      react(n,after,ms){const settle=after||'IDLE';current=n;draw();setTimeout(()=>{if(alive){current=settle;draw();}},ms||1600);},
+      getPose(){return current;},
+      destroy(){alive=false;}
+    };
+  }
+  window.SiaEngine={COL,EYE,render,getPose,mountCompanion,poses:Object.keys(BUILD)};
+})();
+
+</script>
+<script>
+/* ===================== BAR-MODEL (TAPE DIAGRAM) ENGINE =====================
+   AskSia Lesson Factory — SPEC §4 + §4c.
+   Horizontal tape diagram for percent / ratio change:
+   OLD bar (slate, top) · NEW bar (purple, below) · optional chain bar ·
+   change-segment bracket · base highlight (with wrong-base trap) ·
+   readout card · multiplier chip · bottom number ruler.
+   Contract: window.Engines['bar-model'] (see BarModel.meta). */
+(function () {
+  const TAU = Math.PI * 2;
+  const RM = (typeof matchMedia!=='undefined') && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const C = {
+    ink:'#1A1A2E', muted:'#8888A8', dim:'#B7B7CC',
+    slate:'#8888A8', grape:'#854EF5', orange:'#F5874E', teal:'#11B5C9',
+    good:'#1F9E6F', bad:'#FF5A8A',
+    gridMaj:'rgba(78,77,244,.12)', gridMin:'rgba(78,77,244,.05)',
+    surface:'#FFFFFF', white:'#FFFFFF',
+  };
+  function lerp(a,b,t){return a+(b-a)*t;}
+  function easeInOut(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function fmtN(n){ const r=Math.round(n*10)/10; return (Math.abs(r-Math.round(r))<1e-9)? String(Math.round(r)) : r.toFixed(1); }
+  function fmtSigned(n){ return (n>0?'+':'')+fmtN(n).replace('-','−'); }
+
+  const DEFAULTS = {
+    unitsMax:100,
+    oldVal:40, newVal:50,
+    showOld:0, showNew:0,
+    labelsOld:'old price', labelsNew:'new price',
+    showChange:0,
+    showBaseHighlight:0,
+    baseIsNew:0,
+    showReadout:0,
+    showMultiplier:0,
+    chainVal:0, showChain:0, labelsChain:'',
+  };
+
+  function BarModel(canvas, opts){
+    opts = opts || {};
+    const ctx = canvas.getContext('2d');
+    const self = this;
+    let dpr = window.devicePixelRatio || 1;
+    let W=0,H=0, x0=112, x1=0, barH=0, rowGap=0, oldY=0, newY=0, chainY=0, rulerY=0;
+    let pulse=0;
+    let readoutRect=null, chipRect=null;
+
+    this.state = Object.assign({}, DEFAULTS);
+    this.mode = 'none';
+    this.onChange = opts.onChange || function(){};
+    this.onCommit = opts.onCommit || function(){};
+
+    function layout(){
+      const s=self.state;
+      ctx.font='600 11.5px "Space Mono", monospace';
+      const lw=Math.max(ctx.measureText(s.labelsOld||'').width, ctx.measureText(s.labelsNew||'').width, ctx.measureText(s.labelsChain||'').width);
+      x0 = clamp(Math.round(lw)+26, 96, Math.max(96, W*0.34));
+      x1 = Math.max(x0+140, W-84);
+      rulerY = H - 40;
+      barH = clamp(Math.round(H*0.085), 22, 38);
+      rowGap = clamp(Math.round(H*0.115), 32, 52);
+      chainY = rulerY - 28 - barH;
+      newY = chainY - rowGap - barH;
+      oldY = newY - rowGap - barH;
+    }
+    this.resize = function(){
+      const r = canvas.getBoundingClientRect();
+      W=r.width; H=r.height; dpr=window.devicePixelRatio||1;
+      canvas.width=Math.round(W*dpr); canvas.height=Math.round(H*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      layout(); self.draw();
+    };
+    const ux = v => x0 + (v/Math.max(1e-9,self.state.unitsMax))*(x1-x0);
+
+    function roundRect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+    function badge(bx,by,text,color,align){
+      ctx.font='700 12px "Space Mono", monospace';
+      const w=ctx.measureText(text).width+14;
+      let bx0 = align==='center'? bx-w/2 : bx;
+      ctx.fillStyle='#fff'; roundRect(bx0,by-11,w,22,7); ctx.fill();
+      ctx.lineWidth=1.5; ctx.strokeStyle=color; ctx.stroke();
+      ctx.fillStyle=color; ctx.textAlign='center'; ctx.fillText(text,bx0+w/2,by+4); ctx.textAlign='start';
+    }
+
+    function drawRuler(){
+      const s=self.state, n=Math.max(1,Math.round(s.unitsMax/10));
+      const tickW=(x1-x0)/n;
+      const labelEvery = tickW<13? 50 : (tickW<26? 20 : 10);
+      // faint vertical unit guides every 10 units
+      ctx.strokeStyle=C.gridMin; ctx.lineWidth=1;
+      for(let i=0;i<=n;i++){ const x=ux(i*10); ctx.beginPath(); ctx.moveTo(x,oldY-14); ctx.lineTo(x,rulerY); ctx.stroke(); }
+      // zero axis (vertical) + ruler line
+      ctx.strokeStyle='#2A2A40'; ctx.globalAlpha=.55; ctx.lineWidth=1.4;
+      ctx.beginPath(); ctx.moveTo(x0,oldY-18); ctx.lineTo(x0,rulerY+6); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x0-6,rulerY); ctx.lineTo(x1+14,rulerY); ctx.stroke();
+      ctx.globalAlpha=1;
+      // ticks every 10 + labels
+      ctx.fillStyle=C.muted; ctx.font='600 10px "Space Mono", monospace'; ctx.textAlign='center';
+      ctx.strokeStyle=C.muted; ctx.lineWidth=1.2;
+      for(let i=0;i<=n;i++){
+        const v=i*10, x=ux(v);
+        ctx.beginPath(); ctx.moveTo(x,rulerY); ctx.lineTo(x,rulerY+5); ctx.stroke();
+        if(v%labelEvery===0) ctx.fillText(String(v), x, rulerY+18);
+      }
+      ctx.textAlign='start';
+    }
+
+    function drawBar(y, val, label, color, op){
+      if(op<=0) return;
+      const s=self.state, w=Math.max(0, ux(val)-x0);
+      ctx.save(); ctx.globalAlpha=op;
+      if(w>0.5){
+        roundRect(x0, y, w, barH, Math.min(8, barH/2, Math.max(0.5,w/2)));
+        ctx.fillStyle=color;
+        ctx.shadowColor='rgba(78,77,244,.18)'; ctx.shadowBlur=10; ctx.fill(); ctx.shadowBlur=0;
+        // tape unit separators every 10 units
+        ctx.strokeStyle='rgba(255,255,255,.35)'; ctx.lineWidth=1;
+        for(let v=10; v<val; v+=10){ const x=ux(v); ctx.beginPath(); ctx.moveTo(x,y+2); ctx.lineTo(x,y+barH-2); ctx.stroke(); }
+      }
+      // left label
+      ctx.fillStyle=C.ink; ctx.font='600 11.5px "Space Mono", monospace'; ctx.textAlign='right';
+      ctx.fillText(label||'', x0-12, y+barH/2+4); ctx.textAlign='start';
+      // value tag at right end
+      badge(ux(val)+10, y+barH/2, fmtN(val), color);
+      ctx.restore();
+    }
+
+    function drawBaseHighlight(){
+      const s=self.state; if(s.showBaseHighlight<=0) return;
+      const isNew = s.baseIsNew>=0.5;
+      const barY = isNew? newY : oldY;
+      const v = isNew? s.newVal : s.oldVal;
+      const col = isNew? C.bad : C.teal;
+      const tag = isNew? 'wrong base!' : 'base — divide by this';
+      const y = barY + barH + 4, h = 9, w = Math.max(0, ux(v)-x0);
+      ctx.save(); ctx.globalAlpha=s.showBaseHighlight;
+      if(w>1){
+        // soft glow band
+        ctx.save(); ctx.globalAlpha=s.showBaseHighlight*0.16;
+        ctx.fillStyle=col; ctx.shadowColor=col; ctx.shadowBlur=8;
+        roundRect(x0,y,w,h,4.5); ctx.fill(); ctx.restore();
+        // diagonal hatch, clipped to the band
+        ctx.save(); roundRect(x0,y,w,h,4.5); ctx.clip();
+        ctx.strokeStyle=col; ctx.lineWidth=1.3; ctx.globalAlpha=s.showBaseHighlight*0.75;
+        for(let xx=x0-h; xx<x0+w; xx+=6){ ctx.beginPath(); ctx.moveTo(xx,y+h); ctx.lineTo(xx+h,y); ctx.stroke(); }
+        ctx.restore();
+        ctx.globalAlpha=s.showBaseHighlight*0.5; ctx.strokeStyle=col; ctx.lineWidth=1;
+        roundRect(x0,y,w,h,4.5); ctx.stroke();
+        ctx.globalAlpha=s.showBaseHighlight;
+      }
+      // tag beside the band (falls under it if it would clip off-canvas)
+      ctx.font='italic 700 11px "Space Mono", monospace';
+      const tw=ctx.measureText(tag).width;
+      let tx=x0+w+12, ty=y+h-1;
+      if(tx+tw>W-8){ tx=x0; ty=y+h+13; }
+      ctx.fillStyle=col; ctx.fillText(tag,tx,ty);
+      ctx.restore();
+    }
+
+    function drawChange(){
+      const s=self.state; if(s.showChange<=0||s.showNew<=0.05) return;
+      const d=s.newVal-s.oldVal;
+      const xa=ux(Math.min(s.oldVal,s.newVal)), xb=ux(Math.max(s.oldVal,s.newVal));
+      const col = d>0? C.good : (d<0? C.bad : C.muted);
+      ctx.save(); ctx.globalAlpha=s.showChange;
+      if(d>0){
+        // tint the extra segment inside the NEW bar
+        const w=Math.max(0,ux(s.newVal)-x0);
+        ctx.save(); roundRect(x0,newY,w,barH,Math.min(8,barH/2,Math.max(0.5,w/2))); ctx.clip();
+        ctx.fillStyle='rgba(31,158,111,.30)'; ctx.fillRect(xa,newY,xb-xa,barH);
+        ctx.strokeStyle='rgba(255,255,255,.9)'; ctx.lineWidth=2;
+        ctx.beginPath(); ctx.moveTo(xa,newY+1); ctx.lineTo(xa,newY+barH-1); ctx.stroke();
+        ctx.restore();
+      } else if(d<0){
+        // dashed ghost of the removed part (beyond the NEW bar's end)
+        ctx.fillStyle='rgba(255,90,138,.08)'; ctx.fillRect(xa,newY,xb-xa,barH);
+        ctx.strokeStyle=C.bad; ctx.lineWidth=1.6; ctx.setLineDash([5,4]);
+        ctx.strokeRect(xa,newY+0.5,Math.max(0.5,xb-xa),barH-1); ctx.setLineDash([]);
+      }
+      // bracket over the segment
+      const yb=newY-8;
+      ctx.strokeStyle=col; ctx.lineWidth=2*(1+pulse*0.8); ctx.lineCap='round';
+      ctx.beginPath(); ctx.moveTo(xa,newY-2); ctx.lineTo(xa,yb); ctx.lineTo(xb,yb); ctx.lineTo(xb,newY-2); ctx.stroke();
+      badge((xa+xb)/2, yb-13, 'new − old = '+fmtSigned(d), col, 'center');
+      ctx.restore();
+    }
+
+    function drawHandle(){
+      const s=self.state; if(self.mode!=='dragNew'||s.showNew<=0.4) return;
+      const hx=ux(s.newVal), hy=newY+barH/2;
+      ctx.save();
+      ctx.beginPath(); ctx.arc(hx,hy,7,0,TAU); ctx.fillStyle=C.white; ctx.fill();
+      ctx.lineWidth=2.5; ctx.strokeStyle=C.grape; ctx.stroke();
+      ctx.strokeStyle='rgba(133,78,245,.5)'; ctx.lineWidth=1.5; ctx.setLineDash([3,4]);
+      ctx.beginPath(); ctx.arc(hx,hy,16+pulse*4,0,TAU); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle=C.grape; ctx.font='700 11px "Space Mono", monospace'; ctx.textAlign='center';
+      ctx.fillText('◂', hx-26-pulse*3, hy+4); ctx.fillText('▸', hx+26+pulse*3, hy+4);
+      ctx.textAlign='start';
+      ctx.restore();
+    }
+
+    function drawReadout(){
+      readoutRect=null; chipRect=null;
+      const s=self.state;
+      if(s.showReadout<=0 && s.showMultiplier<=0) return;
+      const isNew = s.baseIsNew>=0.5;
+      const base = isNew? s.newVal : s.oldVal;       // CURRENT base — the trap shows the wrong %
+      const d = s.newVal - s.oldVal;
+      const pct = base===0? 9999 : d/base*100;
+      const col = d>0? C.good : (d<0? C.bad : C.muted);
+      const bx=14, by=14;
+      const line1='(new − old) / base';
+      const segs=[
+        ['= '+fmtSigned(d)+' / ', C.ink],
+        [fmtN(base), isNew? C.bad : C.teal],
+        [' = ', C.ink],
+        [fmtN(pct)+'%', isNew? C.bad : col],
+      ];
+      ctx.font='700 13px "Space Mono", monospace';
+      let w2=0; segs.forEach(sg=>{ w2+=ctx.measureText(sg[0]).width; });
+      ctx.font='600 11px "Space Mono", monospace';
+      const w1=ctx.measureText(line1).width;
+      const bw=Math.max(w1,w2)+26, bh=54;
+      if(s.showReadout>0){
+        ctx.save(); ctx.globalAlpha=s.showReadout;
+        ctx.fillStyle='rgba(255,255,255,.94)'; roundRect(bx,by,bw,bh,12); ctx.fill();
+        ctx.lineWidth=1.5; ctx.strokeStyle= isNew? 'rgba(255,90,138,.45)' : 'rgba(78,77,244,.18)'; ctx.stroke();
+        ctx.fillStyle=C.muted; ctx.font='600 11px "Space Mono", monospace';
+        ctx.fillText(line1, bx+13, by+21);
+        ctx.font='700 13px "Space Mono", monospace';
+        let tx=bx+13; segs.forEach(sg=>{ ctx.fillStyle=sg[1]; ctx.fillText(sg[0],tx,by+41); tx+=ctx.measureText(sg[0]).width; });
+        ctx.restore();
+        readoutRect=[bx,by,bw,bh];
+      }
+      if(s.showMultiplier>0){
+        const txt='× '+(1+pct/100).toFixed(2);
+        ctx.font='700 12px "Space Mono", monospace';
+        const cw=ctx.measureText(txt).width+20;
+        const cx0= s.showReadout>0? bx+bw+10 : bx;
+        const cy0= by+bh/2;
+        ctx.save(); ctx.globalAlpha=s.showMultiplier;
+        ctx.fillStyle='#fff'; roundRect(cx0,cy0-13,cw,26,9); ctx.fill();
+        ctx.lineWidth=1.5; ctx.strokeStyle=C.grape; ctx.stroke();
+        ctx.fillStyle=C.grape; ctx.fillText(txt, cx0+10, cy0+4);
+        ctx.restore();
+        chipRect=[cx0,cy0-13,cw,26];
+      }
+    }
+
+    this.draw = function(){
+      layout();
+      ctx.clearRect(0,0,W,H);
+      ctx.fillStyle=C.surface; ctx.fillRect(0,0,W,H);
+      drawRuler();
+      drawBaseHighlight();
+      const s=self.state;
+      drawBar(oldY, s.oldVal, s.labelsOld, C.slate, s.showOld);
+      drawBar(newY, s.newVal, s.labelsNew, C.grape, s.showNew);
+      drawBar(chainY, s.chainVal, s.labelsChain, C.orange, s.showChain);
+      drawChange();
+      drawHandle();
+      drawReadout();
+    };
+
+    this.set = function(p){ Object.assign(self.state,p); self.draw(); };
+    let raf=null;
+    this.animateTo = function(p,ms,onDone){
+      if(raf) cancelAnimationFrame(raf);
+      if(RM||!ms||ms<16){ Object.keys(p).forEach(k=>self.state[k]=p[k]); self.draw(); if(onDone)onDone(); return; }
+      const from={}, keys=Object.keys(p); keys.forEach(k=>from[k]=self.state[k]);
+      const t0=performance.now();
+      function tick(now){
+        const t=Math.min(1,(now-t0)/(ms||600)); const e=easeInOut(t);
+        keys.forEach(k=>{ if(typeof p[k]==='number') self.state[k]=lerp(from[k],p[k],e); else self.state[k]=p[k]; });
+        self.draw();
+        if(t<1) raf=requestAnimationFrame(tick); else { raf=null; if(onDone)onDone(); }
+      }
+      raf=requestAnimationFrame(tick);
+    };
+    this.startPulse = function(){
+      let alive=true; const t0=performance.now();
+      function tick(now){ if(!alive)return; pulse=(Math.sin((now-t0)/360)+1)/2; self.draw(); requestAnimationFrame(tick); }
+      requestAnimationFrame(tick);
+      return ()=>{ alive=false; pulse=0; self.draw(); };
+    };
+    this.setMode = function(m){ self.mode=m||'none'; canvas.style.cursor=(m==='dragNew')?'grab':'default'; self.draw(); };
+
+    this.classifyRegion = function(clientX,clientY){
+      const r=canvas.getBoundingClientRect(); const px=clientX-r.left, py=clientY-r.top;
+      const s=self.state;
+      const inRect=rt=> rt && px>=rt[0]-4 && px<=rt[0]+rt[2]+4 && py>=rt[1]-4 && py<=rt[1]+rt[3]+4;
+      if(s.showReadout>0.4 && inRect(readoutRect)) return 'readout';
+      if(s.showMultiplier>0.4 && inRect(chipRect)) return 'readout';
+      if(s.showChange>0.4 && s.showNew>0.4){
+        const xa=ux(Math.min(s.oldVal,s.newVal))-8, xb=ux(Math.max(s.oldVal,s.newVal))+8;
+        if(px>=xa && px<=xb && py>=newY-32 && py<=newY+barH+4) return 'change-segment';
+      }
+      if(s.showNew>0.4 && py>=newY-6 && py<=newY+barH+6 && px>=x0-6 && px<=ux(s.newVal)+28) return 'new-bar';
+      if(s.showOld>0.4 && py>=oldY-6 && py<=oldY+barH+6 && px>=x0-6 && px<=ux(s.oldVal)+28) return 'old-bar';
+      if(Math.abs(py-rulerY)<14 && px>=x0-10 && px<=x1+18) return 'axis';
+      return 'plane';
+    };
+
+    function mPct(){ const s=self.state; return s.oldVal===0? 9999 : (s.newVal-s.oldVal)/s.oldVal*100; }
+    function mRatio(){ const s=self.state; return s.oldVal===0? 9999 : s.newVal/s.oldVal; }
+    this.measure = function(name){
+      if(name==='pct') return mPct();
+      if(name==='newVal') return self.state.newVal;
+      if(name==='ratio') return mRatio();
+      return NaN;
+    };
+
+    function valAtX(clientX){
+      const r=canvas.getBoundingClientRect(); const px=clientX-r.left;
+      const s=self.state;
+      return clamp(Math.round((px-x0)/Math.max(1,(x1-x0))*s.unitsMax), 0, s.unitsMax);
+    }
+    let dragging=false;
+    canvas.addEventListener('pointerdown',e=>{
+      if(self.mode==='dragNew'){ dragging=true; try{canvas.setPointerCapture(e.pointerId);}catch(_){}; self.state.newVal=valAtX(e.clientX); self.draw(); self.onChange(self.state); }
+    });
+    canvas.addEventListener('pointermove',e=>{
+      if(!dragging){ if(self.mode==='dragNew')canvas.style.cursor='grab'; return; }
+      self.state.newVal=valAtX(e.clientX); self.draw(); self.onChange(self.state);
+    });
+    function up(){ if(!dragging)return; dragging=false; canvas.style.cursor='grab'; self.onCommit({pct:mPct(), newVal:self.state.newVal, ratio:mRatio()}); }
+    canvas.addEventListener('pointerup',up);
+    canvas.addEventListener('pointercancel',up);
+
+    setTimeout(()=>self.resize(),0);
+    window.addEventListener('resize',()=>self.resize());
+  }
+
+  BarModel.meta = {
+    id: 'bar-model',
+    regions: ['old-bar','new-bar','change-segment','readout','axis'],
+    fallbackRegion: 'plane',
+    modes: ['none','dragNew'],
+    measures: ['pct','newVal','ratio'],
+    defaults: DEFAULTS,
+  };
+  window.Engines = window.Engines || {};
+  window.Engines['bar-model'] = BarModel;
+})();
+
+</script>
+<script>
+/* ============== RENDERER CHROME STRINGS — window.UI (EN / 中文) ==============
+   Pure data. Lesson text lives in the lesson JSON; ONLY player chrome is here.
+   Templates use {n} / {value} / {target} placeholders (interpolated by app.jsx). */
+(function(){
+window.UI = {
+  en: {
+    back: 'Back',
+    exit: 'Exit',
+    share: 'Share',
+    report: 'Report',
+    tabTranscript: 'Transcript',
+    tabTakeaways: 'Takeaways',
+    tabCards: 'Cards',
+    tabMap: 'Map',
+    yourTurn: 'Your turn',
+    yourTurnPill: '✋ Your turn',
+    ytToast: 'Your turn — try it, then press Continue',
+    yourTurnInteraction: 'Your turn (interaction)',
+    interactiveCheckpoint: 'Interactive checkpoint',
+    skip: 'Skip ▸',
+    skipTitle: 'Skip this interaction',
+    continue: 'Continue',
+    reset: 'Reset interaction',
+    resetView: 'Reset view',
+    replay: 'Restart',
+    play: 'Play',
+    pause: 'Pause',
+    audioOn: 'Mute Sia',
+    audioOff: 'Unmute Sia',
+    toggleNarration: 'Toggle narration',
+    speed: 'Playback speed',
+    circleToAsk: 'Circle to ask',
+    askPlaceholder: 'Ask Sia anything…',
+    askVoice: 'Ask out loud',
+    askImage: 'Ask with a screenshot',
+    listening: 'Listening',
+    linkCopied: 'Link copied',
+    saveToast: 'Lesson saved · {n} flashcards created · added to your map',
+    tkEmptyHand: 'Watch & play →',
+    tkEmptyBody: 'Key takeaways appear here as you move through the lesson.',
+    takeawayTag: 'TAKEAWAY',
+    examTip: 'Exam tip',
+    fcEmptyHand: 'Finish the lesson →',
+    fcEmptyBody: 'Sia turns this lesson into flashcards once you reach the recap.',
+    fcIntroHand: '✦ Sia made these',
+    fcIntroBody: 'from this lesson · {n} cards',
+    fcQuestionTag: 'Question · tap to flip',
+    fcAnswerTag: 'Answer · tap to flip',
+    mapPrereq: 'Prerequisites',
+    mapHere: 'You are here',
+    mapNext: 'Up next',
+    mapRelated: 'Related · others also studied',
+    mapCompleted: 'Completed',
+    mapInProgress: 'In progress · just now',
+    kindLesson: 'lesson',
+    kindVideo: 'video',
+    minUnit: 'min',
+    resumeLesson: 'Resume lesson',
+    generating: 'Generating your interactive lesson…',
+    dragDoneGeneric: 'Nice — you explored it yourself. Hit Continue.',
+    buildDoneGeneric: 'Nailed every stage — you built it yourself.',
+    buildMissGeneric: 'Close! You got {value} — aim for {target}.',
+    siaTag: 'Sia'
+  },
+  zh: {
+    back: '返回',
+    exit: '退出',
+    share: '分享',
+    report: '反馈',
+    tabTranscript: '文稿',
+    tabTakeaways: '要点',
+    tabCards: '闪卡',
+    tabMap: '地图',
+    yourTurn: '轮到你了',
+    yourTurnPill: '✋ 轮到你了',
+    ytToast: '轮到你了——动手试试，然后按「继续」',
+    yourTurnInteraction: '轮到你了（互动环节）',
+    interactiveCheckpoint: '互动检查点',
+    skip: '跳过 ▸',
+    skipTitle: '跳过这个互动',
+    continue: '继续',
+    reset: '重置互动',
+    resetView: '重置画面',
+    replay: '重新播放',
+    play: '播放',
+    pause: '暂停',
+    audioOn: '静音 Sia',
+    audioOff: '取消静音',
+    toggleNarration: '开关讲解声音',
+    speed: '播放速度',
+    circleToAsk: '圈一下提问',
+    askPlaceholder: '随时问 Sia……',
+    askVoice: '语音提问',
+    askImage: '截图提问',
+    listening: '正在听',
+    linkCopied: '链接已复制',
+    saveToast: '课程已保存 · 已生成 {n} 张闪卡 · 已加入你的知识地图',
+    tkEmptyHand: '边看边玩 →',
+    tkEmptyBody: '随着课程推进，关键要点会逐条出现在这里。',
+    takeawayTag: '要点',
+    examTip: '考试提示',
+    fcEmptyHand: '先看完这节课 →',
+    fcEmptyBody: '到回顾环节时，Sia 会把这节课做成闪卡。',
+    fcIntroHand: '✦ Sia 做的闪卡',
+    fcIntroBody: '来自这节课 · 共 {n} 张',
+    fcQuestionTag: '问题 · 点击翻面',
+    fcAnswerTag: '答案 · 点击翻面',
+    mapPrereq: '前置知识',
+    mapHere: '你在这里',
+    mapNext: '接下来',
+    mapRelated: '相关 · 大家也在学',
+    mapCompleted: '已完成',
+    mapInProgress: '进行中 · 刚刚',
+    kindLesson: '课程',
+    kindVideo: '视频',
+    minUnit: '分钟',
+    resumeLesson: '回到课程',
+    generating: '正在生成你的互动课……',
+    dragDoneGeneric: '很好——你已经亲手探索过了。点「继续」往下走。',
+    buildDoneGeneric: '全部命中——这是你亲手搭出来的。',
+    buildMissGeneric: '差一点——你现在是 {value}，目标是 {target}。',
+    siaTag: 'Sia'
+  }
+};
+})();
+
+</script>
+<script>
+/* ============== HYDRATE — ops runner + answerFor builder + measure glue ==============
+   Plain JS, no JSX, no deps. SPEC §3 (ops DSL runner) + §5 (sweep clamp) + §6 item 14.
+   window.Hydrate = { makeAnswerFor, OpsRunner, converters, sweepClamp } */
+(function(){
+
+  // §6.14 — keyword scorer ported from the demo (line 847): pick the QA entry
+  // with the most keyword hits; fall back when nothing scores.
+  function makeAnswerFor(QA, fallback){
+    const list = QA || [];
+    return function(text){
+      const t = (text || '').toLowerCase();
+      let best = null, bs = 0;
+      for(const it of list){
+        const s = it.k.reduce((n, w) => n + (t.includes(w) ? 1 : 0), 0);
+        if(s > bs){ bs = s; best = it; }
+      }
+      return bs > 0 ? best : fallback;
+    };
+  }
+
+  // §5 — named converters for interactive.control.toState (slider value → engine state)
+  const converters = { deg2rad: function(v){ return v * Math.PI / 180; } };
+
+  // §5 drag done.kind "sweep" — clamp each per-event |Δmeasure| to 0.15×range so a
+  // single measure spike (e.g. slope through Δx≈0) cannot complete the sweep alone.
+  function sweepClamp(delta, range){
+    return Math.min(Math.abs(delta), 0.15 * (range || 0));
+  }
+
+  // §3 — per-step ops runner with an abort token. run(step) aborts the previous
+  // step's pending timers/sequence chains, then executes step.ops in array order.
+  function OpsRunner(engine){
+    let token = null;
+
+    function kill(t){
+      if(!t) return;
+      t.dead = true;
+      for(const id of t.timers) clearTimeout(id);
+      t.timers.length = 0;
+    }
+    function later(t, fn, ms){
+      if(t.dead) return;
+      const id = setTimeout(function(){ if(!t.dead) fn(); }, ms);
+      t.timers.push(id);
+    }
+
+    // 'reset' = setMode('none') + set(engine defaults merged with lesson engine.config)
+    function opReset(){
+      const meta = (engine && engine.constructor && engine.constructor.meta) || {};
+      const L = window.LESSON_DATA || {};
+      const cfg = (L.engine && L.engine.config) || {};
+      engine.setMode('none');
+      engine.set(Object.assign({}, meta.defaults, cfg));
+    }
+
+    // 'sequence' = chained animateTo over values with gap pauses. Under reduced
+    // motion engine.animateTo snaps + fires onDone immediately, so the chain still
+    // terminates (i strictly increases); every timer registers on the token.
+    function opSequence(t, op){
+      const values = op.values || [];
+      const ms = op.ms || 600, gap = op.gap || 0;
+      let i = 0;
+      function nx(){
+        if(t.dead || i >= values.length) return;
+        const st = {}; st[op.field] = values[i];
+        engine.animateTo(st, ms, function(){
+          if(t.dead) return;
+          i++;
+          if(i < values.length) later(t, nx, gap);
+        });
+      }
+      if(op.delay) later(t, nx, op.delay); else nx();
+    }
+
+    function exec(t, op){
+      if(!op || !op.op) return;
+      if(op.op === 'reset') opReset();
+      else if(op.op === 'mode') engine.setMode(op.v);
+      else if(op.op === 'set') engine.set(op.state || {});
+      else if(op.op === 'animate'){
+        const go = function(){ engine.animateTo(op.state || {}, op.ms || 600); };
+        if(op.delay) later(t, go, op.delay); else go();
+      }
+      else if(op.op === 'sequence') opSequence(t, op);
+    }
+
+    return {
+      run: function(step){
+        kill(token);
+        const t = token = { dead:false, timers:[] };
+        const ops = (step && step.ops) || [];
+        for(const op of ops) exec(t, op);
+      },
+      abort: function(){ kill(token); token = null; }
+    };
+  }
+
+  window.Hydrate = { makeAnswerFor:makeAnswerFor, OpsRunner:OpsRunner, converters:converters, sweepClamp:sweepClamp };
+})();
+
+</script>
+<script>
+/* ============================ UI PARTS ============================
+   Ported from the demo (lines 853-1004). Props-driven, no lesson text:
+   chrome strings come from window.UI[lang]; breadcrumb bolds the LAST
+   element; WebEntry → LaunchOverlay; TopBar share copies the canonical URL
+   plus a #player:<step> deep link to the step being viewed. */
+(function () {
+  const {
+    useState,
+    useEffect,
+    useRef
+  } = React;
+  const P = {
+    back: 'M15 18l-6-6 6-6',
+    exit: 'M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9',
+    share: 'M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13',
+    flag: 'M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7',
+    play: 'M6 4l14 8-14 8z',
+    pause: 'M7 4h3v16H7zM14 4h3v16h-3z',
+    restart: 'M3 12a9 9 0 1 0 3-6.7M3 4v4h4',
+    mic: 'M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM5 10v1a7 7 0 0 0 14 0v-1M12 18v4M8 22h8',
+    send: 'M22 2L11 13M22 2l-7 20-4-9-9-4z',
+    lasso: 'M3 13c0-4 4-7 9-7s9 3 9 7-4 7-9 7c-1.5 0-3-.3-4.2-.8M5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5 21c0 1 .5 2 2 2',
+    reset: 'M3 12a9 9 0 1 0 3-6.7M3 4v4h4',
+    sparkle: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z',
+    transcript: 'M4 6h16M4 10h16M4 14h10M4 18h7',
+    bulb: 'M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z',
+    cards: 'M4 7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM17 8h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-1',
+    map: 'M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15',
+    arrow: 'M5 12h14M13 6l6 6-6 6',
+    image: 'M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM8.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM21 16l-5-5L5 21',
+    video: 'M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM16 9l5-3v12l-5-3',
+    book: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM19 3v18',
+    check: 'M20 6L9 17l-5-5',
+    volume: 'M11 5L6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14',
+    mute: 'M11 5L6 9H2v6h4l5 4zM23 9l-6 6M17 9l6 6'
+  };
+  function Icon({
+    d,
+    size = 18,
+    sw = 1.7,
+    fill,
+    style
+  }) {
+    return /*#__PURE__*/React.createElement("svg", {
+      width: size,
+      height: size,
+      viewBox: "0 0 24 24",
+      fill: fill || 'none',
+      stroke: fill ? 'none' : 'currentColor',
+      strokeWidth: sw,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      style: style
+    }, /*#__PURE__*/React.createElement("path", {
+      d: P[d]
+    }));
+  }
+  function ui(lang) {
+    return window.UI && (window.UI[lang] || window.UI.en) || {};
+  }
+  function rep(tmpl, key, val) {
+    return String(tmpl || '').split('{' + key + '}').join(String(val));
+  }
+  function Crumbs({
+    list
+  }) {
+    const items = list || [];
+    return /*#__PURE__*/React.createElement(React.Fragment, null, items.map((c, i) => /*#__PURE__*/React.createElement(React.Fragment, {
+      key: i
+    }, i > 0 && ' › ', i === items.length - 1 ? /*#__PURE__*/React.createElement("b", null, c) : c)));
+  }
+  function TopBar({
+    lesson,
+    step,
+    total,
+    onExit,
+    lang,
+    setLang,
+    onCopied
+  }) {
+    const T = ui(lang);
+    function copyFallback(url) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = url;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (_) {}
+    }
+    function share() {
+      // TopBar only mounts while the player overlay is open → deep-link to the step
+      // being viewed; without a step (player closed) fall back to plain canonical.
+      const canonical = 'https://asksia.ai' + (lesson.meta && lesson.meta.urlPath || '');
+      const url = canonical + (typeof step === 'number' ? '#player:' + step : '');
+      const done = function () {
+        if (onCopied) onCopied();
+      };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {
+            copyFallback(url);
+            done();
+          });
+          return;
+        }
+      } catch (_) {}
+      copyFallback(url);
+      done();
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      className: "topbar"
+    }, /*#__PURE__*/React.createElement("button", {
+      className: "tb-back",
+      onClick: onExit,
+      title: T.back,
+      "aria-label": T.back
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "back"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "tb-title"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "t"
+    }, lesson.meta && lesson.meta.title || lesson.title), /*#__PURE__*/React.createElement("span", {
+      className: "tb-crumb"
+    }, /*#__PURE__*/React.createElement(Crumbs, {
+      list: lesson.MAP.breadcrumb
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "tb-spacer"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "langtoggle"
+    }, /*#__PURE__*/React.createElement("button", {
+      className: lang === 'en' ? 'on' : '',
+      onClick: () => setLang('en')
+    }, "EN"), /*#__PURE__*/React.createElement("button", {
+      className: lang === 'zh' ? 'on' : '',
+      onClick: () => setLang('zh')
+    }, "\u4E2D")), /*#__PURE__*/React.createElement("span", {
+      className: "tb-step"
+    }, String(step + 1).padStart(2, '0'), " / ", String(total).padStart(2, '0')), /*#__PURE__*/React.createElement("button", {
+      className: "tb-ic",
+      title: T.share,
+      "aria-label": T.share,
+      onClick: share
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "share",
+      size: 17
+    })), /*#__PURE__*/React.createElement("button", {
+      className: "tb-ic",
+      title: T.report,
+      "aria-label": T.report
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "flag",
+      size: 17
+    })), /*#__PURE__*/React.createElement("button", {
+      className: "tb-ic",
+      onClick: onExit,
+      title: T.exit,
+      "aria-label": T.exit
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "exit",
+      size: 17
+    })));
+  }
+
+  /* Replaces WebEntry: ONLY the "Generating your interactive lesson" card.
+     Steps from meta.cover.launchSteps, 600ms each, then onDone(). */
+  function LaunchOverlay({
+    cover,
+    lang,
+    onDone
+  }) {
+    const greet = useRef(null);
+    const [ls, setLs] = useState(0);
+    const T = ui(lang);
+    const steps = cover && cover.launchSteps || [];
+    useEffect(() => {
+      if (greet.current && window.SiaEngine) window.SiaEngine.render(greet.current, 'THINK', 2.4);
+      let i = 0;
+      const t = setInterval(() => {
+        i++;
+        if (i >= steps.length) {
+          clearInterval(t);
+          setLs(steps.length);
+          setTimeout(onDone, 650);
+        } else setLs(i);
+      }, 600);
+      return () => clearInterval(t);
+    }, []);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "launch-overlay"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "wl-card"
+    }, /*#__PURE__*/React.createElement("canvas", {
+      ref: greet
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "tt"
+    }, T.generating), /*#__PURE__*/React.createElement("div", {
+      className: "steps"
+    }, steps.map((s, i) => /*#__PURE__*/React.createElement("div", {
+      key: i,
+      className: 'lstep' + (i < ls ? ' on' : '') + (i === ls ? ' cur' : '')
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "dot"
+    }, i < ls && /*#__PURE__*/React.createElement(Icon, {
+      d: "check",
+      size: 12
+    })), s)))));
+  }
+  function Transcript({
+    steps,
+    current,
+    onJump,
+    lang
+  }) {
+    let last = null;
+    return /*#__PURE__*/React.createElement("div", null, steps.map((s, i) => {
+      const chap = s.chapter !== last ? s.chapter : null;
+      last = s.chapter;
+      return /*#__PURE__*/React.createElement(React.Fragment, {
+        key: s.id
+      }, chap && /*#__PURE__*/React.createElement("div", {
+        className: "tr-chap"
+      }, chap), /*#__PURE__*/React.createElement("div", {
+        className: 'tr-line' + (i === current ? ' cur' : i < current ? ' past' : ''),
+        onClick: () => onJump(i)
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "tr-num"
+      }, String(i + 1).padStart(2, '0')), /*#__PURE__*/React.createElement("span", {
+        className: "tr-txt"
+      }, s.say[lang] || s.say.en)));
+    }));
+  }
+  function Takeaways({
+    items,
+    unlocked,
+    lang
+  }) {
+    const T = ui(lang);
+    if (unlocked <= 0) return /*#__PURE__*/React.createElement("div", {
+      className: "tk-empty"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "hand"
+    }, T.tkEmptyHand), T.tkEmptyBody);
+    return /*#__PURE__*/React.createElement("div", null, items.slice(0, unlocked).map((t, i) => /*#__PURE__*/React.createElement("div", {
+      className: "tk",
+      key: i
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "tk-n"
+    }, T.takeawayTag, " ", String(i + 1).padStart(2, '0')), /*#__PURE__*/React.createElement("div", {
+      className: "tk-t"
+    }, t.t[lang] || t.t.en), /*#__PURE__*/React.createElement("div", {
+      className: "tk-b",
+      dangerouslySetInnerHTML: {
+        __html: t.body[lang] || t.body.en
+      }
+    }), t.exam && /*#__PURE__*/React.createElement("div", {
+      className: "tk-exam"
+    }, /*#__PURE__*/React.createElement("b", null, T.examTip), /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: t.exam[lang] || t.exam.en
+      }
+    })))));
+  }
+  function FlashCard({
+    card,
+    lang
+  }) {
+    const [f, setF] = useState(false);
+    const T = ui(lang);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "fc",
+      onClick: () => setF(x => !x)
+    }, f ? /*#__PURE__*/React.createElement("div", {
+      className: "fc-face fc-back"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "fc-tag"
+    }, T.fcAnswerTag), /*#__PURE__*/React.createElement("div", {
+      className: "fc-a"
+    }, card.a[lang] || card.a.en)) : /*#__PURE__*/React.createElement("div", {
+      className: "fc-face fc-front"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "fc-tag"
+    }, T.fcQuestionTag), /*#__PURE__*/React.createElement("div", {
+      className: "fc-q"
+    }, card.q[lang] || card.q.en)));
+  }
+  function Flashcards({
+    cards,
+    ready,
+    lang
+  }) {
+    const T = ui(lang);
+    if (!ready) return /*#__PURE__*/React.createElement("div", {
+      className: "tk-empty"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "hand"
+    }, T.fcEmptyHand), T.fcEmptyBody);
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "fc-intro"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "hand"
+    }, T.fcIntroHand), " ", rep(T.fcIntroBody, 'n', cards.length)), cards.map((c, i) => /*#__PURE__*/React.createElement(FlashCard, {
+      key: i,
+      card: c,
+      lang: lang
+    })));
+  }
+  function MapView({
+    map,
+    related,
+    lang
+  }) {
+    const T = ui(lang);
+    function kindLabel(k) {
+      return k === 'video' ? T.kindVideo : k === 'lesson' ? T.kindLesson : k;
+    }
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "map-crumb"
+    }, /*#__PURE__*/React.createElement(Crumbs, {
+      list: map.breadcrumb
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "map-sec"
+    }, T.mapPrereq), map.prereq.map((n, i) => /*#__PURE__*/React.createElement("div", {
+      className: "mnode done",
+      key: i
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "mi"
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "check",
+      size: 15
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+      className: "mt"
+    }, n.name), /*#__PURE__*/React.createElement("span", {
+      className: "ms"
+    }, T.mapCompleted)))), /*#__PURE__*/React.createElement("div", {
+      className: "map-rail"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "map-sec"
+    }, T.mapHere), /*#__PURE__*/React.createElement("div", {
+      className: "mnode cur"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "mi"
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "sparkle",
+      size: 14,
+      fill: "currentColor"
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+      className: "mt"
+    }, map.current), /*#__PURE__*/React.createElement("span", {
+      className: "ms"
+    }, T.mapInProgress))), /*#__PURE__*/React.createElement("div", {
+      className: "map-rail"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "map-sec"
+    }, T.mapNext), map.next.map((n, i) => /*#__PURE__*/React.createElement("div", {
+      className: "mnode next",
+      key: i
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "mi"
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: n.kind === 'video' ? 'video' : 'book',
+      size: 15
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+      className: "mt"
+    }, n.name), /*#__PURE__*/React.createElement("span", {
+      className: "ms"
+    }, kindLabel(n.kind), " \xB7 ", n.min, " ", T.minUnit)), /*#__PURE__*/React.createElement("span", {
+      className: "marr"
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: "arrow",
+      size: 16
+    })))), /*#__PURE__*/React.createElement("div", {
+      className: "map-sec",
+      style: {
+        marginTop: 20
+      }
+    }, T.mapRelated), /*#__PURE__*/React.createElement("div", {
+      className: "rel-grid"
+    }, related.map((r, i) => /*#__PURE__*/React.createElement("button", {
+      className: "rel",
+      key: i
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "rn"
+    }, r.name), /*#__PURE__*/React.createElement("span", {
+      className: "rt"
+    }, r.tag)))));
+  }
+  function RightRail({
+    lesson,
+    tab,
+    setTab,
+    current,
+    onJump,
+    takeaways,
+    cardsReady,
+    lang
+  }) {
+    const T = ui(lang);
+    const tabs = [['transcript', 'transcript', T.tabTranscript], ['bulb', 'takeaways', T.tabTakeaways], ['cards', 'cards', T.tabCards], ['map', 'map', T.tabMap]];
+    return /*#__PURE__*/React.createElement("div", {
+      className: "rail"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rail-tabs"
+    }, tabs.map(([ic, key, label]) => /*#__PURE__*/React.createElement("button", {
+      key: key,
+      className: 'rtab' + (tab === key ? ' on' : ''),
+      onClick: () => setTab(key)
+    }, /*#__PURE__*/React.createElement(Icon, {
+      d: ic,
+      size: 17
+    }), label, key === 'takeaways' && takeaways > 0 && tab !== 'takeaways' && /*#__PURE__*/React.createElement("span", {
+      className: "badge"
+    })))), /*#__PURE__*/React.createElement("div", {
+      className: "rail-body"
+    }, tab === 'transcript' && /*#__PURE__*/React.createElement(Transcript, {
+      steps: lesson.STEPS,
+      current: current,
+      onJump: onJump,
+      lang: lang
+    }), tab === 'takeaways' && /*#__PURE__*/React.createElement(Takeaways, {
+      items: lesson.TAKEAWAYS,
+      unlocked: takeaways,
+      lang: lang
+    }), tab === 'cards' && /*#__PURE__*/React.createElement(Flashcards, {
+      cards: lesson.FLASHCARDS,
+      ready: cardsReady,
+      lang: lang
+    }), tab === 'map' && /*#__PURE__*/React.createElement(MapView, {
+      map: lesson.MAP,
+      related: lesson.RELATED,
+      lang: lang
+    })));
+  }
+  function Confetti() {
+    const cols = ['#4E4DF4', '#F5874E', '#FF5A8A', '#FFD81A', '#3DFCE8', '#854EF5'];
+    const bits = Array.from({
+      length: 60
+    }, (_, i) => ({
+      left: Math.random() * 100,
+      delay: Math.random() * 0.5,
+      dur: 1.4 + Math.random() * 1.4,
+      bg: cols[i % cols.length],
+      rot: Math.random() * 360
+    }));
+    return /*#__PURE__*/React.createElement("div", {
+      className: "confetti"
+    }, bits.map((b, i) => /*#__PURE__*/React.createElement("i", {
+      key: i,
+      style: {
+        left: b.left + '%',
+        background: b.bg,
+        animationDelay: b.delay + 's',
+        animationDuration: b.dur + 's',
+        transform: `rotate(${b.rot}deg)`
+      }
+    })));
+  }
+  Object.assign(window, {
+    Icon,
+    TopBar,
+    LaunchOverlay,
+    RightRail,
+    Confetti
+  });
+})();
+;
+/* ============================ APP ============================
+   Ported from the demo (lines 1006-1354) per SPEC §6:
+   - window.LESSON = window.LESSON_DATA; answerFor built by Hydrate (item 14)
+   - static hero is build-generated; React renders ONLY LaunchOverlay + #player-overlay (item 2)
+   - generic engine mount via window.Engines[LESSON.engine.id] (item 17)
+   - step ops via Hydrate.OpsRunner (abort + run, replaces step.apply) (§3)
+   - interactive model v2: drag (sweep/reach) + build (measure-graded stages) (§5)
+   - explicit step.takeaway (6) · flags:["recap"] (7) · i18n save toast (8)
+   - MOCK_IMAGE_ASK from data (9) · meta.fallbackRegion (10) · pronounce merge EN-only, base glyphs both langs (11)
+   - share→copy link, deep-links #player:<step> when player open (15) · single INTERACTIVE_WEIGHT constant (16)
+   - everything else behaves exactly like the demo (18) */
+(function () {
+  const {
+    useState,
+    useEffect,
+    useRef,
+    useCallback
+  } = React;
+  function clamp(v, a, b) {
+    return Math.max(a, Math.min(b, v));
+  }
+  const L = window.LESSON = window.LESSON_DATA;
+  L.answerFor = window.Hydrate.makeAnswerFor(L.QA, L.QA_FALLBACK);
+
+  // TTS pronounce map (item 11): base glyphs apply to BOTH languages (demo parity);
+  // LESSON.pronounce overrides are EN-only — zh voices read %, −, × natively, and
+  // injecting ' percent'/' minus ' would put English words inside Chinese audio.
+  const PRONOUNCE_BASE = {
+    'θ': ' theta',
+    '°': ' degrees',
+    '√': 'root ',
+    '⁄': ' over ',
+    '₁': ' one',
+    '₂': ' two'
+  };
+  const PRONOUNCE_EN = Object.assign({}, PRONOUNCE_BASE, L.pronounce || {});
+  function plain(s, lang) {
+    const map = lang === 'en' ? PRONOUNCE_EN : PRONOUNCE_BASE;
+    let t = (s || '').replace(/<[^>]+>/g, '');
+    for (const k in map) {
+      t = t.split(k).join(map[k]);
+    }
+    return t;
+  }
+  const RM = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const INTERACTIVE_WEIGHT = 6500; // item 16 — the ONE timeline weight for dur:0 fallbacks
+
+  // display-side inverses of Hydrate.converters (slider shows degrees, state holds radians)
+  const INV = {
+    deg2rad: function (v) {
+      return v * 180 / Math.PI;
+    }
+  };
+  function bi(node, lang) {
+    if (node == null) return '';
+    if (typeof node === 'string') return node;
+    return node[lang] || node.en || '';
+  }
+  function interp(tmpl, vars) {
+    let t = String(tmpl || '');
+    for (const k in vars) {
+      t = t.split('{' + k + '}').join(String(vars[k]));
+    }
+    return t;
+  }
+  function fmtNum(n) {
+    const r = Math.round(n * 100) / 100;
+    return String(r === 0 ? 0 : r);
+  }
+  function fmtCtl(v, display) {
+    if (display === 'deg') return Math.round(v) + '°';
+    if (display === 'pct') return Math.round(v) + '%';
+    return fmtNum(v);
+  }
+  function App() {
+    const STEPS = L.STEPS,
+      last = STEPS.length - 1;
+    const _hash = typeof location !== 'undefined' ? location.hash : '';
+    const startPlayer = _hash.indexOf('player') >= 0;
+    const _hm = _hash.match(/player:(\d+)/);
+    const _startStep = _hm ? Math.max(0, Math.min(+_hm[1], STEPS.length - 1)) : 0;
+    const [screen, setScreen] = useState(startPlayer ? 'player' : 'page');
+    const [ready, setReady] = useState(false);
+    const [stepIndex, setStepIndex] = useState(_startStep);
+    const [playing, setPlaying] = useState(true);
+    const [speed, setSpeed] = useState(1);
+    const [lang, setLang] = useState('en');
+    const [muted, setMuted] = useState(false);
+    const [cap, setCap] = useState('');
+    const [typing, setTyping] = useState(false);
+    const [answer, setAnswer] = useState(null);
+    const [askText, setAskText] = useState('');
+    const [listening, setListening] = useState(false);
+    const [tab, setTab] = useState('transcript');
+    const [takeaways, setTakeaways] = useState(0);
+    const [cardsReady, setCardsReady] = useState(false);
+    const [interactionDone, setInteractionDone] = useState(false);
+    const [buildStage, setBuildStage] = useState(0);
+    const [ctlVal, setCtlVal] = useState(0);
+    const [dragProg, setDragProg] = useState(0);
+    const [circleArmed, setCircleArmed] = useState(false);
+    const [lasso, setLasso] = useState([]);
+    const [askBubble, setAskBubble] = useState(null);
+    const [confetti, setConfetti] = useState(false);
+    const [saveToast, setSaveToast] = useState(false);
+    const [copied, setCopied] = useState(false);
+    const [stepProg, setStepProg] = useState(0);
+    const [ytToast, setYtToast] = useState(false);
+    const canvasRef = useRef(null),
+      hostRef = useRef(null),
+      siaCanvasRef = useRef(null),
+      lassoElRef = useRef(null);
+    const diagramRef = useRef(null),
+      siaRef = useRef(null),
+      runnerRef = useRef(null),
+      engMetaRef = useRef(null);
+    const stepRef = useRef(STEPS[0]),
+      buildStageRef = useRef(0),
+      interactionDoneRef = useRef(false);
+    const sweepRef = useRef(0),
+      lastMeasRef = useRef(null),
+      reachStartRef = useRef(null);
+    const pulseStopRef = useRef(null),
+      typingRef = useRef(null),
+      lassoStateRef = useRef({
+        active: false,
+        pts: [],
+        client: []
+      });
+    const voiceIdxRef = useRef(0);
+    const langRef = useRef('en'),
+      mutedRef = useRef(false),
+      speedRef = useRef(1);
+    useEffect(() => {
+      langRef.current = lang;
+    }, [lang]);
+    useEffect(() => {
+      mutedRef.current = muted;
+    }, [muted]);
+    useEffect(() => {
+      speedRef.current = speed;
+    }, [speed]);
+    const step = STEPS[stepIndex];
+    const T = window.UI[lang] || window.UI.en; // chrome strings (item 13)
+    const TT = () => window.UI[langRef.current] || window.UI.en; // for callbacks
+
+    // ---- speech (TTS) ----
+    const speak = useCallback(text => {
+      if (mutedRef.current || typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.rate = clamp(0.97 * speedRef.current, 0.6, 2);
+        u.pitch = 1.04;
+        u.lang = langRef.current === 'zh' ? 'zh-CN' : 'en-US';
+        const vs = window.speechSynthesis.getVoices() || [];
+        const pref = vs.find(v => langRef.current === 'zh' ? /zh|Chinese/i.test(v.lang + ' ' + v.name) : /en[-_]?US|English/i.test(v.lang + ' ' + v.name));
+        if (pref) u.voice = pref;
+        window.speechSynthesis.speak(u);
+      } catch (_) {}
+    }, []);
+    function stopSpeech() {
+      try {
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      } catch (_) {}
+    }
+
+    // ---- caption typewriter ----
+    const startTyping = useCallback(text => {
+      if (typingRef.current) clearInterval(typingRef.current);
+      if (RM) {
+        setTyping(false);
+        setCap(text);
+        return;
+      }
+      setTyping(true);
+      setCap('');
+      let i = 0;
+      const per = Math.max(8, 18 / speedRef.current);
+      typingRef.current = setInterval(() => {
+        i += 1;
+        setCap(text.slice(0, i));
+        if (i >= text.length) {
+          clearInterval(typingRef.current);
+          typingRef.current = null;
+          setTyping(false);
+        }
+      }, per);
+    }, []);
+    const flashCap = useCallback(text => {
+      if (typingRef.current) {
+        clearInterval(typingRef.current);
+        typingRef.current = null;
+      }
+      setTyping(false);
+      setCap(text);
+    }, []);
+    function completeDrag(s) {
+      interactionDoneRef.current = true;
+      setInteractionDone(true);
+      setDragProg(1);
+      siaRef.current && siaRef.current.react('CELEBRATE', s.pose, 1800);
+      flashCap(bi(s.interactive.doneSay, langRef.current) || TT().dragDoneGeneric);
+    }
+
+    // ---- engine onChange: control mirror + drag completion (§5 sweep/reach) ----
+    const handleChange = useCallback(() => {
+      const s = stepRef.current,
+        inter = s && s.interactive,
+        d = diagramRef.current;
+      if (!d || !inter) return;
+      const ctl = inter.control;
+      if (ctl) {
+        const raw = d.state && typeof d.state[ctl.bind] === 'number' ? d.state[ctl.bind] : 0;
+        const inv = ctl.toState && INV[ctl.toState];
+        setCtlVal(inv ? inv(raw) : raw);
+      }
+      if (inter.type !== 'drag' || interactionDoneRef.current) return;
+      const done = inter.done || {};
+      if (!done.measure) return;
+      const v = d.measure(done.measure);
+      if (done.kind === 'sweep') {
+        if (lastMeasRef.current != null) sweepRef.current += window.Hydrate.sweepClamp(v - lastMeasRef.current, done.range);
+        lastMeasRef.current = v;
+        setDragProg(clamp(sweepRef.current / done.range, 0, 1));
+        if (sweepRef.current >= done.range) completeDrag(s);
+      } else if (done.kind === 'reach') {
+        const tol = done.tol != null ? done.tol : 0.5;
+        const diff = Math.abs(v - done.target);
+        if (reachStartRef.current == null) reachStartRef.current = Math.max(diff, tol);
+        setDragProg(clamp(1 - (diff - tol) / Math.max(reachStartRef.current - tol, 1e-6), 0, 1));
+        if (diff <= tol) completeDrag(s);
+      }
+    }, []);
+
+    // ---- engine onCommit: build grading on measures (§5) ----
+    const handleCommit = useCallback(() => {
+      const s = stepRef.current,
+        inter = s && s.interactive;
+      if (!inter || inter.type !== 'build') return;
+      const stages = inter.stages || [];
+      const idx = buildStageRef.current;
+      const stg = stages[idx];
+      if (!stg) return;
+      const d = diagramRef.current;
+      if (!d) return;
+      const v = d.measure(stg.measure);
+      const tol = stg.tol != null ? stg.tol : 0.1;
+      if (Math.abs(v - stg.target) > tol) {
+        siaRef.current && siaRef.current.react('OOPS', s.pose, 1200);
+        const tmpl = bi(stg.miss, langRef.current) || TT().buildMissGeneric;
+        flashCap(interp(tmpl, {
+          value: fmtNum(v),
+          target: fmtNum(stg.target)
+        }));
+        return;
+      }
+      siaRef.current && siaRef.current.react(stg.pose || 'CELEBRATE', s.pose, 1700);
+      flashCap(bi(stg.ok, langRef.current));
+      const next = idx + 1;
+      buildStageRef.current = next;
+      setBuildStage(next);
+      if (next >= stages.length) {
+        interactionDoneRef.current = true;
+        setInteractionDone(true);
+        d.setMode('none');
+        fireConfetti();
+      }
+    }, []);
+    function fireConfetti() {
+      setConfetti(true);
+      setTimeout(() => setConfetti(false), 2600);
+    }
+
+    // ---- static hero hookup: CTA listener (#launch-btn, build-rendered) + Sia greeting ----
+    useEffect(() => {
+      const btn = document.getElementById('launch-btn');
+      const go = function (e) {
+        if (e) e.preventDefault();
+        setScreen(sc => sc === 'page' ? 'launching' : sc);
+      };
+      if (btn) btn.addEventListener('click', go);
+      const hc = document.getElementById('hero-sia');
+      if (hc && hc.tagName === 'CANVAS' && window.SiaEngine) {
+        try {
+          window.SiaEngine.render(hc, 'WAVE', 2.4);
+        } catch (_) {}
+      }
+      return () => {
+        if (btn) btn.removeEventListener('click', go);
+      };
+    }, []);
+    useEffect(() => {
+      document.body.classList.toggle('player-open', screen !== 'page');
+    }, [screen]);
+
+    // ---- mount engines (item 17 — nothing engine-specific) ----
+    useEffect(() => {
+      if (screen !== 'player') return;
+      if (canvasRef.current && !diagramRef.current) {
+        const Eng = window.Engines[L.engine.id];
+        engMetaRef.current = Eng.meta;
+        const d = new Eng(canvasRef.current, {
+          onChange: handleChange,
+          onCommit: handleCommit
+        });
+        diagramRef.current = d;
+        runnerRef.current = window.Hydrate.OpsRunner(d);
+        d.set(Object.assign({}, Eng.meta.defaults, L.engine.config || {}));
+        siaRef.current = window.SiaEngine.mountCompanion(siaCanvasRef.current, {
+          cell: 2,
+          pose: 'IDLE'
+        });
+        d.resize();
+        // prime voices list
+        try {
+          if ('speechSynthesis' in window) {
+            window.speechSynthesis.getVoices();
+            window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+          }
+        } catch (_) {}
+        setReady(true);
+      }
+    }, [screen, handleChange, handleCommit]);
+
+    // ---- apply step (ops via runner — replaces step.apply) ----
+    const applyStep = useCallback(i => {
+      const s = STEPS[i];
+      stepRef.current = s;
+      const text = bi(s.say, langRef.current);
+      startTyping(text);
+      setAnswer(null);
+      speak(plain(text, langRef.current));
+      if (siaRef.current) siaRef.current.setPose(s.pose);
+      const d = diagramRef.current;
+      if (!d) return;
+      if (pulseStopRef.current) {
+        pulseStopRef.current();
+        pulseStopRef.current = null;
+      }
+      const runner = runnerRef.current;
+      if (runner) {
+        runner.abort();
+        runner.run(s);
+      }
+      if (s.pulse) pulseStopRef.current = d.startPulse();
+      sweepRef.current = 0;
+      lastMeasRef.current = null;
+      reachStartRef.current = null;
+      setDragProg(0);
+      const inter = s.interactive;
+      if (inter) {
+        interactionDoneRef.current = false;
+        setInteractionDone(false);
+        setPlaying(false);
+        setYtToast(true);
+        setTimeout(() => setYtToast(false), 2800);
+        if (inter.mode) d.setMode(inter.mode);
+        if (inter.type === 'drag') {
+          const ctl = inter.control;
+          if (ctl) {
+            const raw = d.state && typeof d.state[ctl.bind] === 'number' ? d.state[ctl.bind] : 0;
+            const inv = ctl.toState && INV[ctl.toState];
+            setCtlVal(inv ? inv(raw) : raw);
+          }
+        } else if (inter.type === 'build') {
+          buildStageRef.current = 0;
+          setBuildStage(0);
+        }
+      } else {
+        interactionDoneRef.current = true;
+        setInteractionDone(true);
+      }
+      if (s.takeaway) setTakeaways(u => Math.max(u, s.takeaway)); // item 6: explicit only
+      if (s.flags && s.flags.includes('recap'))
+        // item 7
+        setTimeout(() => {
+          setCardsReady(true);
+          setSaveToast(true);
+          setTimeout(() => setSaveToast(false), 3600);
+        }, 900);
+    }, [STEPS, startTyping, speak]);
+    useEffect(() => {
+      if (ready && screen === 'player') applyStep(stepIndex);
+    }, [stepIndex, ready, screen]);
+
+    // re-narrate caption text on language switch (no re-advance)
+    useEffect(() => {
+      if (ready && screen === 'player' && !answer) {
+        const s = STEPS[stepIndex];
+        flashCap(bi(s.say, lang));
+      }
+    }, [lang]);
+
+    // keyboard: Space = play/pause (watch steps only), ← / → = previous / next step
+    useEffect(() => {
+      if (screen !== 'player') return;
+      function onKey(e) {
+        const tg = e.target && e.target.tagName;
+        if (tg && /INPUT|TEXTAREA/.test(tg)) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          if (!STEPS[stepIndex].interactive) {
+            setPlaying(p => {
+              const np = !p;
+              if (!np) stopSpeech();
+              return np;
+            });
+          }
+        } else if (e.key === 'ArrowRight' && stepIndex < last) {
+          jump(stepIndex + 1);
+        } else if (e.key === 'ArrowLeft' && stepIndex > 0) {
+          jump(stepIndex - 1);
+        }
+      }
+      window.addEventListener('keydown', onKey);
+      return () => window.removeEventListener('keydown', onKey);
+    }, [screen, stepIndex]);
+    function goNext() {
+      setStepIndex(i => {
+        if (i < last) return i + 1;
+        setPlaying(false);
+        return i;
+      });
+    }
+
+    // ---- auto-advance + step progress ----
+    useEffect(() => {
+      if (!ready || screen !== 'player' || answer || !playing) {
+        return;
+      }
+      const s = STEPS[stepIndex];
+      let t, prog;
+      setStepProg(0);
+      if (s.dur > 0) {
+        const t0 = performance.now();
+        const dur = s.dur / speed;
+        prog = setInterval(() => {
+          setStepProg(clamp((performance.now() - t0) / dur, 0, 1));
+        }, 90);
+        t = setTimeout(goNext, dur);
+      } else if (interactionDone) {
+        setStepProg(1);
+        t = setTimeout(goNext, 1300 / speed);
+      }
+      return () => {
+        clearTimeout(t);
+        if (prog) clearInterval(prog);
+      };
+    }, [stepIndex, playing, interactionDone, answer, ready, screen, speed]);
+
+    // (speech is stopped explicitly on pause / ask / jump — no auto-effect, so entering an interactive step doesn't cancel its own narration)
+
+    // ---- ask ----
+    function ask(text) {
+      if (!text) return;
+      const a = L.answerFor(text);
+      setAnswer({
+        q: text,
+        tag: 'Sia',
+        html: a.a
+      });
+      setPlaying(false);
+      setAskBubble(null);
+      if (siaRef.current) siaRef.current.react(a.pose, stepRef.current.pose, 2800);
+      speak(plain(a.a, langRef.current));
+    }
+    function startVoice() {
+      if (listening) return;
+      setListening(true);
+      stopSpeech();
+      if (siaRef.current) siaRef.current.setPose('THINK');
+      setTimeout(() => {
+        const s = L.VOICE_SAMPLES[voiceIdxRef.current % L.VOICE_SAMPLES.length];
+        voiceIdxRef.current++;
+        setListening(false);
+        ask(s);
+      }, 1700);
+    }
+    function askImage() {
+      const m = L.MOCK_IMAGE_ASK;
+      if (!m) return; // item 9: from data
+      setPlaying(false);
+      setAskBubble(null);
+      stopSpeech();
+      if (siaRef.current) siaRef.current.setPose('THINK');
+      setTimeout(() => {
+        setAnswer({
+          q: m.q,
+          tag: 'Sia',
+          img: true,
+          html: m.html
+        });
+        if (siaRef.current) siaRef.current.react('HAPPY', stepRef.current.pose, 2800);
+        speak(plain(m.html, langRef.current));
+      }, 900);
+    }
+    function resumeLesson() {
+      setAnswer(null);
+      setPlaying(true);
+      if (siaRef.current) siaRef.current.setPose(stepRef.current.pose);
+    }
+
+    // ---- circle to ask ----
+    function lassoDown(e) {
+      if (!circleArmed) return;
+      const r = lassoElRef.current.getBoundingClientRect();
+      lassoStateRef.current = {
+        active: true,
+        pts: [[e.clientX - r.left, e.clientY - r.top]],
+        client: [[e.clientX, e.clientY]]
+      };
+      setLasso([[e.clientX - r.left, e.clientY - r.top]]);
+      try {
+        lassoElRef.current.setPointerCapture(e.pointerId);
+      } catch (_) {}
+    }
+    function lassoMove(e) {
+      const st = lassoStateRef.current;
+      if (!st.active) return;
+      const r = lassoElRef.current.getBoundingClientRect();
+      st.pts.push([e.clientX - r.left, e.clientY - r.top]);
+      st.client.push([e.clientX, e.clientY]);
+      setLasso(st.pts.slice());
+    }
+    function lassoUp() {
+      const st = lassoStateRef.current;
+      if (!st.active) return;
+      st.active = false;
+      if (st.pts.length < 3) {
+        setLasso([]);
+        setCircleArmed(false);
+        return;
+      }
+      const cxp = st.pts.reduce((a, p) => a + p[0], 0) / st.pts.length,
+        cyp = st.pts.reduce((a, p) => a + p[1], 0) / st.pts.length;
+      const ccx = st.client.reduce((a, p) => a + p[0], 0) / st.client.length,
+        ccy = st.client.reduce((a, p) => a + p[1], 0) / st.client.length;
+      const region = diagramRef.current.classifyRegion(ccx, ccy);
+      const fb = engMetaRef.current && engMetaRef.current.fallbackRegion || 'plane'; // item 10
+      const ra = L.REGION_ANSWERS[region] || L.REGION_ANSWERS[fb];
+      if (ra) {
+        const hw = hostRef.current.clientWidth,
+          hh = hostRef.current.clientHeight;
+        setAskBubble({
+          x: clamp(cxp - 165, 12, hw - 342),
+          y: clamp(cyp + 14, 12, hh - 180),
+          tag: 'Sia',
+          html: ra.a,
+          chips: ra.chips
+        });
+        if (siaRef.current) siaRef.current.react(ra.pose, stepRef.current.pose, 2800);
+        speak(plain(ra.a, langRef.current));
+      }
+      setCircleArmed(false);
+      setTimeout(() => setLasso([]), 450);
+    }
+
+    // ---- exit: close overlay back to the scrollable page (item 3) ----
+    function exitToPage() {
+      stopSpeech();
+      if (pulseStopRef.current) {
+        pulseStopRef.current();
+        pulseStopRef.current = null;
+      }
+      if (runnerRef.current) {
+        runnerRef.current.abort();
+        runnerRef.current = null;
+      }
+      if (siaRef.current) {
+        siaRef.current.destroy();
+        siaRef.current = null;
+      }
+      diagramRef.current = null;
+      engMetaRef.current = null;
+      setReady(false);
+      setScreen('page');
+      setStepIndex(0);
+      setPlaying(true);
+      setTakeaways(0);
+      setCardsReady(false);
+      setAnswer(null);
+      setAskBubble(null);
+      setConfetti(false);
+      setSaveToast(false);
+      setCopied(false);
+      document.body.classList.remove('player-open');
+      try {
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      } catch (_) {
+        try {
+          location.hash = '';
+        } catch (__) {}
+      }
+    }
+    function jump(i) {
+      setAskBubble(null);
+      setAnswer(null);
+      setStepIndex(i);
+    }
+    function cycleSpeed() {
+      setSpeed(s => s === 1 ? 1.25 : s === 1.25 ? 1.5 : 1);
+    }
+
+    // ===== render =====
+    if (screen === 'page') return null; // static hero + article are build-generated HTML
+    if (screen === 'launching') return /*#__PURE__*/React.createElement(window.LaunchOverlay, {
+      cover: L.meta && L.meta.cover,
+      lang: lang,
+      onDone: () => setScreen('player')
+    });
+    const inter = step.interactive;
+    const progPct = inter && inter.type === 'drag' ? clamp(dragProg * 100, 4, 100) : 0;
+    const weights = STEPS.map(s => s.interactive ? 0 : s.dur > 0 ? s.dur : INTERACTIVE_WEIGHT);
+    const totalMs = weights.reduce((a, b) => a + b, 0);
+    let elapsedMs = 0;
+    for (let i = 0; i < stepIndex; i++) elapsedMs += weights[i];
+    elapsedMs += stepProg * (weights[stepIndex] || 0);
+    const mmss = ms => {
+      const s = Math.max(0, Math.round(ms / 1000));
+      return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    };
+    const saveToastText = interp(L.ui && L.ui.saveToast && bi(L.ui.saveToast, lang) || T.saveToast, {
+      n: L.FLASHCARDS.length
+    }); // item 8
+    const ctl = inter && inter.type === 'drag' ? inter.control : null; // item 5: slider only from interactive.control
+
+    return /*#__PURE__*/React.createElement("div", {
+      id: "player-overlay"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "player"
+    }, /*#__PURE__*/React.createElement(window.TopBar, {
+      lesson: L,
+      step: stepIndex,
+      total: STEPS.length,
+      onExit: exitToPage,
+      lang: lang,
+      setLang: setLang,
+      onCopied: () => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2200);
+      }
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "main"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "stage"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: 'stage-card' + (inter ? ' interacting' : '')
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "stage-toprow"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: 'chapter-pill' + (inter ? ' yourturn' : '')
+    }, inter ? T.yourTurnPill : step.chapter), /*#__PURE__*/React.createElement("div", {
+      className: "tools"
+    }, /*#__PURE__*/React.createElement("button", {
+      className: 'tool' + (circleArmed ? ' on' : ''),
+      onClick: () => {
+        setCircleArmed(a => !a);
+        setAskBubble(null);
+      }
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "lasso",
+      size: 15
+    }), T.circleToAsk), /*#__PURE__*/React.createElement("button", {
+      className: "tool",
+      onClick: () => applyStep(stepIndex),
+      title: T.resetView,
+      "aria-label": T.resetView
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "reset",
+      size: 15
+    })))), ytToast && /*#__PURE__*/React.createElement("div", {
+      className: "yt-toast"
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "lasso",
+      size: 12
+    }), T.ytToast), /*#__PURE__*/React.createElement("div", {
+      className: "canvas-host",
+      ref: hostRef
+    }, /*#__PURE__*/React.createElement("canvas", {
+      className: "diagram",
+      ref: canvasRef
+    }), /*#__PURE__*/React.createElement("div", {
+      ref: lassoElRef,
+      className: 'lasso' + (circleArmed ? ' armed' : ''),
+      style: {
+        pointerEvents: circleArmed ? 'auto' : 'none'
+      },
+      onPointerDown: lassoDown,
+      onPointerMove: lassoMove,
+      onPointerUp: lassoUp,
+      onPointerCancel: lassoUp
+    }, lasso.length > 1 && /*#__PURE__*/React.createElement("svg", {
+      width: "100%",
+      height: "100%",
+      style: {
+        position: 'absolute',
+        inset: 0
+      }
+    }, /*#__PURE__*/React.createElement("polyline", {
+      points: lasso.map(p => p.join(',')).join(' '),
+      fill: "rgba(78,77,244,.06)",
+      stroke: "var(--primary)",
+      strokeWidth: "2.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeDasharray: "2 5"
+    }))), askBubble && /*#__PURE__*/React.createElement("div", {
+      className: "ask-bubble",
+      style: {
+        left: askBubble.x,
+        top: askBubble.y
+      }
+    }, /*#__PURE__*/React.createElement("button", {
+      className: "ab-close",
+      onClick: () => setAskBubble(null)
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "exit",
+      size: 13
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "ab-tag"
+    }, T.siaTag), /*#__PURE__*/React.createElement("div", {
+      className: "ab-body",
+      dangerouslySetInnerHTML: {
+        __html: askBubble.html
+      }
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "ab-chips"
+    }, askBubble.chips.map((c, i) => /*#__PURE__*/React.createElement("button", {
+      className: "ab-chip",
+      key: i,
+      onClick: () => ask(c)
+    }, c)))), /*#__PURE__*/React.createElement("div", {
+      className: "companion"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: 'soundbars' + (typing || answer ? ' on' : ''),
+      style: {
+        opacity: typing || answer ? 1 : 0
+      }
+    }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)), /*#__PURE__*/React.createElement("div", {
+      className: "sia-tile"
+    }, /*#__PURE__*/React.createElement("canvas", {
+      ref: siaCanvasRef
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "pedestal"
+    }))), ctl && /*#__PURE__*/React.createElement("div", {
+      className: "focusctl"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lbl"
+    }, bi(ctl.label, lang)), /*#__PURE__*/React.createElement("div", {
+      className: "val"
+    }, fmtCtl(ctlVal, ctl.display)), /*#__PURE__*/React.createElement("input", {
+      type: "range",
+      min: ctl.min,
+      max: ctl.max,
+      step: ctl.step || 1,
+      value: ctlVal,
+      onChange: e => {
+        const v = +e.target.value;
+        setCtlVal(v);
+        const conv = ctl.toState && window.Hydrate.converters[ctl.toState];
+        const st = {};
+        st[ctl.bind] = conv ? conv(v) : v;
+        const d = diagramRef.current;
+        if (d) {
+          d.set(st);
+          handleChange(d.state);
+        }
+      }
+    })), inter && /*#__PURE__*/React.createElement("div", {
+      className: "hintbar"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "htxt"
+    }, inter.type === 'build' ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: "hmain"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "hand"
+    }, "\u270E "), interactionDone ? bi(inter.doneHint, lang) || T.buildDoneGeneric : inter.stages[buildStage] ? bi(inter.stages[buildStage].hint, lang) : ''), /*#__PURE__*/React.createElement("div", {
+      className: "buildlist",
+      style: {
+        marginTop: 8
+      }
+    }, inter.stages.map((st, i) => /*#__PURE__*/React.createElement("div", {
+      key: i,
+      className: 'bstep' + (i < buildStage ? ' done' : i === buildStage ? ' cur' : '')
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "n"
+    }, i < buildStage ? /*#__PURE__*/React.createElement(window.Icon, {
+      d: "check",
+      size: 11
+    }) : i + 1), st.label)))) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: "htag"
+    }, T.yourTurn), /*#__PURE__*/React.createElement("div", {
+      className: "hmain"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "hand"
+    }, "\u270E "), bi(inter.hint, lang)))), inter.type !== 'build' && !interactionDone && /*#__PURE__*/React.createElement("div", {
+      className: "hint-prog"
+    }, /*#__PURE__*/React.createElement("i", {
+      style: {
+        width: progPct + '%'
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "hb-actions"
+    }, /*#__PURE__*/React.createElement("button", {
+      className: "skip-link",
+      onClick: () => {
+        setPlaying(true);
+        goNext();
+      },
+      title: T.skipTitle
+    }, T.skip), /*#__PURE__*/React.createElement("button", {
+      className: "btn-cont",
+      disabled: !interactionDone,
+      onClick: () => {
+        setPlaying(true);
+        goNext();
+      }
+    }, T.continue, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "arrow",
+      size: 16
+    }))))))), /*#__PURE__*/React.createElement(window.RightRail, {
+      lesson: L,
+      tab: tab,
+      setTab: setTab,
+      current: stepIndex,
+      onJump: jump,
+      takeaways: takeaways,
+      cardsReady: cardsReady,
+      lang: lang
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "timeline"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "tl-track"
+    }, STEPS.map((s, i) => s.interactive ? /*#__PURE__*/React.createElement("button", {
+      key: i,
+      className: 'tl-mark' + (i < stepIndex ? ' done' : '') + (i === stepIndex ? ' cur' : ''),
+      title: T.yourTurnInteraction,
+      "aria-label": T.interactiveCheckpoint,
+      onClick: () => jump(i)
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "lasso",
+      size: 9
+    })) : /*#__PURE__*/React.createElement("div", {
+      key: i,
+      className: 'tl-seg' + (i < stepIndex ? ' done' : ''),
+      title: s.chapter,
+      onClick: () => jump(i),
+      style: {
+        flexGrow: s.dur > 0 ? s.dur : INTERACTIVE_WEIGHT
+      }
+    }, /*#__PURE__*/React.createElement("i", {
+      style: {
+        width: i < stepIndex ? '100%' : i === stepIndex ? stepProg * 100 + '%' : '0%'
+      }
+    })))), /*#__PURE__*/React.createElement("div", {
+      className: "tl-time"
+    }, mmss(elapsedMs), " / ", mmss(totalMs))), /*#__PURE__*/React.createElement("div", {
+      className: "bottombar"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "bb-controls"
+    }, inter ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+      className: "bb-mode"
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "lasso",
+      size: 13
+    }), T.yourTurn), /*#__PURE__*/React.createElement("button", {
+      className: "bb-ic",
+      onClick: () => applyStep(stepIndex),
+      title: T.reset,
+      "aria-label": T.reset
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "restart",
+      size: 18
+    })), /*#__PURE__*/React.createElement("button", {
+      className: 'bb-ic' + (muted ? '' : ' on'),
+      onClick: () => setMuted(m => !m),
+      title: muted ? T.audioOff : T.audioOn,
+      "aria-label": T.toggleNarration
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: muted ? 'mute' : 'volume',
+      size: 18
+    }))) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+      className: "bb-play",
+      onClick: () => setPlaying(p => {
+        const np = !p;
+        if (!np) stopSpeech();
+        return np;
+      }),
+      title: playing ? T.pause : T.play,
+      "aria-label": playing ? T.pause : T.play
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: playing ? 'pause' : 'play',
+      size: 20,
+      fill: "currentColor"
+    })), /*#__PURE__*/React.createElement("button", {
+      className: "bb-ic",
+      onClick: () => jump(0),
+      title: T.replay,
+      "aria-label": T.replay
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "restart",
+      size: 18
+    })), /*#__PURE__*/React.createElement("button", {
+      className: 'bb-ic' + (muted ? '' : ' on'),
+      onClick: () => setMuted(m => !m),
+      title: muted ? T.audioOff : T.audioOn,
+      "aria-label": T.toggleNarration
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: muted ? 'mute' : 'volume',
+      size: 18
+    })), /*#__PURE__*/React.createElement("button", {
+      className: "bb-speed",
+      onClick: cycleSpeed,
+      "aria-label": T.speed
+    }, speed.toFixed(2).replace(/0$/, ''), "\xD7"))), /*#__PURE__*/React.createElement("div", {
+      className: "caption"
+    }, answer ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: 'cap-q' + (answer.img ? ' cap-q-img' : '')
+    }, answer.img && /*#__PURE__*/React.createElement(window.Icon, {
+      d: "image",
+      size: 13
+    }), answer.q), /*#__PURE__*/React.createElement("div", {
+      className: "cap-row"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "cap-tag"
+    }, T.siaTag), /*#__PURE__*/React.createElement("span", {
+      className: "cap-text cap-answer",
+      dangerouslySetInnerHTML: {
+        __html: answer.html
+      }
+    })), /*#__PURE__*/React.createElement("button", {
+      className: "cap-resume",
+      onClick: resumeLesson
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "play",
+      size: 12,
+      fill: "currentColor"
+    }), T.resumeLesson)) : /*#__PURE__*/React.createElement("div", {
+      className: "cap-row"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "cap-tag"
+    }, T.siaTag), /*#__PURE__*/React.createElement("span", {
+      className: "cap-text"
+    }, cap, typing && /*#__PURE__*/React.createElement("span", {
+      className: "cursor"
+    })))), /*#__PURE__*/React.createElement("div", {
+      className: "askbar"
+    }, /*#__PURE__*/React.createElement("button", {
+      className: "attach",
+      onClick: askImage,
+      title: T.askImage,
+      "aria-label": T.askImage
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "image",
+      size: 18
+    })), /*#__PURE__*/React.createElement("button", {
+      className: 'mic' + (listening ? ' listening' : ''),
+      onClick: startVoice,
+      title: T.askVoice,
+      "aria-label": T.askVoice
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "mic",
+      size: 19
+    })), /*#__PURE__*/React.createElement("form", {
+      className: "ask-input",
+      onSubmit: e => {
+        e.preventDefault();
+        ask(askText);
+        setAskText('');
+      }
+    }, /*#__PURE__*/React.createElement("input", {
+      placeholder: T.askPlaceholder,
+      value: askText,
+      onChange: e => setAskText(e.target.value)
+    }), /*#__PURE__*/React.createElement("button", {
+      className: "ask-go",
+      type: "submit"
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "send",
+      size: 15
+    }))))), listening && /*#__PURE__*/React.createElement("div", {
+      className: "listen-toast"
+    }, /*#__PURE__*/React.createElement("span", null, T.listening), /*#__PURE__*/React.createElement("span", {
+      className: "dots"
+    }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null))), saveToast && /*#__PURE__*/React.createElement("div", {
+      className: "save-toast"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "ck"
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "check",
+      size: 13
+    })), saveToastText), copied && /*#__PURE__*/React.createElement("div", {
+      className: "save-toast"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "ck"
+    }, /*#__PURE__*/React.createElement(window.Icon, {
+      d: "check",
+      size: 13
+    })), T.linkCopied), confetti && /*#__PURE__*/React.createElement(window.Confetti, null)));
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(App, null));
+})();
+</script>
+</body>
+</html>
