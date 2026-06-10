@@ -283,7 +283,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .lasso{position:absolute;inset:0;width:100%;height:100%;z-index:9}
 .lasso.armed{cursor:crosshair}
 
-.companion{position:absolute;left:18px;bottom:18px;z-index:12;display:flex;align-items:flex-end;gap:10px;pointer-events:none;transform:scale(var(--sia-scale,1));transform-origin:bottom left}
+.companion{position:absolute;left:18px;bottom:18px;z-index:12;display:flex;align-items:flex-end;gap:10px;pointer-events:none;--sia-scale:.8;transform:scale(var(--sia-scale,1));transform-origin:bottom left;transition:opacity .25s ease,transform .25s ease}
 .companion .sia-tile{position:relative;animation:float 4.5s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .companion canvas{display:block;filter:drop-shadow(0 8px 14px rgba(78,77,244,.28))}
@@ -293,6 +293,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .soundbars.on span{animation:sb .6s ease-in-out infinite}
 .soundbars span:nth-child(2){animation-delay:.15s}.soundbars span:nth-child(3){animation-delay:.3s}.soundbars span:nth-child(4){animation-delay:.45s}
 @keyframes sb{0%,100%{height:5px}50%{height:18px}}
+/* .companion is pointer-events:none, so :hover can't fire — app.jsx toggles .dodge from a pointermove proximity check */
+.companion.dodge{opacity:.18}
+/* interactive step: .stage-card carries .interacting (app.jsx) — shrink Sia out of the way of canvas targets; .soundbars fades with it (same subtree) */
+.stage-card.interacting .companion{opacity:.32;transform:scale(.62);transform-origin:bottom left}
+.stage-card.interacting .companion.dodge{opacity:.18}
 
 .hintbar{position:absolute;left:16px;right:16px;bottom:16px;z-index:11;background:rgba(255,255,255,.96);border:1.5px solid var(--primary-200);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh-md);animation:popUp .3s ease both}
 @keyframes popUp{from{transform:translateY(8px);opacity:.4}to{transform:translateY(0);opacity:1}}
@@ -608,7 +613,7 @@ body.player-open{overflow:hidden}
 
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
-<script>window.LESSON_DATA = {"meta":{"slug":"sine-cosine-unit-circle","urlPath":"/learn/geometry-trigonometry/right-triangles-and-trigonometry/sine-cosine-unit-circle","title":"Sine & Cosine on the Unit Circle","description":"See where sine and cosine actually come from: the coordinates of a point spinning around the unit circle, and how that traces the sine wave. Interactive, narrated, ask-anything lesson by AskSia.","keywords":["sine","cosine","unit circle","trigonometry","sin cos definition","sine wave","SOH CAH TOA","special angles","interactive math lesson"],"durationLabel":"≈ 5 min · narrated","intro":"Sine and cosine are not just calculator buttons or the triangle rule SOH-CAH-TOA — they are the coordinates of a single point moving around the unit circle (a circle of radius 1). For a point at angle θ, cos θ is its x-coordinate and sin θ is its y-coordinate. Sweeping θ traces the sine and cosine waves.","sat":{"domain":"Geometry and Trigonometry","skillCode":"right_triangles_and_trigonometry","skillName":"Right triangles and trigonometry","sessionId":"right_triangles_and_trigonometry.soh-cah-toa--define-ratios","code":"GEO-TRIG-09","tier":"2","difficultyIndex":5,"preparesFor":"M","formats":["MCQ","SPR"]},"cover":{"eyebrow":"AI-native interactive lesson","crumb":"Trigonometry · The Unit Circle","h1Parts":["Sine &","Cosine"],"sub":{"en":"The circle behind the wave","zh":"波背后的那个圆"},"blurb":{"en":"Stop memorizing SOH-CAH-TOA. Watch Sia turn a spinning point on a circle into sine and cosine — drag it, watch the wave roll out, and ask anything, any time, out loud.","zh":"别再死记 SOH-CAH-TOA。看 Sia 把圆上一个旋转的点变成正弦和余弦——亲手拖动它，看波从圆里展开，随时随地开口提问。"},"launchSteps":["Reading the topic — sine & cosine","Building the unit-circle animation","Writing Sia's narration","Recording the AI voice-over","Preparing your flashcards"]},"terms":[{"name":"Unit circle","def":"A circle of radius 1 centered at the origin."},{"name":"Sine (sin θ)","def":"The y-coordinate of the point at angle θ on the unit circle."},{"name":"Cosine (cos θ)","def":"The x-coordinate of the point at angle θ on the unit circle."},{"name":"Radian","def":"An angle measure where a full turn is 2π; 360° = 2π radians."}],"faq":[{"q":{"en":"What is cosine on the unit circle?","zh":"在单位圆上，cos θ 是什么？"},"a":{"en":"cos θ is the x-coordinate of the point at angle θ on the unit circle.","zh":"cos θ 就是单位圆上角度 θ 处那个点的 x 坐标。"}},{"q":{"en":"What is sine on the unit circle?","zh":"单位圆上的 sin θ 是什么？"},"a":{"en":"sin θ is the y-coordinate of the point at angle θ on the unit circle.","zh":"sin θ 就是单位圆上角度 θ 处那个点的 y 坐标。"}},{"q":{"en":"Why are sine and cosine always between -1 and 1?","zh":"为什么 sin 和 cos 永远在 −1 到 1 之间？"},"a":{"en":"Because the point never leaves the radius-1 unit circle, so neither coordinate can exceed 1 or drop below -1.","zh":"因为点永远离不开半径为 1 的单位圆，所以两个坐标都不可能超过 1，也不可能低于 −1。"}},{"q":{"en":"What are sin 90° and cos 90°?","zh":"sin 90° 和 cos 90° 是多少？"},"a":{"en":"sin 90° = 1 and cos 90° = 0 — the point sits at the top of the circle, (0, 1).","zh":"sin 90° = 1，cos 90° = 0——点正好在圆的顶端 (0, 1)。"}},{"q":{"en":"How are the sine and cosine waves related?","zh":"正弦波和余弦波有什么关系？"},"a":{"en":"They are the same shape shifted by 90 degrees: cos θ = sin(θ + 90°).","zh":"它们是同一个形状，平移了 90°：cos θ = sin(θ + 90°)。"}},{"q":{"en":"What is sin 45°?","zh":"sin 45° 是多少？"},"a":{"en":"sin 45° = √2⁄2 ≈ 0.707, and it equals cos 45°.","zh":"sin 45° = √2⁄2 ≈ 0.707，并且等于 cos 45°。"}}]},"engine":{"id":"unit-circle-wave","config":{}},"STEPS":[{"id":"intro","chapter":"The idea","pose":"WAVE","dur":9000,"say":{"en":"Everyone learns sine and cosine as buttons on a calculator — or some triangle rule, SOH-CAH-TOA. That's not what they ARE. Sine and cosine are the footprints of a single point walking around a circle. Watch.","zh":"几乎所有人都把 sin、cos 当成计算器上的按钮——或者一句口诀 SOH-CAH-TOA。但那不是它们的本质。正弦和余弦，是一个点绕着圆走时留下的脚印。看好了。"},"ops":[{"op":"reset"}]},{"id":"the-circle","chapter":"The idea","pose":"HAPPY","dur":8500,"say":{"en":"Start with one circle. Radius exactly 1 — the unit circle. Drop a point P on its edge. The angle θ is just how far P has spun from the right side, going counter-clockwise.","zh":"先画一个圆。半径正好是 1——这就是单位圆。在圆上放一个点 P。角度 θ，就是 P 从最右边开始、逆时针转过了多少。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"theta":0.62,"waveMode":"none","showSpecial":0,"showTri":0,"showSinLeg":0,"showCosLeg":0}},{"op":"animate","state":{"showCircle":1},"ms":700},{"op":"animate","state":{"showPoint":1,"showArc":1},"ms":700,"delay":650}]},{"id":"definition","chapter":"The rule","pose":"THINK","dur":10000,"pulse":true,"takeaway":1,"say":{"en":"Here's the whole definition. Cosine is just the x-coordinate of P. Sine is just the y-coordinate. cos θ, sin θ — that is literally where the point sits. No triangle required.","zh":"完整的定义就这一句：余弦，就是 P 的 x 坐标；正弦，就是 P 的 y 坐标。cos θ、sin θ——就是这个点所在的位置，不需要任何三角形。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showTri":0,"showSpecial":0,"waveMode":"none"}},{"op":"animate","state":{"theta":0.95,"showCosLeg":1},"ms":700},{"op":"animate","state":{"showSinLeg":1},"ms":650,"delay":650}]},{"id":"triangle-bridge","chapter":"The rule","pose":"CONTENT","dur":9500,"takeaway":2,"say":{"en":"And the triangle you were taught? It's hiding right here. The horizontal leg is cos θ, the vertical leg is sin θ, and the radius — the hypotenuse — is 1. SOH-CAH-TOA is just this circle, zoomed in.","zh":"那你学过的那个三角形呢？它就藏在这里。水平的直角边是 cos θ，竖直的直角边是 sin θ，而半径——也就是斜边——是 1。SOH-CAH-TOA，不过是把这个圆放大看而已。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"theta":0.95}},{"op":"animate","state":{"showTri":1},"ms":700}]},{"id":"drag-angle","chapter":"The rule","pose":"HAPPY","dur":0,"pulse":true,"say":{"en":"Your turn — grab P and spin it around. Watch sin and cos change together. Notice they never escape the range −1 to 1, because the point never leaves the circle.","zh":"轮到你了——抓住 P，转一圈。看 sin 和 cos 怎样一起变化。注意它们永远跑不出 −1 到 1，因为这个点永远离不开这个圆。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":1,"waveMode":"none"}},{"op":"mode","v":"dragAngle"}],"interactive":{"type":"drag","mode":"dragAngle","hint":{"en":"Drag P around the circle — watch sin θ and cos θ","zh":"拖动 P 绕圆转一圈——看 sin θ 和 cos θ 怎样变化"},"doneSay":{"en":"See how sin and cos always move together? That's the whole secret. Hit Continue.","zh":"看到了吗——sin 和 cos 永远手拉手一起变。这就是全部秘密。点 Continue。"},"control":{"bind":"theta","min":0,"max":360,"step":1,"label":{"en":"Angle · θ","zh":"角度 · θ"},"display":"deg","toState":"deg2rad"},"done":{"kind":"sweep","measure":"theta","range":3.4}}},{"id":"special-angles","chapter":"The exact values","pose":"THINK","dur":12000,"takeaway":3,"say":{"en":"A handful of angles show up on every test. At 0°, P is at (1, 0): cos is 1, sin is 0. Straight up at 90°: cos 0, sin 1. And 30, 45, 60 give those exact values you memorize — but now you can SEE where each one lives.","zh":"有几个角，每次考试都会出现。0° 时，P 在 (1, 0)：cos 是 1，sin 是 0。竖直向上 90° 时：cos 0，sin 1。而 30、45、60 给出你要背的那些精确值——但现在，你能“看见”每一个值住在哪里。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":0,"waveMode":"none"}},{"op":"animate","state":{"showSpecial":1,"theta":0},"ms":700},{"op":"sequence","field":"theta","values":[0.5236,0.7854,1.0472,1.5708,0],"ms":800,"gap":700,"delay":700}]},{"id":"unroll","chapter":"The wave","pose":"CELEBRATE","dur":9500,"takeaway":4,"say":{"en":"Now the magic. Let the point keep spinning, and trace its HEIGHT — the sine — out to the right as it goes. Those heights don't scatter; they roll out into one smooth wave. THAT is where the sine wave is born.","zh":"接下来是魔法时刻。让点继续转，把它的“高度”——也就是正弦——一路向右描出来。这些高度不会乱跑，它们会展开成一条平滑的波。正弦波，就是这样诞生的。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":0,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"sin","waveFocus":null,"theta":0,"waveTheta":0,"cosTheta":0}},{"op":"animate","state":{"theta":6.2832,"waveTheta":6.2832},"ms":6800}]},{"id":"cosine-wave","chapter":"The wave","pose":"HAPPY","dur":9500,"say":{"en":"Cosine makes the exact same wave — it just starts at the top, at 1, instead of at zero. Sine and cosine are the same shape, a quarter-turn apart. That 90° shift is the whole relationship between them.","zh":"余弦画出的是一模一样的波——只是它从顶端、从 1 开始，而不是从 0。正弦和余弦是同一个形状，差了四分之一圈。这个 90° 的平移，就是它们之间的全部关系。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"both","waveFocus":"cos","waveTheta":6.2832,"cosTheta":6.2832,"theta":1.5708}}]},{"id":"challenge","chapter":"Lock it in","pose":"HAPPY","dur":0,"say":{"en":"Let's lock it in. I'll call out a target — spin P to hit it, and read the values yourself. Three quick ones.","zh":"来巩固一下。我说一个目标——你把 P 转过去命中它，然后自己读出数值。三个小挑战。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":0,"showSpecial":1,"waveMode":"none","waveFocus":null,"cosTheta":0,"waveTheta":0,"theta":1.1}},{"op":"mode","v":"setAngle"}],"interactive":{"type":"build","mode":"setAngle","doneHint":{"en":"Nailed all three — you can read sin & cos straight off the circle now.","zh":"三个全中——现在你可以直接从圆上读出 sin 和 cos 了。"},"stages":[{"measure":"deg","target":90,"tol":8,"label":"θ = 90°","hint":{"en":"Spin P to θ = 90° — where sine hits its maximum","zh":"把 P 转到 θ = 90°——正弦在这里达到最大值"},"ok":{"en":"Yes — sin 90° = 1, cos 90° = 0. Top of the circle.","zh":"对——sin 90° = 1，cos 90° = 0。圆的顶端。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"CELEBRATE"},{"measure":"deg","target":0,"tol":8,"label":"θ = 0°","hint":{"en":"Now θ = 0° — where cosine is biggest","zh":"再到 θ = 0°——余弦在这里最大"},"ok":{"en":"Exactly — cos 0° = 1, sin 0° = 0.","zh":"完全正确——cos 0° = 1，sin 0° = 0。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"HAPPY"},{"measure":"deg","target":45,"tol":8,"label":"θ = 45°","hint":{"en":"Last one: θ = 45°, where sine equals cosine","zh":"最后一个：θ = 45°——正弦等于余弦的地方"},"ok":{"en":"Perfect — at 45° they're equal: both √2⁄2 ≈ 0.71.","zh":"完美——45° 时它们相等：都是 √2⁄2 ≈ 0.71。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"CELEBRATE"}]}},{"id":"recap","chapter":"Recap","pose":"HEART","dur":11000,"flags":["recap"],"say":{"en":"You didn't memorize a table — you watched sine and cosine BE the coordinates of a spinning point, and watched the wave roll out of the circle. That picture is yours now. I've saved this, turned it into 6 flashcards, and lined up what comes next.","zh":"你没有去背一张表——你亲眼看到 sin 和 cos 就是一个旋转点的坐标，看到波从圆里展开出来。这幅画面现在是你的了。我已经把这节课存好、做成了 6 张闪卡、并排好了接下来要学的内容。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"both","waveFocus":null,"waveTheta":6.2832,"cosTheta":6.2832,"theta":0.7854}}]}],"TAKEAWAYS":[{"t":{"en":"The definition","zh":"定义"},"body":{"en":"On the unit circle, <b>cos θ</b> is the <b>x-coordinate</b> of the point and <b>sin θ</b> is its <b>y-coordinate</b>.","zh":"在单位圆上，<b>cos θ</b> 是这个点的 <b>x 坐标</b>，<b>sin θ</b> 是它的 <b>y 坐标</b>。"},"exam":{"en":"Because the point stays on a radius-1 circle, sin θ and cos θ are <b>always between −1 and 1</b>.","zh":"因为点始终在半径为 1 的圆上，所以 sin θ 与 cos θ <b>永远在 −1 到 1 之间</b>。"}},{"t":{"en":"The triangle is inside","zh":"三角形就藏在里面"},"body":{"en":"cos θ and sin θ are the <b>horizontal</b> and <b>vertical legs</b> of a right triangle with hypotenuse <b>1</b> — SOH-CAH-TOA and the unit circle are the same picture.","zh":"cos θ 与 sin θ 就是一个斜边为 <b>1</b> 的直角三角形的<b>水平边</b>和<b>竖直边</b>——SOH-CAH-TOA 和单位圆是同一张图。"}},{"t":{"en":"The special angles","zh":"特殊角"},"body":{"en":"0°→(1,0), 30°→(√3⁄2, 1⁄2), 45°→(√2⁄2, √2⁄2), 60°→(1⁄2, √3⁄2), 90°→(0,1). Read (cos, sin) straight off the point.","zh":"0°→(1,0)，30°→(√3⁄2, 1⁄2)，45°→(√2⁄2, √2⁄2)，60°→(1⁄2, √3⁄2)，90°→(0,1)。直接从点上读出 (cos, sin)。"},"exam":{"en":"Cofunction identity: <b>sin θ = cos(90° − θ)</b> — they swap across complementary angles.","zh":"余函数恒等式：<b>sin θ = cos(90° − θ)</b>——它们在互余角处互换。"}},{"t":{"en":"The wave","zh":"波"},"body":{"en":"Sweeping θ traces <b>sin θ</b> as a smooth wave; <b>cos θ</b> is the same wave shifted by 90° — <span class=\"mono-eq\">cos θ = sin(θ + 90°)</span>.","zh":"让 θ 扫过，<b>sin θ</b> 被描成一条平滑的波；<b>cos θ</b> 是同一条波平移 90°——<span class=mono-eq>cos θ = sin(θ + 90°)</span>。"}}],"FLASHCARDS":[{"q":{"en":"On the unit circle, what is cos θ?","zh":"在单位圆上，cos θ 是什么？"},"a":{"en":"The x-coordinate of the point at angle θ.","zh":"角度 θ 处那个点的 x 坐标。"}},{"q":{"en":"What is sin θ on the unit circle?","zh":"单位圆上的 sin θ 是什么？"},"a":{"en":"The y-coordinate of that point.","zh":"那个点的 y 坐标。"}},{"q":{"en":"What are sin 90° and cos 90°?","zh":"sin 90° 和 cos 90° 是多少？"},"a":{"en":"sin 90° = 1, cos 90° = 0 (top of the circle).","zh":"sin 90° = 1，cos 90° = 0（圆的顶端）。"}},{"q":{"en":"What is sin 45° (= cos 45°)?","zh":"sin 45°（= cos 45°）是多少？"},"a":{"en":"√2⁄2 ≈ 0.707.","zh":"√2⁄2 ≈ 0.707。"}},{"q":{"en":"Why are sin θ and cos θ always between −1 and 1?","zh":"为什么 sin θ、cos θ 永远在 −1 到 1 之间？"},"a":{"en":"The point never leaves the radius-1 circle.","zh":"因为点永远离不开半径为 1 的圆。"}},{"q":{"en":"How are the sine and cosine waves related?","zh":"正弦波和余弦波有什么关系？"},"a":{"en":"Same shape, shifted 90°: cos θ = sin(θ + 90°).","zh":"同一形状，平移 90°：cos θ = sin(θ + 90°)。"}}],"MAP":{"breadcrumb":["Trigonometry","The Unit Circle","Sine & Cosine"],"prereq":[{"name":"The coordinate plane","done":true},{"name":"Right triangles & the Pythagorean theorem","done":true}],"current":"Sine & cosine on the unit circle","next":[{"name":"SOH-CAH-TOA: the trig ratios","kind":"lesson","min":5},{"name":"Exact values of special angles","kind":"lesson","min":6},{"name":"Graphing sine & cosine","kind":"video","min":4}]},"RELATED":[{"name":"The Pythagorean theorem","tag":"Geometry"},{"name":"Radians vs degrees","tag":"Trig"},{"name":"The tangent ratio","tag":"Trig"},{"name":"Wave motion","tag":"Physics"},{"name":"Slope: Rise over Run","tag":"Algebra","slug":"/learn/algebra/linear-equations-in-two-variables/slope-rise-over-run"}],"REGION_ANSWERS":{"point":{"pose":"HAPPY","a":"This point <b>P</b> is everything. Its x-coordinate is <b>cos θ</b>, its y-coordinate is <b>sin θ</b>. Move it and both values move with it.","chips":["Why is the radius 1?","What is sin θ?"]},"sine":{"pose":"THINK","a":"This vertical leg is <b>sin θ</b> — the HEIGHT of the point. It's biggest (1) at the top, zero on the x-axis, and negative below.","chips":["Why does it become the wave?","What is sin 30°?"]},"cosine":{"pose":"CONTENT","a":"This horizontal leg is <b>cos θ</b> — how far left/right the point sits. It's 1 at the right, 0 at the top.","chips":["How is cos related to sin?","What is cos 60°?"]},"circle":{"pose":"HEART","a":"Radius exactly <b>1</b>. That's why sin and cos can never be more than 1 or less than −1 — the point is trapped on this circle.","chips":["What is the unit circle?","Why radius 1?"]},"wave":{"pose":"CELEBRATE","a":"This wave is just the <b>height of the point</b>, plotted as it spins. Every full bump is one trip around the circle.","chips":["Where does cosine start?","What is the period?"]},"angle":{"pose":"THINK","a":"<b>θ</b> is the angle P has swept from the positive x-axis, counter-clockwise. 90° is a quarter turn, 360° is all the way around.","chips":["Degrees or radians?","What is θ at the top?"]},"plane":{"pose":"WAVE","a":"Circle the point, a leg, the circle, or the wave — and I'll explain it. Or just ask me out loud.","chips":["What is sin θ?","What is cos θ?"]}},"QA":[{"k":["radius","why","1","unit"],"pose":"CONTENT","a":"We use radius <b>1</b> so the hypotenuse of the triangle is 1 — then sin and cos ARE the legs directly, with no dividing. That's the whole point of the <i>unit</i> circle."},{"k":["real","world","use","wave","sound","light","music"],"pose":"HAPPY","a":"Anything that repeats is a sine wave: sound, light, AC electricity, tides, springs. They all come from this same circle-going-around motion."},{"k":["period","repeat","360","2pi"],"pose":"THINK","a":"The wave repeats every <b>360°</b> (one full trip around the circle) — that distance is called the <b>period</b>."},{"k":["cos","cosine","related","shift","difference"],"pose":"CONTENT","a":"Cosine is sine shifted by <b>90°</b>: <span class='mono-eq'>cos θ = sin(θ + 90°)</span>. Same wave, quarter-turn head start — cosine starts at 1, sine starts at 0."},{"k":["negative","below","minus","-1"],"pose":"THINK","a":"When P drops below the x-axis (angles 180°–360°), sin θ goes <b>negative</b>. When P is left of the y-axis (90°–270°), cos θ goes negative. The signs just follow the coordinates."},{"k":["radian","degree","degrees","radians"],"pose":"CONTENT","a":"Degrees and radians both measure the same spin: <b>360° = 2π radians</b>. 90° = π⁄2, 45° = π⁄4. The SAT uses both — convert with ×(π⁄180)."},{"k":["30","sin 30","cos 60"],"pose":"HAPPY","a":"sin 30° = <b>1⁄2</b> and cos 30° = <b>√3⁄2</b>. And by the cofunction swap, cos 60° = 1⁄2 too."},{"k":["tan","tangent"],"pose":"THINK","a":"Tangent is just <b>sin θ ⁄ cos θ</b> — the slope of the radius line. It blows up at 90°, where cos hits 0."}],"QA_FALLBACK":{"pose":"CONTENT","a":"Good question. Hold onto the core picture: <b>cos θ and sin θ are the x and y of a point on the unit circle</b>. Want me to show that on the graph again?"},"VOICE_SAMPLES":["Where do we see sine waves in real life?","Why is the radius exactly 1?","What is sin 30 degrees?","How is cosine related to sine?"],"MOCK_IMAGE_ASK":{"q":"Screenshot — \"What are sin θ and cos θ for this point?\"","html":"Got your screenshot. The point is at <b>(0.6, 0.8)</b>, so by the definition <b>cos θ = 0.6</b> and <b>sin θ = 0.8</b> — read straight off the coordinates. (Check: 0.6² + 0.8² = 1, so it really is on the unit circle.) Want me to drop this point onto the circle?"},"pronounce":{},"checks":[{"desc":"Special angles: sin 30° = 1/2","expr":"Math.sin(0.5235987756)","expect":0.5,"tol":0.000001},{"desc":"Special angles: sin 45° = √2/2 ≈ 0.707 (= cos 45°)","expr":"Math.sin(0.7853981634)","expect":0.7071067812,"tol":0.000001},{"desc":"Special angles: sin 60° = √3/2","expr":"Math.sin(1.0471975512)","expect":0.8660254038,"tol":0.000001},{"desc":"Top of the circle: sin 90° = 1","expr":"Math.sin(1.5707963268)","expect":1,"tol":1e-9},{"desc":"Mock screenshot point (0.6, 0.8) sits on the unit circle: 0.6² + 0.8² = 1","expr":"0.6*0.6 + 0.8*0.8","expect":1,"tol":1e-9},{"desc":"The wave repeats every 2π (period 360°): sin θ = sin(θ + 2π)","expr":"Math.sin(0.6) - Math.sin(0.6 + 6.2831853072)","expect":0,"tol":1e-9}]};</script>
+<script>window.LESSON_DATA = {"meta":{"slug":"sine-cosine-unit-circle","urlPath":"/learn/geometry-trigonometry/right-triangles-and-trigonometry/sine-cosine-unit-circle","title":"Sine & Cosine on the Unit Circle","description":"See where sine and cosine actually come from: the coordinates of a point spinning around the unit circle, and how that traces the sine wave. Interactive, narrated, ask-anything lesson by AskSia.","keywords":["sine","cosine","unit circle","trigonometry","sin cos definition","sine wave","SOH CAH TOA","special angles","interactive math lesson"],"durationLabel":"≈ 5 min · narrated","intro":"Sine and cosine are not just calculator buttons or the triangle rule SOH-CAH-TOA — they are the coordinates of a single point moving around the unit circle (a circle of radius 1). For a point at angle θ, cos θ is its x-coordinate and sin θ is its y-coordinate. Sweeping θ traces the sine and cosine waves.","sat":{"domain":"Geometry and Trigonometry","skillCode":"right_triangles_and_trigonometry","skillName":"Right triangles and trigonometry","sessionId":"right_triangles_and_trigonometry.soh-cah-toa--define-ratios","code":"GEO-TRIG-09","tier":"2","difficultyIndex":5,"preparesFor":"M","formats":["MCQ","SPR"]},"cover":{"eyebrow":"AI-native interactive lesson","crumb":"Trigonometry · The Unit Circle","h1Parts":["Sine &","Cosine"],"sub":{"en":"The circle behind the wave","zh":"波背后的那个圆"},"blurb":{"en":"Stop memorizing SOH-CAH-TOA. Watch Sia turn a spinning point on a circle into sine and cosine — drag it, watch the wave roll out, and ask anything, any time, out loud.","zh":"别再死记 SOH-CAH-TOA。看 Sia 把圆上一个旋转的点变成正弦和余弦——亲手拖动它，看波从圆里展开，随时随地开口提问。"},"launchSteps":["Reading the topic — sine & cosine","Building the unit-circle animation","Writing Sia's narration","Recording the AI voice-over","Preparing your flashcards"]},"terms":[{"name":"Unit circle","def":"A circle of radius 1 centered at the origin."},{"name":"Sine (sin θ)","def":"The y-coordinate of the point at angle θ on the unit circle."},{"name":"Cosine (cos θ)","def":"The x-coordinate of the point at angle θ on the unit circle."},{"name":"Radian","def":"An angle measure where a full turn is 2π; 360° = 2π radians."}],"faq":[{"q":{"en":"What is cosine on the unit circle?","zh":"在单位圆上，cos θ 是什么？"},"a":{"en":"cos θ is the x-coordinate of the point at angle θ on the unit circle.","zh":"cos θ 就是单位圆上角度 θ 处那个点的 x 坐标。"}},{"q":{"en":"What is sine on the unit circle?","zh":"单位圆上的 sin θ 是什么？"},"a":{"en":"sin θ is the y-coordinate of the point at angle θ on the unit circle.","zh":"sin θ 就是单位圆上角度 θ 处那个点的 y 坐标。"}},{"q":{"en":"Why are sine and cosine always between -1 and 1?","zh":"为什么 sin 和 cos 永远在 −1 到 1 之间？"},"a":{"en":"Because the point never leaves the radius-1 unit circle, so neither coordinate can exceed 1 or drop below -1.","zh":"因为点永远离不开半径为 1 的单位圆，所以两个坐标都不可能超过 1，也不可能低于 −1。"}},{"q":{"en":"What are sin 90° and cos 90°?","zh":"sin 90° 和 cos 90° 是多少？"},"a":{"en":"sin 90° = 1 and cos 90° = 0 — the point sits at the top of the circle, (0, 1).","zh":"sin 90° = 1，cos 90° = 0——点正好在圆的顶端 (0, 1)。"}},{"q":{"en":"How are the sine and cosine waves related?","zh":"正弦波和余弦波有什么关系？"},"a":{"en":"They are the same shape shifted by 90 degrees: cos θ = sin(θ + 90°).","zh":"它们是同一个形状，平移了 90°：cos θ = sin(θ + 90°)。"}},{"q":{"en":"What is sin 45°?","zh":"sin 45° 是多少？"},"a":{"en":"sin 45° = √2⁄2 ≈ 0.707, and it equals cos 45°.","zh":"sin 45° = √2⁄2 ≈ 0.707，并且等于 cos 45°。"}}]},"engine":{"id":"unit-circle-wave","config":{}},"STEPS":[{"id":"intro","chapter":"The idea","pose":"WAVE","dur":9000,"say":{"en":"Everyone learns sine and cosine as buttons on a calculator — or some triangle rule, SOH-CAH-TOA. That's not what they ARE. Sine and cosine are the footprints of a single point walking around a circle. Watch.","zh":"几乎所有人都把 sin、cos 当成计算器上的按钮——或者一句口诀 SOH-CAH-TOA。但那不是它们的本质。正弦和余弦，是一个点绕着圆走时留下的脚印。看好了。"},"ops":[{"op":"reset"}]},{"id":"the-circle","chapter":"The idea","pose":"HAPPY","dur":8500,"say":{"en":"Start with one circle. Radius exactly 1 — the unit circle. Drop a point P on its edge. The angle θ is just how far P has spun from the right side, going counter-clockwise.","zh":"先画一个圆。半径正好是 1——这就是单位圆。在圆上放一个点 P。角度 θ，就是 P 从最右边开始、逆时针转过了多少。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"theta":0.62,"waveMode":"none","showSpecial":0,"showTri":0,"showSinLeg":0,"showCosLeg":0}},{"op":"animate","state":{"showCircle":1},"ms":700},{"op":"animate","state":{"showPoint":1,"showArc":1},"ms":700,"delay":650}]},{"id":"definition","chapter":"The rule","pose":"THINK","dur":10000,"pulse":true,"takeaway":1,"say":{"en":"Here's the whole definition. Cosine is just the x-coordinate of P. Sine is just the y-coordinate. cos θ, sin θ — that is literally where the point sits. No triangle required.","zh":"完整的定义就这一句：余弦，就是 P 的 x 坐标；正弦，就是 P 的 y 坐标。cos θ、sin θ——就是这个点所在的位置，不需要任何三角形。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showTri":0,"showSpecial":0,"waveMode":"none"}},{"op":"animate","state":{"theta":0.95,"showCosLeg":1},"ms":700},{"op":"animate","state":{"showSinLeg":1},"ms":650,"delay":650}]},{"id":"triangle-bridge","chapter":"The rule","pose":"CONTENT","dur":9500,"takeaway":2,"say":{"en":"And the triangle you were taught? It's hiding right here. The horizontal leg is cos θ, the vertical leg is sin θ, and the radius — the hypotenuse — is 1. SOH-CAH-TOA is just this circle, zoomed in.","zh":"那你学过的那个三角形呢？它就藏在这里。水平的直角边是 cos θ，竖直的直角边是 sin θ，而半径——也就是斜边——是 1。SOH-CAH-TOA，不过是把这个圆放大看而已。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"theta":0.95}},{"op":"animate","state":{"showTri":1},"ms":700}]},{"id":"drag-angle","chapter":"The rule","pose":"HAPPY","dur":0,"pulse":true,"say":{"en":"Your turn — grab P and spin it around. Watch sin and cos change together. Notice they never escape the range −1 to 1, because the point never leaves the circle.","zh":"轮到你了——抓住 P，转一圈。看 sin 和 cos 怎样一起变化。注意它们永远跑不出 −1 到 1，因为这个点永远离不开这个圆。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":1,"waveMode":"none"}},{"op":"mode","v":"dragAngle"}],"interactive":{"type":"drag","mode":"dragAngle","hint":{"en":"Drag P around the circle — watch sin θ and cos θ","zh":"拖动 P 绕圆转一圈——看 sin θ 和 cos θ 怎样变化"},"doneSay":{"en":"See how sin and cos always move together? That's the whole secret. Hit Continue.","zh":"看到了吗——sin 和 cos 永远手拉手一起变。这就是全部秘密。点 Continue。"},"control":{"bind":"theta","min":0,"max":360,"step":1,"label":{"en":"Angle · θ","zh":"角度 · θ"},"display":"deg","toState":"deg2rad"},"done":{"kind":"sweep","measure":"theta","range":3.4}}},{"id":"special-angles","chapter":"The exact values","pose":"THINK","dur":12000,"takeaway":3,"say":{"en":"A handful of angles show up on every test. At 0°, P is at (1, 0): cos is 1, sin is 0. Straight up at 90°: cos 0, sin 1. And 30, 45, 60 give those exact values you memorize — but now you can SEE where each one lives.","zh":"有几个角，每次考试都会出现。0° 时，P 在 (1, 0)：cos 是 1，sin 是 0。竖直向上 90° 时：cos 0，sin 1。而 30、45、60 给出你要背的那些精确值——但现在，你能“看见”每一个值住在哪里。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":0,"waveMode":"none"}},{"op":"animate","state":{"showSpecial":1,"theta":0},"ms":700},{"op":"sequence","field":"theta","values":[0.5236,0.7854,1.0472,1.5708,0],"ms":800,"gap":700,"delay":700}]},{"id":"unroll","chapter":"The wave","pose":"CELEBRATE","dur":9500,"takeaway":4,"say":{"en":"Now the magic. Let the point keep spinning, and trace its HEIGHT — the sine — out to the right as it goes. Those heights don't scatter; they roll out into one smooth wave. THAT is where the sine wave is born.","zh":"接下来是魔法时刻。让点继续转，把它的“高度”——也就是正弦——一路向右描出来。这些高度不会乱跑，它们会展开成一条平滑的波。正弦波，就是这样诞生的。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":0,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"sin","waveFocus":null,"theta":0,"waveTheta":0,"cosTheta":0}},{"op":"animate","state":{"theta":6.2832,"waveTheta":6.2832},"ms":6800}]},{"id":"cosine-wave","chapter":"The wave","pose":"HAPPY","dur":9500,"say":{"en":"Cosine makes the exact same wave — it just starts at the top, at 1, instead of at zero. Sine and cosine are the same shape, a quarter-turn apart. That 90° shift is the whole relationship between them.","zh":"余弦画出的是一模一样的波——只是它从顶端、从 1 开始，而不是从 0。正弦和余弦是同一个形状，差了四分之一圈。这个 90° 的平移，就是它们之间的全部关系。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"both","waveFocus":"cos","waveTheta":6.2832,"cosTheta":6.2832,"theta":1.5708}}]},{"id":"challenge","chapter":"Lock it in","pose":"HAPPY","dur":0,"say":{"en":"Let's lock it in. I'll call out a target — spin P to hit it, and read the values yourself. Three quick ones.","zh":"来巩固一下。我说一个目标——你把 P 转过去命中它，然后自己读出数值。三个小挑战。"},"ops":[{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":1,"showCosLeg":1,"showTri":0,"showSpecial":1,"waveMode":"none","waveFocus":null,"cosTheta":0,"waveTheta":0,"theta":1.1}},{"op":"mode","v":"setAngle"}],"interactive":{"type":"build","mode":"setAngle","doneHint":{"en":"Nailed all three — you can read sin & cos straight off the circle now.","zh":"三个全中——现在你可以直接从圆上读出 sin 和 cos 了。"},"stages":[{"measure":"deg","target":90,"tol":8,"label":"θ = 90°","hint":{"en":"Spin P to θ = 90° — where sine hits its maximum","zh":"把 P 转到 θ = 90°——正弦在这里达到最大值"},"ok":{"en":"Yes — sin 90° = 1, cos 90° = 0. Top of the circle.","zh":"对——sin 90° = 1，cos 90° = 0。圆的顶端。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"CELEBRATE"},{"measure":"deg","target":0,"tol":8,"label":"θ = 0°","hint":{"en":"Now θ = 0° — where cosine is biggest","zh":"再到 θ = 0°——余弦在这里最大"},"ok":{"en":"Exactly — cos 0° = 1, sin 0° = 0.","zh":"完全正确——cos 0° = 1，sin 0° = 0。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"HAPPY"},{"measure":"deg","target":45,"tol":8,"label":"θ = 45°","hint":{"en":"Last one: θ = 45°, where sine equals cosine","zh":"最后一个：θ = 45°——正弦等于余弦的地方"},"ok":{"en":"Perfect — at 45° they're equal: both √2⁄2 ≈ 0.71.","zh":"完美——45° 时它们相等：都是 √2⁄2 ≈ 0.71。"},"miss":{"en":"Close! Aim for θ = {target}°.","zh":"再靠近一点——目标是 θ = {target}°。"},"pose":"CELEBRATE"}]}},{"id":"recap","chapter":"Recap","pose":"HEART","dur":11000,"flags":["recap"],"say":{"en":"You didn't memorize a table — you watched sine and cosine BE the coordinates of a spinning point, and watched the wave roll out of the circle. That picture is yours now. I've saved this, turned it into 6 flashcards, and lined up what comes next.","zh":"你没有去背一张表——你亲眼看到 sin 和 cos 就是一个旋转点的坐标，看到波从圆里展开出来。这幅画面现在是你的了。我已经把这节课存好、做成了 6 张闪卡、并排好了接下来要学的内容。"},"ops":[{"op":"mode","v":"none"},{"op":"set","state":{"showCircle":1,"showPoint":1,"showArc":1,"showSinLeg":0,"showCosLeg":0,"showTri":0,"showSpecial":0,"waveMode":"both","waveFocus":null,"waveTheta":6.2832,"cosTheta":6.2832,"theta":0.7854}}]}],"TAKEAWAYS":[{"t":{"en":"The definition","zh":"定义"},"body":{"en":"On the unit circle, <b>cos θ</b> is the <b>x-coordinate</b> of the point and <b>sin θ</b> is its <b>y-coordinate</b>.","zh":"在单位圆上，<b>cos θ</b> 是这个点的 <b>x 坐标</b>，<b>sin θ</b> 是它的 <b>y 坐标</b>。"},"exam":{"en":"Because the point stays on a radius-1 circle, sin θ and cos θ are <b>always between −1 and 1</b>.","zh":"因为点始终在半径为 1 的圆上，所以 sin θ 与 cos θ <b>永远在 −1 到 1 之间</b>。"}},{"t":{"en":"The triangle is inside","zh":"三角形就藏在里面"},"body":{"en":"cos θ and sin θ are the <b>horizontal</b> and <b>vertical legs</b> of a right triangle with hypotenuse <b>1</b> — SOH-CAH-TOA and the unit circle are the same picture.","zh":"cos θ 与 sin θ 就是一个斜边为 <b>1</b> 的直角三角形的<b>水平边</b>和<b>竖直边</b>——SOH-CAH-TOA 和单位圆是同一张图。"}},{"t":{"en":"The special angles","zh":"特殊角"},"body":{"en":"0°→(1,0), 30°→(√3⁄2, 1⁄2), 45°→(√2⁄2, √2⁄2), 60°→(1⁄2, √3⁄2), 90°→(0,1). Read (cos, sin) straight off the point.","zh":"0°→(1,0)，30°→(√3⁄2, 1⁄2)，45°→(√2⁄2, √2⁄2)，60°→(1⁄2, √3⁄2)，90°→(0,1)。直接从点上读出 (cos, sin)。"},"exam":{"en":"Cofunction identity: <b>sin θ = cos(90° − θ)</b> — they swap across complementary angles.","zh":"余函数恒等式：<b>sin θ = cos(90° − θ)</b>——它们在互余角处互换。"}},{"t":{"en":"The wave","zh":"波"},"body":{"en":"Sweeping θ traces <b>sin θ</b> as a smooth wave; <b>cos θ</b> is the same wave shifted by 90° — <span class=\"mono-eq\">cos θ = sin(θ + 90°)</span>.","zh":"让 θ 扫过，<b>sin θ</b> 被描成一条平滑的波；<b>cos θ</b> 是同一条波平移 90°——<span class=mono-eq>cos θ = sin(θ + 90°)</span>。"}}],"FLASHCARDS":[{"q":{"en":"On the unit circle, what is cos θ?","zh":"在单位圆上，cos θ 是什么？"},"a":{"en":"The x-coordinate of the point at angle θ.","zh":"角度 θ 处那个点的 x 坐标。"}},{"q":{"en":"What is sin θ on the unit circle?","zh":"单位圆上的 sin θ 是什么？"},"a":{"en":"The y-coordinate of that point.","zh":"那个点的 y 坐标。"}},{"q":{"en":"What are sin 90° and cos 90°?","zh":"sin 90° 和 cos 90° 是多少？"},"a":{"en":"sin 90° = 1, cos 90° = 0 (top of the circle).","zh":"sin 90° = 1，cos 90° = 0（圆的顶端）。"}},{"q":{"en":"What is sin 45° (= cos 45°)?","zh":"sin 45°（= cos 45°）是多少？"},"a":{"en":"√2⁄2 ≈ 0.707.","zh":"√2⁄2 ≈ 0.707。"}},{"q":{"en":"Why are sin θ and cos θ always between −1 and 1?","zh":"为什么 sin θ、cos θ 永远在 −1 到 1 之间？"},"a":{"en":"The point never leaves the radius-1 circle.","zh":"因为点永远离不开半径为 1 的圆。"}},{"q":{"en":"How are the sine and cosine waves related?","zh":"正弦波和余弦波有什么关系？"},"a":{"en":"Same shape, shifted 90°: cos θ = sin(θ + 90°).","zh":"同一形状，平移 90°：cos θ = sin(θ + 90°)。"}}],"MAP":{"breadcrumb":["Trigonometry","The Unit Circle","Sine & Cosine"],"prereq":[{"name":"The coordinate plane","done":true},{"name":"Right triangles & the Pythagorean theorem","done":true}],"current":"Sine & cosine on the unit circle","next":[{"name":"SOH-CAH-TOA: the trig ratios","kind":"lesson","min":5},{"name":"Exact values of special angles","kind":"lesson","min":6},{"name":"Graphing sine & cosine","kind":"video","min":4}]},"RELATED":[{"name":"The Pythagorean theorem","tag":"Geometry"},{"name":"Radians vs degrees","tag":"Trig"},{"name":"The tangent ratio","tag":"Trig"},{"name":"Wave motion","tag":"Physics"},{"name":"Slope: Rise over Run","tag":"Algebra","slug":"/learn/algebra/linear-equations-in-two-variables/slope-rise-over-run"}],"REGION_ANSWERS":{"point":{"pose":"HAPPY","a":"This point <b>P</b> is everything. Its x-coordinate is <b>cos θ</b>, its y-coordinate is <b>sin θ</b>. Move it and both values move with it.","chips":["Why is the radius 1?","What is sin θ?"]},"sine":{"pose":"THINK","a":"This vertical leg is <b>sin θ</b> — the HEIGHT of the point. It's biggest (1) at the top, zero on the x-axis, and negative below.","chips":["Why does it become the wave?","What is sin 30°?"]},"cosine":{"pose":"CONTENT","a":"This horizontal leg is <b>cos θ</b> — how far left/right the point sits. It's 1 at the right, 0 at the top.","chips":["How is cos related to sin?","What is cos 60°?"]},"circle":{"pose":"HEART","a":"Radius exactly <b>1</b>. That's why sin and cos can never be more than 1 or less than −1 — the point is trapped on this circle.","chips":["What is the unit circle?","Why radius 1?"]},"wave":{"pose":"CELEBRATE","a":"This wave is just the <b>height of the point</b>, plotted as it spins. Every full bump is one trip around the circle.","chips":["Where does cosine start?","What is the period?"]},"angle":{"pose":"THINK","a":"<b>θ</b> is the angle P has swept from the positive x-axis, counter-clockwise. 90° is a quarter turn, 360° is all the way around.","chips":["Degrees or radians?","What is θ at the top?"]},"plane":{"pose":"WAVE","a":"Circle the point, a leg, the circle, or the wave — and I'll explain it. Or just ask me out loud.","chips":["What is sin θ?","What is cos θ?"]}},"QA":[{"k":["radius","why","1","unit"],"pose":"CONTENT","a":"We use radius <b>1</b> so the hypotenuse of the triangle is 1 — then sin and cos ARE the legs directly, with no dividing. That's the whole point of the <i>unit</i> circle."},{"k":["real","world","use","wave","sound","light","music"],"pose":"HAPPY","a":"Anything that repeats is a sine wave: sound, light, AC electricity, tides, springs. They all come from this same circle-going-around motion."},{"k":["period","repeat","360","2pi"],"pose":"THINK","a":"The wave repeats every <b>360°</b> (one full trip around the circle) — that distance is called the <b>period</b>."},{"k":["cos","cosine","related","shift","difference"],"pose":"CONTENT","a":"Cosine is sine shifted by <b>90°</b>: <span class='mono-eq'>cos θ = sin(θ + 90°)</span>. Same wave, quarter-turn head start — cosine starts at 1, sine starts at 0."},{"k":["negative","below","minus","-1"],"pose":"THINK","a":"When P drops below the x-axis (angles 180°–360°), sin θ goes <b>negative</b>. When P is left of the y-axis (90°–270°), cos θ goes negative. The signs just follow the coordinates."},{"k":["radian","degree","degrees","radians"],"pose":"CONTENT","a":"Degrees and radians both measure the same spin: <b>360° = 2π radians</b>. 90° = π⁄2, 45° = π⁄4. The SAT uses both — convert with ×(π⁄180)."},{"k":["30","sin 30","cos 60"],"pose":"HAPPY","a":"sin 30° = <b>1⁄2</b> and cos 30° = <b>√3⁄2</b>. And by the cofunction swap, cos 60° = 1⁄2 too."},{"k":["tan","tangent"],"pose":"THINK","a":"Tangent is just <b>sin θ ⁄ cos θ</b> — the slope of the radius line. It blows up at 90°, where cos hits 0."}],"QA_FALLBACK":{"pose":"CONTENT","a":"Good question. Hold onto the core picture: <b>cos θ and sin θ are the x and y of a point on the unit circle</b>. Want me to show that on the graph again?"},"VOICE_SAMPLES":["Where do we see sine waves in real life?","Why is the radius exactly 1?","What is sin 30 degrees?","How is cosine related to sine?"],"MOCK_IMAGE_ASK":{"q":"Screenshot — \"What are sin θ and cos θ for this point?\"","html":"Got your screenshot. The point is at <b>(0.6, 0.8)</b>, so by the definition <b>cos θ = 0.6</b> and <b>sin θ = 0.8</b> — read straight off the coordinates. (Check: 0.6² + 0.8² = 1, so it really is on the unit circle.) Want me to drop this point onto the circle?"},"pronounce":{},"checks":[{"desc":"Special angles: sin 30° = 1/2","expr":"Math.sin(0.5235987756)","expect":0.5,"tol":0.000001},{"desc":"Special angles: sin 45° = √2/2 ≈ 0.707 (= cos 45°)","expr":"Math.sin(0.7853981634)","expect":0.7071067812,"tol":0.000001},{"desc":"Special angles: sin 60° = √3/2","expr":"Math.sin(1.0471975512)","expect":0.8660254038,"tol":0.000001},{"desc":"Top of the circle: sin 90° = 1","expr":"Math.sin(1.5707963268)","expect":1,"tol":1e-9},{"desc":"Mock screenshot point (0.6, 0.8) sits on the unit circle: 0.6² + 0.8² = 1","expr":"0.6*0.6 + 0.8*0.8","expect":1,"tol":1e-9},{"desc":"The wave repeats every 2π (period 360°): sin θ = sin(θ + 2π)","expr":"Math.sin(0.6) - Math.sin(0.6 + 6.2831853072)","expect":0,"tol":1e-9}],"AUDIO":{"base":"../../../audio/sine-cosine-unit-circle/","clips":{"say:intro":{"en":{"f":"say-intro-en.mp3","d":13.32},"zh":{"f":"say-intro-zh.mp3","d":14.11}},"say:the-circle":{"en":{"f":"say-the-circle-en.mp3","d":11.4},"zh":{"f":"say-the-circle-zh.mp3","d":11.4}},"say:definition":{"en":{"f":"say-definition-en.mp3","d":12.19},"zh":{"f":"say-definition-zh.mp3","d":12.5}},"say:triangle-bridge":{"en":{"f":"say-triangle-bridge-en.mp3","d":13.8},"zh":{"f":"say-triangle-bridge-zh.mp3","d":16.82}},"say:drag-angle":{"en":{"f":"say-drag-angle-en.mp3","d":10.44},"zh":{"f":"say-drag-angle-zh.mp3","d":10.44}},"doneSay:drag-angle":{"en":{"f":"doneSay-drag-angle-en.mp3","d":5.64},"zh":{"f":"doneSay-drag-angle-zh.mp3","d":7.22}},"say:special-angles":{"en":{"f":"say-special-angles-en.mp3","d":17.3},"zh":{"f":"say-special-angles-zh.mp3","d":17.78}},"say:unroll":{"en":{"f":"say-unroll-en.mp3","d":10.75},"zh":{"f":"say-unroll-zh.mp3","d":15.24}},"say:cosine-wave":{"en":{"f":"say-cosine-wave-en.mp3","d":12.67},"zh":{"f":"say-cosine-wave-zh.mp3","d":11.4}},"say:challenge":{"en":{"f":"say-challenge-en.mp3","d":7.56},"zh":{"f":"say-challenge-zh.mp3","d":8.35}},"doneHint:challenge":{"en":{"f":"doneHint-challenge-en.mp3","d":4.03},"zh":{"f":"doneHint-challenge-zh.mp3","d":5.95}},"say:recap":{"en":{"f":"say-recap-en.mp3","d":13.8},"zh":{"f":"say-recap-zh.mp3","d":14.42}}}}};</script>
 <script>
 /* ============================ PIXEL SIA ENGINE ============================ */
 (function () {
@@ -1732,6 +1737,22 @@ window.UI = {
     }
     return t;
   }
+
+  // Pre-generated narration manifest (optional; build-injected as LESSON_DATA.AUDIO).
+  // Keys are generic ("say:<id>", later "doneSay:<id>", ...). No cross-language fallback:
+  // a missing zh clip must fall back to zh TTS, not to the English mp3.
+  function clipFor(key, lang) {
+    const A = L.AUDIO;
+    if (!A || !A.clips) return null;
+    const c = A.clips[key];
+    if (!c) return null;
+    const v = c[lang];
+    if (!v || !v.f) return null;
+    return {
+      src: (A.base || '') + v.f,
+      d: v.d
+    };
+  }
   const RM = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const INTERACTIVE_WEIGHT = 6500; // item 16 — the ONE timeline weight for dur:0 fallbacks
 
@@ -1821,6 +1842,12 @@ window.UI = {
     const langRef = useRef('en'),
       mutedRef = useRef(false),
       speedRef = useRef(1);
+    const audioRef = useRef(null),
+      audioActiveRef = useRef(null),
+      clipSrcRef = useRef(''),
+      stepIndexRef = useRef(0);
+    const companionRef = useRef(null);
+    const [audioEpoch, setAudioEpoch] = useState(0); // bumped ONLY in manifest mode, so no-manifest pacing is untouched
     useEffect(() => {
       langRef.current = lang;
     }, [lang]);
@@ -1830,12 +1857,58 @@ window.UI = {
     useEffect(() => {
       speedRef.current = speed;
     }, [speed]);
+    useEffect(() => {
+      const a = audioRef.current;
+      if (a) a.muted = muted;
+    }, [muted]); // live mute: clip keeps playing so pacing is identical
+
     const step = STEPS[stepIndex];
     const T = window.UI[lang] || window.UI.en; // chrome strings (item 13)
     const TT = () => window.UI[langRef.current] || window.UI.en; // for callbacks
 
-    // ---- speech (TTS) ----
-    const speak = useCallback(text => {
+    // ---- pre-generated narration clips (one persistent element; TTS is the fallback) ----
+    const playClip = useCallback(key => {
+      const a = audioRef.current;
+      if (!a) return false;
+      const clip = clipFor(key, langRef.current);
+      if (!clip) return false;
+      try {
+        // a.src reflects the resolved absolute URL, so compare against our own marker
+        if (clipSrcRef.current !== clip.src) {
+          a.src = clip.src;
+          clipSrcRef.current = clip.src;
+        }
+        a.playbackRate = clamp(speedRef.current, 0.5, 2);
+        a.muted = mutedRef.current;
+        a.currentTime = 0; // only playClip restarts; pause/resume elsewhere must keep position
+        const p = a.play();
+        if (p && p.catch) p.catch(function () {});
+      } catch (_) {
+        return false;
+      }
+      audioActiveRef.current = {
+        key: key,
+        stepIndex: stepIndexRef.current
+      };
+      return true;
+    }, []);
+    function stopClip() {
+      const a = audioRef.current;
+      if (a) {
+        try {
+          a.pause();
+        } catch (_) {}
+      }
+      audioActiveRef.current = null;
+    }
+
+    // ---- speech (clip first when keyed, else TTS) ----
+    const speak = useCallback((text, key) => {
+      // clip plays even while muted (element is muted) so pacing stays identical; check before the mute gate
+      if (key) {
+        if (playClip(key)) return;
+        stopClip();
+      } // no clip for this step: kill any leftover clip (mirrors the TTS cancel below)
       if (mutedRef.current || typeof window === 'undefined' || !('speechSynthesis' in window)) return;
       try {
         window.speechSynthesis.cancel();
@@ -1848,8 +1921,9 @@ window.UI = {
         if (pref) u.voice = pref;
         window.speechSynthesis.speak(u);
       } catch (_) {}
-    }, []);
+    }, [playClip]);
     function stopSpeech() {
+      stopClip();
       try {
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
       } catch (_) {}
@@ -2009,18 +2083,68 @@ window.UI = {
             window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
           }
         } catch (_) {}
+        if (L.AUDIO && !audioRef.current) {
+          try {
+            audioRef.current = new Audio();
+            audioRef.current.preload = 'auto';
+          } catch (_) {}
+        }
         setReady(true);
       }
     }, [screen, handleChange, handleCommit]);
+
+    // ---- companion proximity dodge: .companion is pointer-events:none, so CSS hover
+    // can't fire — track the pointer on the stage host. classList directly (not React
+    // state) because this runs per pointer frame.
+    useEffect(() => {
+      if (screen !== 'player') return;
+      const host = hostRef.current;
+      if (!host) return;
+      let raf = 0,
+        px = 0,
+        py = 0;
+      function measure() {
+        raf = 0;
+        const el = companionRef.current;
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const dx = px - (r.left + r.width / 2),
+          dy = py - (r.top + r.height / 2);
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) el.classList.add('dodge');else if (dist > 170) el.classList.remove('dodge'); // 150 in / 170 out hysteresis avoids edge flicker
+      }
+      function onMove(e) {
+        px = e.clientX;
+        py = e.clientY;
+        if (!raf) raf = requestAnimationFrame(measure);
+      }
+      function onLeave() {
+        if (raf) {
+          cancelAnimationFrame(raf);
+          raf = 0;
+        }
+        const el = companionRef.current;
+        if (el) el.classList.remove('dodge');
+      }
+      host.addEventListener('pointermove', onMove);
+      host.addEventListener('pointerleave', onLeave);
+      return () => {
+        host.removeEventListener('pointermove', onMove);
+        host.removeEventListener('pointerleave', onLeave);
+        if (raf) cancelAnimationFrame(raf);
+        onLeave();
+      };
+    }, [screen]);
 
     // ---- apply step (ops via runner — replaces step.apply) ----
     const applyStep = useCallback(i => {
       const s = STEPS[i];
       stepRef.current = s;
+      stepIndexRef.current = i;
       const text = bi(s.say, langRef.current);
       startTyping(text);
       setAnswer(null);
-      speak(plain(text, langRef.current));
+      speak(plain(text, langRef.current), 'say:' + s.id);
       if (siaRef.current) siaRef.current.setPose(s.pose);
       const d = diagramRef.current;
       if (!d) return;
@@ -2079,6 +2203,24 @@ window.UI = {
       if (ready && screen === 'player' && !answer) {
         const s = STEPS[stepIndex];
         flashCap(bi(s.say, lang));
+        if (L.AUDIO) {
+          // clips are per-language: restart this step's clip in the new language, or go silent
+          const wasActive = !!audioActiveRef.current;
+          if (playClip('say:' + s.id)) {
+            try {
+              if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            } catch (_) {} // old-lang TTS must not overlap the clip
+            if (!playing && !s.interactive) {
+              try {
+                audioRef.current.pause();
+              } catch (_) {}
+            } // paused watch step: swap clip but stay paused
+            setAudioEpoch(e => e + 1);
+          } else {
+            stopClip();
+            if (wasActive) setAudioEpoch(e => e + 1); // hand pacing back to the wall-clock timer
+          }
+        }
       }
     }, [lang]);
 
@@ -2122,6 +2264,48 @@ window.UI = {
       const s = STEPS[stepIndex];
       let t, prog;
       setStepProg(0);
+      // audio-driven pacing: when the active clip belongs to THIS step, the element is the clock
+      const a = audioRef.current;
+      if (s.dur > 0 && a && !a.error) {
+        const act = audioActiveRef.current;
+        let drives = false;
+        if (act && act.stepIndex === stepIndex) drives = true;else if (!act) {
+          // stopSpeech (pause/mic) cleared the ref but left src+position intact — reclaim the step's own clip
+          const c = clipFor('say:' + s.id, langRef.current);
+          if (c && c.src === clipSrcRef.current) {
+            drives = true;
+            audioActiveRef.current = {
+              key: 'say:' + s.id,
+              stepIndex: stepIndex
+            };
+          }
+        }
+        if (drives) {
+          a.playbackRate = clamp(speed, 0.5, 2); // speed change: rate only; src/currentTime untouched so position is kept
+          const p = a.play();
+          if (p && p.catch) p.catch(function () {}); // resume from current position; only playClip resets to 0
+          prog = setInterval(() => {
+            const d = a.duration;
+            if (d > 0 && d < Infinity) setStepProg(clamp(a.currentTime / d, 0, 1));
+          }, 90);
+          const onEnd = () => {
+            setStepProg(1);
+            t = setTimeout(goNext, 350);
+          };
+          const onErr = () => {
+            t = setTimeout(goNext, (s.dur || 4000) / speed);
+          }; // file died mid-flight: never hang the step
+          a.addEventListener('ended', onEnd);
+          a.addEventListener('error', onErr);
+          return () => {
+            clearTimeout(t);
+            clearInterval(prog);
+            a.removeEventListener('ended', onEnd);
+            a.removeEventListener('error', onErr);
+            a.pause();
+          };
+        }
+      }
       if (s.dur > 0) {
         const t0 = performance.now();
         const dur = s.dur / speed;
@@ -2137,7 +2321,7 @@ window.UI = {
         clearTimeout(t);
         if (prog) clearInterval(prog);
       };
-    }, [stepIndex, playing, interactionDone, answer, ready, screen, speed]);
+    }, [stepIndex, playing, interactionDone, answer, ready, screen, speed, audioEpoch]);
 
     // (speech is stopped explicitly on pause / ask / jump — no auto-effect, so entering an interactive step doesn't cancel its own narration)
 
@@ -2421,7 +2605,8 @@ window.UI = {
       key: i,
       onClick: () => ask(c)
     }, c)))), /*#__PURE__*/React.createElement("div", {
-      className: "companion"
+      className: "companion",
+      ref: companionRef
     }, /*#__PURE__*/React.createElement("div", {
       className: 'soundbars' + (typing || answer ? ' on' : ''),
       style: {
